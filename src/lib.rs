@@ -19,7 +19,7 @@
 extern crate rocket;
 
 pub mod constant;
+pub mod item_loader;
 pub mod model;
 pub mod search_engine;
 pub mod server;
-pub mod item_loader;

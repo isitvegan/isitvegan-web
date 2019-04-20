@@ -1,7 +1,7 @@
 use is_it_vegan::{
     constant::*,
+    item_loader::{ItemLoader, TomlItemLoader},
     search_engine::{ElasticSearch, SearchEngine},
-    item_loader::{ItemLoader, TomlItemLoader}
 };
 
 fn main() {
@@ -13,4 +13,3 @@ fn main() {
     search_engine.wipe_storage().unwrap();
     search_engine.import_items(&items.items).unwrap();
 }
-

@@ -7,7 +7,7 @@ use url::Url;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Items {
     /// The items
-    pub items: Vec<Item>
+    pub items: Vec<Item>,
 }
 
 /// The description of an item.

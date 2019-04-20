@@ -1,11 +1,11 @@
 //! Client for the communication with the underlying search engine
 
 use crate::model::Item;
+use elastic::client::responses::search::Hit;
 use elastic::prelude::*;
 use serde_json::json;
 use std::error::Error;
 use std::fmt::{self, Debug};
-use elastic::client::responses::search::Hit;
 
 /// A search engine for our items
 pub trait SearchEngine: Debug + Sync + Send {
