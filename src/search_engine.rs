@@ -3,12 +3,13 @@
 use crate::model::Item;
 use elastic::prelude::*;
 use serde_json::json;
+use std::error::Error;
 use std::fmt::{self, Debug};
 
 /// A search engine for our items
 pub trait SearchEngine {
     /// Search for a query
-    fn search(self, query: &str) -> Result<Vec<Item>, elastic::Error>;
+    fn search(self, query: &str) -> Result<Vec<Item>, Box<dyn Error>>;
 }
 
 /// Search engine with an ElasticSearch backend
@@ -32,7 +33,7 @@ impl ElasticSearch {
 }
 
 impl SearchEngine for ElasticSearch {
-    fn search(self, query: &str) -> Result<Vec<Item>, elastic::Error> {
+    fn search(self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
         Ok(self
             .client
             .search::<Item>()
@@ -44,7 +45,8 @@ impl SearchEngine for ElasticSearch {
                     }
                 }
             }))
-            .send()?
+            .send()
+            .map_err(Box::new)?
             .into_hits()
             .filter_map(|hit| hit.into_document())
             .collect())
