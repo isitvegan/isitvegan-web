@@ -2,3 +2,4 @@
 yarn-debug.log*
 yarn-error.log*
 /.rpt2_cache/
+/build/

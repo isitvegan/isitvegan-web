@@ -13,6 +13,8 @@
     "devDependencies": {
         "@babel/core": "^7.4.3",
         "@babel/preset-env": "^7.4.3",
+        "less": "^3.9.0",
+        "less-plugin-clean-css": "^1.5.1",
         "preact": "^8.4.2",
         "rollup": "^1.10.1",
         "rollup-plugin-babel": "^4.3.2",
@@ -22,8 +24,9 @@
         "typescript": "^3.4.4"
     },
     "scripts": {
-        "dev-build": "yarn run rollup -c rollup.config.js",
+        "dev-build": "yarn run rollup -c rollup.config.js && yarn build dev-build-less",
         "dev-build-watch": "yarn run rollup -c rollup.config.js --watch",
+        "dev-build-less": "lessc --clean-css='--s0' less/main.less build/main.css",
         "build": "BUILD_ENV=production yarn run rollup -c rollup.config.js"
     }
 }
