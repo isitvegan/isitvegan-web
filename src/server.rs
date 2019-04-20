@@ -2,6 +2,7 @@
 
 use crate::search_engine::SearchEngine;
 use rocket::config::{Config, Environment};
+use rocket::State;
 use std::error::Error;
 use std::fmt::Debug;
 use std::sync::Arc;
@@ -46,6 +47,7 @@ impl Server for RocketServer {
 
 /// Returns a hello world
 #[get("/search/<query>")]
-fn index(query: String) -> &'static str {
-    "Hello, world!"
+fn index(query: String, search_engine: State<'_, Arc<dyn SearchEngine>>) -> Option<String> {
+    let items = search_engine.search(&query).ok()?;
+    Some(format!("{:#?}", items))
 }
