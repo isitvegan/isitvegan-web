@@ -1,0 +1,9 @@
+{
+  "name": "is-it-vegan",
+  "version": "0.1.0",
+  "description": "Is it vegan",
+  "main": "index.js",
+  "author": "Jan Nils Ferner, Mathias Fischler, Ruben Schmidmeister",
+  "license": "MIT",
+  "private": true
+}
