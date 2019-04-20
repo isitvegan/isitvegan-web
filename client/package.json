@@ -9,5 +9,10 @@
   "dependencies": {
     "preact": "^8.4.2",
     "rollup": "^1.10.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-preact": "^1.1.0"
   }
 }
