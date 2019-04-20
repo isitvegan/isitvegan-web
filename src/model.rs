@@ -26,8 +26,10 @@ pub struct Item {
 pub enum State {
     /// The item is definitely or overwhelmingly typically vegan.
     Vegan,
+
     /// The item is probably not vegan
     Carnist,
+
     /// The item could be vegan, depending on how it was produced
     ItDepends,
 }
