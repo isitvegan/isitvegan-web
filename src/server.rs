@@ -39,7 +39,7 @@ impl Server for RocketServer {
             .map_err(Box::new)?;
 
         rocket::custom(config)
-            .mount("/", routes![index])
+            .mount("/", routes![search])
             .manage(self.search_engine)
             .launch();
 
@@ -49,7 +49,7 @@ impl Server for RocketServer {
 
 /// Returns a hello world
 #[get("/search?<query>")]
-fn index(
+fn search(
     query: String,
     search_engine: State<'_, Arc<dyn SearchEngine>>,
 ) -> Option<Json<Vec<Item>>> {
