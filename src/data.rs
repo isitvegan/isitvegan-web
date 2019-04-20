@@ -1,3 +1,5 @@
+//! Plain old data types
+
 use serde::{Deserialize, Serialize};
 use url::Url;
 
