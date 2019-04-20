@@ -38,7 +38,7 @@ impl SearchEngine for ElasticSearch {
         Ok(self
             .client
             .search::<Item>()
-            .index("_all")
+            .index("items")
             .body(json!({
                 "query": {
                     "query_string": {
