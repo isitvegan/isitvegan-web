@@ -18,7 +18,7 @@
 #[macro_use]
 extern crate rocket;
 
+pub mod constant;
 pub mod model;
 pub mod search_engine;
 pub mod server;
-pub mod constant;

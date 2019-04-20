@@ -1,7 +1,7 @@
 use is_it_vegan::{
+    constant::*,
     search_engine::ElasticSearch,
     server::{RocketServer, Server},
-    constant::*
 };
 use std::sync::Arc;
 
@@ -11,4 +11,3 @@ fn main() {
     let server = Box::new(RocketServer::new(Arc::new(search_engine)));
     server.run(SERVER_ADDRESS, PORT).unwrap();
 }
-
