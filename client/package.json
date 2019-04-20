@@ -1,26 +1,27 @@
 {
-  "name": "is-it-vegan",
-  "version": "0.1.0",
-  "description": "Is it vegan",
-  "main": "index.js",
-  "author": "Jan Nils Ferner, Mathias Fischler, Ruben Schmidmeister",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "preact": "^8.4.2",
-    "rollup": "^1.10.1",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-node-resolve": "^4.2.3",
-    "rollup-plugin-uglify": "^6.0.2"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-preact": "^1.1.0"
-  },
-  "scripts": {
-    "dev-build": "yarn run rollup -c rollup.config.js",
-    "dev-build-watch": "yarn run rollup -c rollup.config.js --watch",
-    "build": "BUILD_ENV=production yarn run rollup -c rollup.config.js"
-  }
+    "name": "is-it-vegan",
+    "version": "0.1.0",
+    "description": "Is it vegan",
+    "main": "index.js",
+    "author": "Jan Nils Ferner, Mathias Fischler, Ruben Schmidmeister",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "preact": "^8.4.2",
+        "rollup": "^1.10.1",
+        "rollup-plugin-babel": "^4.3.2",
+        "rollup-plugin-node-resolve": "^4.2.3",
+        "rollup-plugin-typescript2": "^0.20.1",
+        "rollup-plugin-uglify": "^6.0.2",
+        "tslib": "^1.9.3",
+        "typescript": "^3.4.4"
+    },
+    "scripts": {
+        "dev-build": "yarn run rollup -c rollup.config.js",
+        "dev-build-watch": "yarn run rollup -c rollup.config.js --watch",
+        "build": "BUILD_ENV=production yarn run rollup -c rollup.config.js"
+    }
 }

@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ESNEXT",
+        "module": "ESNEXT",
+        "moduleResolution": "node",
+        "jsx": "react",
+        "jsxFactory": "h",
+        "incremental": true,
+        "strict": true,
+        "esModuleInterop": true,
+    },
+    "include": [
+        "src/**/*",
+        "node_modules/**/*"
+    ]
+}
