@@ -1,8 +1,11 @@
 import { SearchResult } from "./searchApiReturnTypes";
-import Axios from 'axios';
 
 export function search(queryString: string): Promise<SearchResult[]> {
-  return Axios
-    .get(`/search?${queryString}`)
-    .then((response) => response.data);
+  return fetch(searchUrl(queryString)).then((response) => response.json());
+}
+
+function searchUrl(queryString: string): string {
+  const url = new URL('/search');
+  url.searchParams.append('query', queryString);
+  return url.toString();
 }

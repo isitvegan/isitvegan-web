@@ -7,7 +7,6 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "axios": "^0.18.0",
         "rollup-plugin-uglify": "^6.0.2"
     },
     "devDependencies": {
@@ -24,7 +23,7 @@
         "typescript": "^3.4.4"
     },
     "scripts": {
-        "dev-build": "yarn run rollup -c rollup.config.js && yarn build dev-build-less",
+        "dev-build": "yarn run rollup -c rollup.config.js && yarn run dev-build-less",
         "dev-build-watch": "yarn run rollup -c rollup.config.js --watch",
         "dev-build-less": "lessc --clean-css='--s0' less/main.less build/main.css",
         "build": "BUILD_ENV=production yarn run rollup -c rollup.config.js"
