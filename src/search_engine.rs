@@ -46,7 +46,7 @@ impl SearchEngine for ElasticSearch {
             }))
             .send()?
             .into_hits()
-            .map(|hit| hit.into_document().unwrap())
+            .filter_map(|hit| hit.into_document())
             .collect())
     }
 }
