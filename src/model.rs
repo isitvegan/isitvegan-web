@@ -24,11 +24,11 @@ pub struct Item {
 #[derive(Debug, Serialize, Deserialize)]
 pub enum State {
     /// The item is definitely or overwhelmingly typically vegan.
-    Yes,
+    Vegan,
     /// The item is probably not vegan
-    No,
+    Carnist,
     /// The item could be vegan, depending on how it was produced
-    Possibly,
+    ItDepends,
 }
 
 /// A source for an item's [`State`]
