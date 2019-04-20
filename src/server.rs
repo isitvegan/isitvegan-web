@@ -8,17 +8,17 @@ use std::fmt::Debug;
 /// The server running the application
 pub trait Server: Debug {
     /// Start the application on the specified port
-    fn run(address: &str, port: u16) -> Result<(), Box<dyn Error>>;
-}
-
-#[derive(Debug)]
-pub struct RocketServer {
-    search_engine: Box<dyn SearchEngine>,
+    fn run(&self, address: &str, port: u16) -> Result<(), Box<dyn Error>>;
 }
 
 /// An implementation of [`Server`] that uses [Rocket]
 ///
 /// [Rocket]: https://www.rocket.rs
+#[derive(Debug)]
+pub struct RocketServer {
+    search_engine: Box<dyn SearchEngine>,
+}
+
 impl RocketServer {
     /// Creates a new [`RocketServer`]
     pub fn new(search_engine: Box<dyn SearchEngine>) -> RocketServer {
@@ -27,7 +27,7 @@ impl RocketServer {
 }
 
 impl Server for RocketServer {
-    fn run(address: &str, port: u16) -> Result<(), Box<dyn Error>> {
+    fn run(&self, address: &str, port: u16) -> Result<(), Box<dyn Error>> {
         let config = Config::build(Environment::Staging)
             .address(address)
             .port(port)

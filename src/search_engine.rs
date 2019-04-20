@@ -9,7 +9,7 @@ use std::fmt::{self, Debug};
 /// A search engine for our items
 pub trait SearchEngine: Debug {
     /// Search for a query
-    fn search(self, query: &str) -> Result<Vec<Item>, Box<dyn Error>>;
+    fn search(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>>;
 }
 
 /// Search engine with an ElasticSearch backend
@@ -33,7 +33,7 @@ impl ElasticSearch {
 }
 
 impl SearchEngine for ElasticSearch {
-    fn search(self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
+    fn search(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
         Ok(self
             .client
             .search::<Item>()
