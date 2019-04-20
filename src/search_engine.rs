@@ -5,6 +5,7 @@ use elastic::prelude::*;
 use serde_json::json;
 use std::error::Error;
 use std::fmt::{self, Debug};
+use elastic::client::responses::search::Hit;
 
 /// A search engine for our items
 pub trait SearchEngine: Debug + Sync + Send {
@@ -18,7 +19,7 @@ pub trait SearchEngine: Debug + Sync + Send {
     fn search(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>>;
 }
 
-/// Search engine with an ElasticSearch backend
+/// Search engine with an `ElasticSearch` backend
 pub struct ElasticSearch {
     client: SyncClient,
 }
@@ -77,7 +78,7 @@ impl SearchEngine for ElasticSearch {
             .send()
             .map_err(Box::new)?
             .into_hits()
-            .filter_map(|hit| hit.into_document())
+            .filter_map(Hit::into_document)
             .collect())
     }
 }

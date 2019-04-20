@@ -1,3 +1,5 @@
+//! Data sources for items
+
 use crate::model::Items;
 use std::error::Error;
 use std::fs::File;
