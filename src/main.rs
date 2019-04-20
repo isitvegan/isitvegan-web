@@ -17,6 +17,7 @@ fn main() {
         vegan_alternatives: vec!["Soy Milk".to_string(), "Oat Milk".to_string()],
     };
 
+    search_engine.wipe_storage();
     search_engine.import_items(&[item]).unwrap();
 
     let server = Box::new(RocketServer::new(Arc::new(search_engine)));

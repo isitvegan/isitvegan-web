@@ -58,7 +58,8 @@ impl SearchEngine for ElasticSearch {
     }
 
     fn wipe_storage(&self) -> Result<(), Box<dyn Error>> {
-        unimplemented!()
+        self.client.index(INDEX).delete().send().map_err(Box::new)?;
+        Ok(())
     }
 
     fn search(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
