@@ -1,5 +1,6 @@
 use is_it_vegan::search_engine::{ElasticSearch, SearchEngine};
 use is_it_vegan::server::{RocketServer, Server};
+use std::sync::Arc;
 
 fn main() {
     let search_engine = ElasticSearch::try_new(ELASTICSEARCH_SERVER_URL).unwrap();
@@ -7,7 +8,7 @@ fn main() {
         println!("{:#?}", item);
     }
 
-    let server = RocketServer::new(Box::new(search_engine));
+    let server = Box::new(RocketServer::new(Arc::new(search_engine)));
     server.run(SERVER_URL, PORT).unwrap();
 }
 
