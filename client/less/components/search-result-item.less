@@ -3,17 +3,23 @@
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, .12);
     border-radius: 5px;
     overflow: hidden;
-    width: 600px;
+    max-width: 600px;
     margin: auto;
+
+    @media (max-width: 600px) {
+        border-radius: 0;
+    }
 
     > .header {
         color: #fff;
-        padding: 36px 48px;
+        padding: 36px;
         background-color: var(--header-color);
         display: grid;
-        grid-template-columns: repeat(2, max-content);
+        grid-gap: 18px;
+        grid-template-columns: repeat(2, auto);
         align-items: center;
         justify-content: space-between;
+        max-width: 100%;
     }
 
     > .header.-green {

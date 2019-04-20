@@ -1,0 +1,27 @@
+.search-bar {
+    background: var(--color-green);
+    color: #fff;
+    padding: 38px;
+    font-size: 30px;
+
+    > .inner {
+        display: grid;
+        align-items: center;
+        grid-gap: 16px 32px;
+        grid-template-columns: max-content 1fr max-content;
+        margin: auto;
+        max-width: 600px;
+    }
+
+    @media (max-width: 600px) {
+        > .inner {
+            grid-template-columns: 100%;
+        }
+    }
+
+    > .inner > .input {
+        background: rgba(0, 0, 0, .19);
+        border-radius: 6px;
+        padding: 11px 20px;
+    }
+}
