@@ -53,6 +53,5 @@ fn index(
     query: String,
     search_engine: State<'_, Arc<dyn SearchEngine>>,
 ) -> Option<Json<Vec<Item>>> {
-    let items = search_engine.search(&query).ok()?;
-    Some(Json(items))
+    search_engine.search(&query).ok().map(Json)
 }
