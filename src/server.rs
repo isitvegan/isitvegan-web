@@ -52,6 +52,6 @@ impl Server for RocketServer {
 fn search(
     query: String,
     search_engine: State<'_, Arc<dyn SearchEngine>>,
-) -> Option<Json<Vec<Item>>> {
-    search_engine.search(&query).ok().map(Json)
+) -> Result<Json<Vec<Item>>, Box<dyn Error>> {
+    search_engine.search(&query).map(Json)
 }
