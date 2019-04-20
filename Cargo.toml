@@ -5,3 +5,4 @@ authors = ["Jan Nils Ferner <jn_ferner@hotmail.de>"]
 edition = "2018"
 
 [dependencies]
+url = "1.7.2"
