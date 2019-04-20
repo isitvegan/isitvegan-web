@@ -34,6 +34,7 @@ pub enum State {
 /// A source for an item's [`State`]
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(tag = "type", content = "value")]
+#[serde(rename_all = "camelCase")]
 pub enum Source {
     /// An online source
     #[serde(with = "url_serde")]
