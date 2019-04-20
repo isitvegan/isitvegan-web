@@ -703,4 +703,3 @@
 	render(h(Foo, null), document.body);
 
 }());
-//# sourceMappingURL=main.js.map
