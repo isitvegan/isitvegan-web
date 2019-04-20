@@ -44,6 +44,10 @@ impl SearchEngine for ElasticSearch {
         unimplemented!()
     }
 
+    fn wipe_storage(&self) -> Result<(), Box<Error>> {
+        unimplemented!()
+    }
+
     fn search(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
         Ok(self
             .client
