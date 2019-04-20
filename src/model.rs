@@ -22,6 +22,7 @@ pub struct Item {
 
 /// The vegan-ness of an item.
 #[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub enum State {
     /// The item is definitely or overwhelmingly typically vegan.
     Vegan,
