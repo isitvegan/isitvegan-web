@@ -17,5 +17,10 @@
     "babel-core": "^6.26.3",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-preact": "^1.1.0"
+  },
+  "scripts": {
+    "dev-build": "yarn run rollup -c rollup.config.js",
+    "dev-build-watch": "yarn run rollup -c rollup.config.js --watch",
+    "build": "BUILD_ENV=production yarn run rollup -c rollup.config.js"
   }
 }
