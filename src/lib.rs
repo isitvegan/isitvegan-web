@@ -22,3 +22,4 @@ pub mod constant;
 pub mod model;
 pub mod search_engine;
 pub mod server;
+pub mod item_loader;

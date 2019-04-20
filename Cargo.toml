@@ -13,3 +13,4 @@ elastic = { git = "https://github.com/elastic-rs/elastic" }
 serde_json = "1"
 rocket = "0.4.0"
 rocket_contrib = { version = "0.4.0", features = ["json"] }
+toml = "0.4"
