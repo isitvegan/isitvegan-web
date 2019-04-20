@@ -3,6 +3,13 @@
 use serde::{Deserialize, Serialize};
 use url::Url;
 
+/// All available items
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Items {
+    /// The items
+    pub items: Vec<Item>
+}
+
 /// The description of an item.
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Item {

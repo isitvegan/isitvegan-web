@@ -1,4 +1,4 @@
-use crate::model::Item;
+use crate::model::Items;
 use std::error::Error;
 use std::fs::File;
 use std::io::Read;
@@ -6,7 +6,7 @@ use std::io::Read;
 /// A data source for items
 pub trait ItemLoader {
     /// Load items from an underlying source
-    fn load_items(&self) -> Result<Vec<Item>, Box<dyn Error>>;
+    fn load_items(&self) -> Result<Items, Box<dyn Error>>;
 }
 
 
@@ -26,7 +26,7 @@ impl TomlItemLoader {
 }
 
 impl ItemLoader for TomlItemLoader {
-    fn load_items(&self) -> Result<Vec<Item>, Box<dyn Error>> {
+    fn load_items(&self) -> Result<Items, Box<dyn Error>> {
         let mut file = File::open(&self.file_path)?;
         let mut file_content = String::new();
         file.read_to_string(&mut file_content)?;

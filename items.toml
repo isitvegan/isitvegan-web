@@ -1,4 +1,4 @@
-[[Item]]
+[[items]]
 name = "Butter"
 alternative_names = ["Titty juice"]
 e_numbers = []
@@ -7,7 +7,7 @@ description = "Not your mom, not your milk!"
 sources = []
 vegan_alternatives = ["Soy Milk", "Oat Milk"]
 
-[[Item]]
+[[items]]
 name = "Oat Milk"
 alternative_names = ["Sexy Juice"]
 e_numbers = []

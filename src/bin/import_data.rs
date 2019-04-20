@@ -15,6 +15,6 @@ fn main() {
     let items = item_loader.load_items().unwrap();
 
     search_engine.wipe_storage().unwrap();
-    search_engine.import_items(&items).unwrap();
+    search_engine.import_items(&items.items).unwrap();
 }
 
