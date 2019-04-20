@@ -1,6 +1,6 @@
 //! Client for the communication with the underlying search engine
 
-use crate::data::Item;
+use crate::model::Item;
 use elastic::prelude::*;
 use serde_json::json;
 use std::fmt::{self, Debug};

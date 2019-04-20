@@ -13,5 +13,5 @@
     clippy::explicit_into_iter_loop
 )]
 
-pub mod data;
+pub mod model;
 pub mod search_engine;
