@@ -25,9 +25,9 @@ impl Debug for ElasticSearch {
 
 impl ElasticSearch {
     /// Create a new [`ElasticSearch`] instant
-    pub fn try_new() -> Result<ElasticSearch, elastic::Error> {
+    pub fn try_new(server_url: &str) -> Result<ElasticSearch, elastic::Error> {
         Ok(Self {
-            client: SyncClientBuilder::new().build()?,
+            client: SyncClientBuilder::new().static_node(server_url).build()?,
         })
     }
 }
