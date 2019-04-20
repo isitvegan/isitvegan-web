@@ -8,8 +8,8 @@ use std::fmt::{self, Debug};
 
 /// A search engine for our items
 pub trait SearchEngine: Debug + Sync + Send {
-    /// Add an item to the search engine
-    fn add_item(&self, items: &Item) -> Result<(), Box<dyn Error>>;
+    /// Import a bunch of items into the search engine's storage
+    fn import_items(&self, items: &[Item]) -> Result<(), Box<dyn Error>>;
 
     /// Remove all items from the internal storage
     fn wipe_storage(&self) -> Result<(), Box<dyn Error>>;
@@ -40,11 +40,24 @@ impl ElasticSearch {
 }
 
 impl SearchEngine for ElasticSearch {
-    fn add_item(&self, item: &Item) -> Result<(), Box<dyn Error>> {
-        unimplemented!()
+    fn import_items(&self, items: &[Item]) -> Result<(), Box<dyn Error>> {
+        let operations = items.iter().enumerate().map(|(index, item)| {
+            bulk_raw()
+                .index(serde_json::to_value(item).unwrap())
+                .ty(TYPE)
+                .id(index)
+        });
+        self.client
+            .bulk()
+            .index(INDEX)
+            .ty(TYPE)
+            .extend(operations)
+            .send()
+            .map_err(Box::new)?;
+        Ok(())
     }
 
-    fn wipe_storage(&self) -> Result<(), Box<Error>> {
+    fn wipe_storage(&self) -> Result<(), Box<dyn Error>> {
         unimplemented!()
     }
 
@@ -69,3 +82,4 @@ impl SearchEngine for ElasticSearch {
 }
 
 const INDEX: &str = "items";
+const TYPE: &str = "item";

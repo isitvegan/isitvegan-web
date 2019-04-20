@@ -256,13 +256,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "elastic"
 version = "0.21.0-pre.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/elastic-rs/elastic#b8171556370a4ac1ef9c29ffe3a38dcd71b00736"
 dependencies = [
  "bytes 0.4.12 (registry+https://github.com/rust-lang/crates.io-index)",
  "crossbeam-channel 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "elastic_requests 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "elastic_responses 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "elastic_types 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "elastic_requests 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)",
+ "elastic_responses 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)",
+ "elastic_types 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)",
  "error-chain 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "fluent_builder 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.1.26 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -280,19 +280,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "elastic_derive"
-version = "0.21.0-pre.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-dependencies = [
- "elastic_types_derive_internals 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "quote 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",
- "syn 0.11.11 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
 name = "elastic_requests"
 version = "0.21.0-pre.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/elastic-rs/elastic#b8171556370a4ac1ef9c29ffe3a38dcd71b00736"
 dependencies = [
  "http 0.1.17 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -300,7 +290,7 @@ dependencies = [
 [[package]]
 name = "elastic_responses"
 version = "0.21.0-pre.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/elastic-rs/elastic#b8171556370a4ac1ef9c29ffe3a38dcd71b00736"
 dependencies = [
  "http 0.1.17 (registry+https://github.com/rust-lang/crates.io-index)",
  "quick-error 1.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -312,10 +302,10 @@ dependencies = [
 [[package]]
 name = "elastic_types"
 version = "0.21.0-pre.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/elastic-rs/elastic#b8171556370a4ac1ef9c29ffe3a38dcd71b00736"
 dependencies = [
  "chrono 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "elastic_types_derive 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "elastic_types_derive 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)",
  "geo 0.4.13 (registry+https://github.com/rust-lang/crates.io-index)",
  "geohash 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "geojson 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -327,9 +317,9 @@ dependencies = [
 [[package]]
 name = "elastic_types_derive"
 version = "0.21.0-pre.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/elastic-rs/elastic#b8171556370a4ac1ef9c29ffe3a38dcd71b00736"
 dependencies = [
- "elastic_types_derive_internals 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "elastic_types_derive_internals 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)",
  "quote 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",
  "syn 0.11.11 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -337,7 +327,7 @@ dependencies = [
 [[package]]
 name = "elastic_types_derive_internals"
 version = "0.21.0-pre.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/elastic-rs/elastic#b8171556370a4ac1ef9c29ffe3a38dcd71b00736"
 dependencies = [
  "chrono 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "nom 2.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -625,8 +615,7 @@ dependencies = [
 name = "is-it-vegan"
 version = "0.1.0"
 dependencies = [
- "elastic 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "elastic_derive 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "elastic 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)",
  "rocket 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rocket_contrib 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.90 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1931,13 +1920,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum devise_codegen 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "066ceb7928ca93a9bedc6d0e612a8a0424048b0ab1f75971b203d01420c055d7"
 "checksum devise_core 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cf41c59b22b5e3ec0ea55c7847e5f358d340f3a8d6d53a5cf4f1564967f96487"
 "checksum dtoa 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "6d301140eb411af13d3115f9a562c85cc6b541ade9dfa314132244aaee7489dd"
-"checksum elastic 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)" = "b77dcc72c456a793443e0c034e07189bb42cd03ea79f35a30377a53b1c3d1809"
-"checksum elastic_derive 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)" = "f64b1880070c369f7e4fed85a9bad764de8825190ff4d5512ca5ffb4c6009440"
-"checksum elastic_requests 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)" = "83d8768931a5b3afc453ee0df5ee812f24291748730685b0e17fe12d513cad8e"
-"checksum elastic_responses 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)" = "b05c2ec4fbf35e98c38f908cab4ce88ab53ee670c1780409709794acdc709018"
-"checksum elastic_types 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)" = "2b7c08c666af6aaf04dd0316832db4fbabad4fbc757ee549159251e7f5f8f223"
-"checksum elastic_types_derive 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)" = "aea806d669eb7a1f03ca03adb143154696bedda3129009d1f55251c3e1e782ed"
-"checksum elastic_types_derive_internals 0.21.0-pre.3 (registry+https://github.com/rust-lang/crates.io-index)" = "651c3b6e54ed258f28d67b32d7551db52e3425be1eb69532727fa77e0eea23e6"
+"checksum elastic 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)" = "<none>"
+"checksum elastic_requests 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)" = "<none>"
+"checksum elastic_responses 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)" = "<none>"
+"checksum elastic_types 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)" = "<none>"
+"checksum elastic_types_derive 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)" = "<none>"
+"checksum elastic_types_derive_internals 0.21.0-pre.3 (git+https://github.com/elastic-rs/elastic)" = "<none>"
 "checksum encoding_rs 0.8.17 (registry+https://github.com/rust-lang/crates.io-index)" = "4155785c79f2f6701f185eb2e6b4caf0555ec03477cb4c70db67b465311620ed"
 "checksum error-chain 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ff511d5dc435d703f4971bc399647c9bc38e20cb41452e3b9feb4765419ed3f3"
 "checksum filetime 0.2.4 (registry+https://github.com/rust-lang/crates.io-index)" = "a2df5c1a8c4be27e7707789dc42ae65976e60b394afd293d1419ab915833e646"
