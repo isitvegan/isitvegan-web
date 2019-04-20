@@ -1,0 +1,19 @@
+[[Item]]
+name = "Butter"
+alternative_names = ["Titty juice"]
+e_numbers = []
+state = "carnist"
+description = "Not your mom, not your milk!"
+sources = []
+vegan_alternatives = ["Soy Milk", "Oat Milk"]
+
+[[Item]]
+name = "Oat Milk"
+alternative_names = ["Sexy Juice"]
+e_numbers = []
+state = "vegan"
+description = "It's like milk, but for humans."
+sources = [
+    { type = "url", value = "https://www.oatly.com" }
+]
+vegan_alternatives = []

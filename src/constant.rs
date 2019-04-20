@@ -5,3 +5,5 @@ pub const ELASTICSEARCH_PORT: u16 = 9200;
 
 pub const SERVER_ADDRESS: &str = "localhost";
 pub const PORT: u16 = 8080;
+
+pub const ITEMS_TOML: &str = "items.toml";
