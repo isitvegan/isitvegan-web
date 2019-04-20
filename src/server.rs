@@ -1,8 +1,10 @@
 //! The server running the application
 
+use crate::model::Item;
 use crate::search_engine::SearchEngine;
 use rocket::config::{Config, Environment};
 use rocket::State;
+use rocket_contrib::json::Json;
 use std::error::Error;
 use std::fmt::Debug;
 use std::sync::Arc;
@@ -46,8 +48,11 @@ impl Server for RocketServer {
 }
 
 /// Returns a hello world
-#[get("/search/<query>")]
-fn index(query: String, search_engine: State<'_, Arc<dyn SearchEngine>>) -> Option<String> {
+#[get("/search?<query>")]
+fn index(
+    query: String,
+    search_engine: State<'_, Arc<dyn SearchEngine>>,
+) -> Option<Json<Vec<Item>>> {
     let items = search_engine.search(&query).ok()?;
-    Some(format!("{:#?}", items))
+    Some(Json(items))
 }
