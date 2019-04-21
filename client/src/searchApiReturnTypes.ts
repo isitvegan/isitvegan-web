@@ -1,4 +1,4 @@
-export interface SearchResult {
+export interface Item {
   name: string;
   state: State;
   description: string;

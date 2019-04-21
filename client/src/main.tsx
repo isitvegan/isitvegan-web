@@ -1,45 +1,41 @@
 import { h, render, Component } from 'preact';
-import { search } from './searchApiProxy';
-import { SearchResult } from './searchApiReturnTypes';
+import { SearchInput } from './components/search-input';
+import { SearchResults } from './components/search-results';
 
 interface AppState {
-  items: SearchResult[];
-  error?: string;
+  query: string,
 }
 
-class App extends Component<{}, AppState>{
+class App extends Component<{}, AppState> {
   constructor() {
     super()
 
+    this._onSearch = this._onSearch.bind(this);
+
     this.state = {
-      items: [],
-      error: "",
+      query: '',
     }
   }
 
-  render(props: {}, state: AppState) {
+  render(props: {}, { query }: AppState) {
     return (
       <div>
-        <input type='search' onInput={this._onInput.bind(this)} />
-        <SearchResults items={state.items} />
-        {state.error ? <div>{state.error}</div> : null}
+        <div class='search-bar'>
+          <div class='inner'>
+              <span class='text'>Is</span>
+              <SearchInput query={query} className='input' placeholder='Oat Milk' onSearch={this._onSearch} />
+              <span class='text'>vegan?</span>
+          </div>
+        </div>
+        <SearchResults query={query} />
       </div>
     )
   }
 
-  private _onInput(event: Event) {
-    search("milk")
-      .then((results) => this.setState({ items: results, error: undefined }))
-      .catch(() => this.setState({ error: "No idea" }));
+  private _onSearch(query: string) {
+    this.setState({ query })
   }
 }
 
-const SearchResults = ({ items }: { items: SearchResult[] }) => {
-  return (
-    <ul>
-      {items.map((item) => <li>{item.name}</li>)}
-    </ul>
-  )
-}
-
-render(<App />, document.body);
+const main = document.querySelector('main') as HTMLMainElement;
+render(<App />, main);
