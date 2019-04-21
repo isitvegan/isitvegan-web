@@ -1,0 +1,11 @@
+[[items]]
+name = "Red Bull"
+alternative_names = []
+state = "vegan"
+description = """
+Red Bull energy drinks are completely vegan. The taurine used in their production is synthetic.
+"""
+sources = [
+    { type = "url", value = "https://energydrink.redbull.com/red-bull-vegan-and-gluten-free" }
+]
+vegan_alternatives = []

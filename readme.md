@@ -8,13 +8,17 @@ A useful tool to check wether food is vegan 🌱
 
 #### Milk
 
-- [ ] Cow's Milk
+- [X] Cow's Milk
 - [ ] Oat Milk
 - [ ] Soy Milk
 - [ ] Rice Milk
 - [ ] Cashew Milk
 - [ ] Almond Milk
 - [ ] Coconut Drink
+
+#### Energy Drinks
+
+- [X] Red Bull
 
 ### E Numbers
 
