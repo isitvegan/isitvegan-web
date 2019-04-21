@@ -45,6 +45,10 @@ impl ElasticSearch {
 
 impl SearchEngine for ElasticSearch {
     fn import_items(&self, items: &[Item]) -> Result<(), Box<dyn Error>> {
+        if items.is_empty() {
+            return Ok(())
+        }
+
         let operations = items.iter().enumerate().map(|(index, item)| {
             bulk_raw()
                 .index(serde_json::to_value(item).unwrap())
