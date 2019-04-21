@@ -20,6 +20,10 @@ fn main() {
     let source_items = item_loader.load_items().unwrap();
     let items = item_mapper.map_items(source_items);
 
+    if items.is_empty() {
+        eprintln!("No items could be imported. Is the path to the items directory correct?");
+    }
+
     search_engine.wipe_storage().unwrap();
     search_engine.import_items(&items).unwrap();
 }

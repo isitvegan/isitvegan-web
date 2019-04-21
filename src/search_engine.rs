@@ -46,7 +46,7 @@ impl ElasticSearch {
 impl SearchEngine for ElasticSearch {
     fn import_items(&self, items: &[Item]) -> Result<(), Box<dyn Error>> {
         if items.is_empty() {
-            return Ok(())
+            return Ok(());
         }
 
         let operations = items.iter().enumerate().map(|(index, item)| {

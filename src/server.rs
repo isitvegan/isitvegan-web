@@ -62,5 +62,7 @@ fn item_by_slug(
     slug: String,
     search_engine: State<'_, Arc<dyn SearchEngine>>,
 ) -> Result<Option<Json<Item>>, Box<dyn Error>> {
-    search_engine.get_by_slug(&slug).map(|option| option.map(Json))
+    search_engine
+        .get_by_slug(&slug)
+        .map(|option| option.map(Json))
 }
