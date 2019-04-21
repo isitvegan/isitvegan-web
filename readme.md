@@ -4,6 +4,10 @@ A useful tool to check wether food is vegan 🌱
 
 ## Supported Items
 
+A lot of the following items are planned to be supported, but not yet included in our database.
+Because this app is quite young, there's not a lot available yet. If you want to help, feel free to
+add information to the [items/ directory](https://github.com/jnferner/isitvegan.app/tree/master/items).
+
 ### Products
 
 - [ ] Wool
