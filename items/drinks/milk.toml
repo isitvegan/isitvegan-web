@@ -1,0 +1,18 @@
+[[items]]
+name = "Milk"
+alternative_names = [
+    "Cow's Milk"
+]
+state = "carnist"
+description = """
+Given the chance, cows nurture their young and form lifelong friendships with one another.
+They play games and have a wide range of emotions and personality traits.
+But most cows raised for the dairy industry are intensively confined,
+leaving them unable to fulfill their most basic desires, such as nursing their calves, even for a single day.
+They are treated like milk-producing machines and are genetically manipulated and may be pumped full of antibiotics and hormones in order to produce more milk.
+While cows suffer on factory farms, humans who drink their milk increase their chances of developing heart disease, diabetes, cancer, and many other ailments.
+"""
+sources = [
+    { type = "url", value = "https://www.peta.org/issues/animals-used-for-food/animals-used-food-factsheets/cows-milk-cruel-unhealthy-product/" }
+]
+vegan_alternatives = ["Oat Milk", "Soy Milk", "Rice Milk", "Cashew Milk", "Almond Milk", "Coconut Drink"]

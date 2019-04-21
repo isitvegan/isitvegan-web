@@ -4,6 +4,18 @@ A useful tool to check wether food is vegan 🌱
 
 ## Supported Items
 
+### Drinks
+
+#### Milk
+
+- [ ] Cow's Milk
+- [ ] Oat Milk
+- [ ] Soy Milk
+- [ ] Rice Milk
+- [ ] Cashew Milk
+- [ ] Almond Milk
+- [ ] Coconut Drink
+
 ### E Numbers
 
 Sources:
