@@ -22,12 +22,13 @@ vegan_alternatives = []
 [[items]]
 name = "Riboflavin"
 alternative_names = [
-    "FMN", "Lactoflavin",
+    "FMN",
+    "Lactoflavin",
     "Vactochrome",
     "Vitamin G",
     "Vitamin B2"
 ]
-e_numbers = ["E101", "E101a (as Riboflavin-5'-phosphate)", "E106 (as Riboflavin-5-Sodium Phosphate)"]
+e_numbers = ["E101"]
 state = "vegan"
 description = """
 Riboflavin is yellow or orange-yellow in colour and in addition to being used as a food colouring it is also used to fortify some foods.
@@ -36,7 +37,48 @@ It can be found in such foods as baby foods, breakfast cereals, sauces, fruit dr
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "http://www.ukfoodguide.net/e101.htm" },
-    { type = "url", value = "https://en.wikipedia.org/wiki/Riboflavin" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Riboflavin" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Riboflavin-5'-phosphate"
+alternative_names = [
+    "FMN",
+    "Lactoflavin",
+    "Vactochrome",
+    "Vitamin G",
+    "Vitamin B2"
+]
+e_numbers = ["E101a"]
+state = "vegan"
+description = """
+Riboflavin-5'-phosphate is the principal form in which riboflavin is found in cells and tissues.
+It requires more energy to produce, but is more soluble than E101 Riboflavin.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "http://www.ukfoodguide.net/e101.htm" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Flavin_mononucleotide" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Riboflavin-5-Sodium Phosphate"
+alternative_names = [
+    "FMN",
+    "Lactoflavin",
+    "Vactochrome",
+    "Vitamin G",
+    "Vitamin B2"
+]
+e_numbers = ["E106"]
+state = "vegan"
+description = """
+Riboflavin-5-Sodium Phosphate is a yellow variant of E101a Riboflavin-5'-phosphate
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Flavin_mononucleotide" }
 ]
 vegan_alternatives = []
