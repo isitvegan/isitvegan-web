@@ -22,7 +22,7 @@ pub struct Item {
     /// [E numbers] assigned to this item.
     ///
     /// [E numbers](https://en.wikipedia.org/wiki/E_number)
-    pub e_numbers: Vec<u16>,
+    pub e_numbers: Vec<String>,
 
     /// The item's vegan-ness.
     pub state: State,
