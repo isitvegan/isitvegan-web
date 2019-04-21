@@ -74,9 +74,11 @@ impl SearchEngine for ElasticSearch {
             .create()
             .body(json!({
                 "mappings": {
-                    "properties": {
-                        "slug": {
-                            "type": "keyword"
+                    "item": {
+                        "properties": {
+                            "slug": {
+                                "type": "keyword"
+                            }
                         }
                     }
                 }
