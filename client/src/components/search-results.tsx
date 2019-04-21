@@ -1,5 +1,5 @@
 import { Component, h } from 'preact';
-import { Item } from '../searchApiReturnTypes';
+import { Item, State } from '../searchApiReturnTypes';
 import { search } from '../searchApiProxy';
 
 export interface SearchResultsProps {
@@ -13,10 +13,9 @@ enum SearchResultsStateType {
   Error,
 }
 
-type SearchResultsStateInner = { type: SearchResultsStateType.Initial } |
-                          { type: SearchResultsStateType.Loading } |
-                          { type: SearchResultsStateType.Loaded, items: Item[] } |
-                          { type: SearchResultsStateType.Error };
+type SearchResultsStateInner =  { type: SearchResultsStateType.Loading } |
+                                { type: SearchResultsStateType.Loaded, items: Item[] } |
+                                { type: SearchResultsStateType.Error };
 
 interface SearchResultsState {
   inner: SearchResultsStateInner,
@@ -30,19 +29,17 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
     super(props);
 
     this.setState({
-      inner: { type: SearchResultsStateType.Initial },
+      inner: { type: SearchResultsStateType.Loaded, items: [] },
       query: '',
     })
   }
 
   render(_: SearchResultsProps, state: SearchResultsState) {
     switch (state.inner.type) {
-      case SearchResultsStateType.Initial:
-        return <div />;
       case SearchResultsStateType.Loading:
         return <Loading />;
       case SearchResultsStateType.Loaded:
-        return <Items items={state.inner.items} />
+        return <SearchResultItems items={state.inner.items} />
       case SearchResultsStateType.Error:
         return <Error />;
     }
@@ -87,17 +84,78 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
 }
 
 function Error() {
-  return <div>Oops an error occurred</div>;
+  return <div>There was an error processing your request</div>;
 }
 
-function Items({ items }: { items: Item[] }) {
+function SearchResultItems({ items }: { items: Item[] }) {
   return (
-    <ul>
-      {items.map((item) => <li>{item.name}</li>)}
-    </ul>
+    <div class='search-results'>
+      {items.map((item) => <SearchResultItem item={item}/>)}
+    </div>
   );
 }
 
+function SearchResultItem({ item }: { item: Item }) {
+  const headerClass = `header ${colorClassForState(item.state)}`;
+
+  return (
+    <article class='item search-result-item'>
+      <header class={headerClass}>
+          <h2 class='title'>{item.name}</h2>
+          <div class='status search-result-item-status'>
+              <div class='text'>{labelForState(item.state)}</div>
+              <StateIcon state={item.state} />
+          </div>
+      </header>
+      <div class="section">
+        <p class="content">{item.description}</p>
+      </div>
+    </article>
+  );
+}
+
+function StateIcon({ state }: { state: State }) {
+  const icon = `${iconForState(state)}#icon`;
+  return (
+    <svg class='icon'>
+        <use xlinkHref={icon} href={icon} />
+    </svg>
+  )
+}
+
+function labelForState(state: State): string {
+  switch (state) {
+    case 'vegan':
+      return 'Vegan';
+    case 'carnist':
+      return 'Carnist';
+    case 'itDepends':
+      return 'It Depends';
+  }
+}
+
+function colorClassForState(state: State): string {
+  switch (state) {
+    case 'vegan':
+      return '-green';
+    case 'carnist':
+      return '-red';
+    case 'itDepends':
+      return '-orange';
+  }
+}
+
+function iconForState(state: State): string {
+  switch (state) {
+    case 'vegan':
+      return '/icons/vegan.svg';
+    case 'carnist':
+      return '/icons/carnist.svg';
+    case 'itDepends':
+      return '/icons/it-depends.svg';
+  }
+}
+
 function Loading () {
-  return <div>Loading results...</div>;
+  return <div></div>;
 }
