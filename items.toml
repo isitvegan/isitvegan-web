@@ -22,13 +22,12 @@ vegan_alternatives = []
 [[items]]
 name = "Riboflavin"
 alternative_names = [
-    "Riboflavin-5'-phosphate",
     "FMN", "Lactoflavin",
     "Vactochrome",
     "Vitamin G",
     "Vitamin B2"
 ]
-e_numbers = ["E101", "E101a"]
+e_numbers = ["E101", "E101a (as Riboflavin-5'-phosphate)", "E106 (as Riboflavin-5-Sodium Phosphate)"]
 state = "vegan"
 description = """
 Riboflavin is yellow or orange-yellow in colour and in addition to being used as a food colouring it is also used to fortify some foods.
@@ -99,6 +98,26 @@ Used in lipsticks hair products, colognes; also in a wide range of medications.
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Quinoline_Yellow_WS" },
-    { type = "url", value = "www.ukfoodguide.net/e104.htm" }
+    { type = "url", value = "https://www.ukfoodguide.net/e104.htm" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Fast Yellow AB"
+alternative_names = [
+    "Fast Yellow",
+    "Acid Yellow",
+    "Food Yellow 2",
+    "C.I. 13015"
+]
+e_numbers = ["E105"]
+state = "vegan"
+description = """
+Fast Yellow AB is an azo dye. It used to be used as a food dye.
+It is now delisted in both Europe and USA and is forbidden if used in foods and drinks, as toxicological data has shown it is harmful.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Fast_Yellow_AB" },
 ]
 vegan_alternatives = []
