@@ -339,7 +339,7 @@ A red synthetic coal tar or azo dye found in dessert toppings, jelly, dressings,
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "http://www.ukfoodguide.net/e124.htm" },
-    { type = "url", value = "https://en.wikipedia.org/wiki/Ponceau_4R)" }
+    { type = "url", value = "https://en.wikipedia.org/wiki/Ponceau_4R" }
 ]
 vegan_alternatives = []
 
@@ -365,7 +365,7 @@ This exception was repealed in 1976 due to mounting evidence over its safety con
 In the European Union, it is not permitted as a food additive."""
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "https://en.wikipedia.org/wiki/Scarlet_GN)" }
+    { type = "url", value = "https://en.wikipedia.org/wiki/Scarlet_GN" }
 ]
 vegan_alternatives = []
 
@@ -386,6 +386,6 @@ It is closely related to Amaranth (E123).
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "https://en.wikipedia.org/wiki/Scarlet_GN)" }
+    { type = "url", value = "https://en.wikipedia.org/wiki/Ponceau_6R" }
 ]
 vegan_alternatives = []
