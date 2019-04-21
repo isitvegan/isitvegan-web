@@ -110,6 +110,7 @@ function SearchResultItem({ item }: { item: Item }) {
       <div class="section">
         <p class="content">{item.description}</p>
       </div>
+      <AlternativeNames names={item.alternativeNames} />
     </article>
   );
 }
@@ -121,6 +122,19 @@ function StateIcon({ state }: { state: State }) {
         <use xlinkHref={icon} href={icon} />
     </svg>
   )
+}
+
+function AlternativeNames({ names }: { names: string[] }) {
+  if (names.length === 0) {
+    return null;
+  } else {
+    return (
+      <div class='section'>
+        <h3 class='title'>Also known as</h3>
+        <p class='content'>{names.join(', ')}</p>
+      </div>
+    )
+  }
 }
 
 function labelForState(state: State): string {

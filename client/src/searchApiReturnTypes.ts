@@ -3,6 +3,7 @@ export interface Item {
   state: State;
   description: string;
   sources: Source[];
+  alternativeNames: string[],
 }
 
 export interface Source {
