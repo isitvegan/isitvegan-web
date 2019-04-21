@@ -15,8 +15,9 @@
         padding: 36px;
         background-color: var(--header-color);
         display: grid;
-        grid-gap: 18px;
-        grid-template-columns: repeat(2, auto);
+        grid-gap: 8px 18px;
+        grid-template-columns: repeat(3, auto);
+        grid-template-areas: "title title status" "enumber . .";
         align-items: center;
         justify-content: space-between;
         max-width: 100%;
@@ -36,6 +37,20 @@
 
     > .header > .title {
         font-size: 24px;
+        grid-area: title;
+    }
+
+    > .header > .enumber {
+        background-color: #fff;
+        border-radius: 1em;
+        font-size: 14px;
+        padding: 6px 10px;
+        color: var(--header-color);
+        grid-area: enumber;
+    }
+
+    > .header > .status {
+        grid-area: status;
     }
 
     > .section {

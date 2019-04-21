@@ -4,6 +4,7 @@ export interface Item {
   description: string;
   sources: Source[];
   alternativeNames: string[],
+  eNumber?: string,
 }
 
 export interface Source {

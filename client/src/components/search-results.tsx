@@ -106,6 +106,7 @@ function SearchResultItem({ item }: { item: Item }) {
               <div class='text'>{labelForState(item.state)}</div>
               <StateIcon state={item.state} />
           </div>
+          {item.eNumber ? <span class='enumber'>{item.eNumber}</span> : null}
       </header>
       <div class="section">
         <p class="content">{item.description}</p>

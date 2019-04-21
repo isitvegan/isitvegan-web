@@ -14,6 +14,7 @@ function mapItem(item: any): Item {
     description: item.description,
     sources: item.sources,
     alternativeNames: item.alternative_names,
+    eNumber: item.e_number,
   }
 }
 
