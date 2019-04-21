@@ -1,0 +1,41 @@
+[[items]]
+name = "Wool"
+alternative_names = []
+state = "carnist"
+description = """
+Sheep are gentle individuals who, like all animals, feel pain, fear, and loneliness.
+But because there’s a market for their fleece and skins, they’re treated as nothing more than wool-producing machines.
+In Australia, where more than 50 percent of the world’s merino wool—which is used in products ranging from clothing to carpets—originates,
+lambs are forced to endure a gruesome procedure called “mulesing,”
+in which huge chunks of skin are cut from the animals’ backsides, often without any painkillers.
+"""
+sources = [
+    { type = "url", value = "https://www.peta.org/issues/animals-used-for-clothing/wool-industry/" }
+]
+vegan_alternatives = ["Cotton", "Polar Fleece"]
+
+[[items]]
+name = "Leather"
+alternative_names = []
+state = "carnist"
+description = """
+Leather can be made from cows, pigs, goats, and sheep;
+exotic animals such as alligators, ostriches, and kangaroos;
+and even dogs and cats, who are slaughtered for their meat and skin in China,
+which exports their skins around the world. Because leather is normally not labeled,
+you never really know where (or whom) it came from.
+In the U.S., many of the millions of cows and other animals who are killed
+for their skin endure the horrors of factory farming—extreme crowding and
+deprivation as well as castration, branding, tail-docking, and dehorning—all without any painkillers.
+At slaughterhouses, animals routinely have their throats cut and some are even skinned and
+dismembered while they are still conscious.
+Buying leather directly contributes to factory farms and slaughterhouses because skin
+is the most economically important coproduct of the meat industry.
+Leather is also no friend of the environment, as it shares responsibility for all
+the environmental destruction caused by the meat industry as well as the
+pollution caused by the toxins used in tanning.
+"""
+sources = [
+    { type = "url", value = "https://www.peta.org/issues/animals-used-for-clothing/leather-industry/" }
+]
+vegan_alternatives = ["Artificial Leather"]

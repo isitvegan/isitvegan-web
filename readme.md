@@ -8,11 +8,14 @@ A lot of the following items are planned to be supported, but not yet included i
 Because this app is quite young, there's not a lot available yet. If you want to help, feel free to
 add information to the [items/ directory](https://github.com/jnferner/isitvegan.app/tree/master/items).
 
-### Products
+### Materials
 
-- [ ] Wool
+- [X] Wool
+- [X] Leather
 - [ ] Cotton
-- [ ] Leather
+- [ ] Wool Fleece
+- [ ] Polar Fleece
+- [ ] Faux Leather
 
 ### Food
 
