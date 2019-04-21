@@ -5,6 +5,7 @@ export interface Item {
   sources: Source[];
   alternativeNames: string[],
   eNumber?: string,
+  veganAlternatives: string[],
 }
 
 export interface Source {

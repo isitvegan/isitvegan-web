@@ -96,7 +96,7 @@ impl SearchEngine for ElasticSearch {
             .body(json!({
                 "query": {
                     "query_string": {
-                        "query": query
+                        "query": query,
                     }
                 }
             }))

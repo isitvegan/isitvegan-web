@@ -2,8 +2,11 @@ import { Component, h } from 'preact';
 import { Item, State, Source } from '../search-api-return-types';
 import { search } from '../search-api-proxy';
 
+type OnSearchTermClick = (searchTerm: string) => void;
+
 export interface SearchResultsProps {
   query: string,
+  onSearchTermClick: OnSearchTermClick,
 }
 
 enum SearchResultsStateType {
@@ -34,12 +37,12 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
     })
   }
 
-  render(_: SearchResultsProps, state: SearchResultsState) {
+  render(props: SearchResultsProps, state: SearchResultsState) {
     switch (state.inner.type) {
       case SearchResultsStateType.Loading:
         return <Loading />;
       case SearchResultsStateType.Loaded:
-        return <SearchResultItems items={state.inner.items} />
+        return <SearchResultItems items={state.inner.items} onSearchTermClick={props.onSearchTermClick} />
       case SearchResultsStateType.Error:
         return <Error />;
     }
@@ -87,15 +90,15 @@ function Error() {
   return <div>There was an error processing your request</div>;
 }
 
-function SearchResultItems({ items }: { items: Item[] }) {
+function SearchResultItems({ items, onSearchTermClick }: { items: Item[], onSearchTermClick: OnSearchTermClick }) {
   return (
     <div class='search-results'>
-      {items.map((item) => <SearchResultItem item={item}/>)}
+      {items.map((item) => <SearchResultItem item={item} onSearchTermClick={onSearchTermClick} />)}
     </div>
   );
 }
 
-function SearchResultItem({ item }: { item: Item }) {
+function SearchResultItem({ item, onSearchTermClick }: { item: Item, onSearchTermClick: OnSearchTermClick }) {
   const headerClass = `header ${colorClassForState(item.state)}`;
 
   return (
@@ -112,6 +115,7 @@ function SearchResultItem({ item }: { item: Item }) {
         <p class="content">{item.description}</p>
       </div>
       <AlternativeNames names={item.alternativeNames} />
+      <VeganAlternatives alternatives={item.veganAlternatives} onSearchTermClick={onSearchTermClick} />
       <Sources sources={item.sources} />
     </article>
   );
@@ -125,6 +129,32 @@ function StateIcon({ state }: { state: State }) {
     </svg>
   )
 }
+
+function VeganAlternatives({ alternatives, onSearchTermClick }: { alternatives: string[], onSearchTermClick: OnSearchTermClick }) {
+  if (alternatives.length === 0) {
+    return null;
+  } else {
+    return (
+      <div class='section'>
+        <h3 class='title'>Vegan alternatives</h3>
+        <p class='content'>
+          {alternatives.map((alternative, i) => <VeganAlternative alternative={alternative} onSearchTermClick={onSearchTermClick} isLast={i === alternatives.length - 1} />)}
+        </p>
+      </div>
+    )
+  }
+}
+
+function VeganAlternative(
+  { alternative, onSearchTermClick, isLast }: { alternative: string, onSearchTermClick: OnSearchTermClick, isLast: boolean }) {
+  return (
+    <span>
+      <a href='#' onClick={() => onSearchTermClick(alternative)}>{alternative}</a>
+      {isLast ? null : ', '}
+    </span>
+  );
+}
+
 
 function AlternativeNames({ names }: { names: string[] }) {
   if (names.length === 0) {

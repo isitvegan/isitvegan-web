@@ -27,7 +27,7 @@ class App extends Component<{}, AppState> {
               <span class='text'>vegan?</span>
           </div>
         </div>
-        <SearchResults query={query.trim()} />
+        <SearchResults query={query.trim()} onSearchTermClick={this._onSearch} />
       </div>
     )
   }

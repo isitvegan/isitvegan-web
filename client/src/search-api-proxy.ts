@@ -15,6 +15,7 @@ function mapItem(item: any): Item {
     sources: item.sources,
     alternativeNames: item.alternative_names,
     eNumber: item.e_number,
+    veganAlternatives: item.vegan_alternatives,
   }
 }
 
