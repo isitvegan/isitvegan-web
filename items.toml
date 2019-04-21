@@ -253,3 +253,24 @@ sources = [
 
 ]
 vegan_alternatives = ["Beetroot Juice", "Allura Red AC"]
+
+[[items]]
+name = "Citrus Red 2"
+alternative_names = [
+    "Citrus Red No. 2",
+    "C.I. Solvent Red 80",
+    "C.I. 12156"
+]
+e_number = "E121"
+state = "vegan"
+description = """
+Citrus Red 2 is an artificial dye.
+As a food dye, it has been permitted by the US Food and Drug Administration (FDA) since 1956 to color the skin of oranges.
+Citrus Red 2 is listed by the International Agency for Research on Cancer (IARC) as a group 2B carcinogen, a substance "possibly carcinogenic to humans".
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Citrus_Red_2" },
+
+]
+vegan_alternatives = []
