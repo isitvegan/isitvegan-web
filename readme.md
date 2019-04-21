@@ -1,6 +1,6 @@
 # Is it vegan?
 
-A useful tool to check wether food is vegan 🌱
+A simple tool to check whether an item is vegan 🌱
 
 ## Supported Items
 
