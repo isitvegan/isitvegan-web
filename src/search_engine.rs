@@ -53,13 +53,14 @@ impl SearchEngine for ElasticSearch {
             .index(INDEX)
             .ty(TYPE)
             .extend(operations)
-            .send()
-            .map_err(Box::new)?;
+            .send()?;
         Ok(())
     }
 
     fn wipe_storage(&self) -> Result<(), Box<dyn Error>> {
-        self.client.index(INDEX).delete().send().map_err(Box::new)?;
+        if self.client.index(INDEX).exists().send()?.exists() {
+            self.client.index(INDEX).delete().send()?;
+        }
         Ok(())
     }
 
