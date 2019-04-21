@@ -163,3 +163,29 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Fast_Yellow_AB" },
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Yellow 2G"
+alternative_names = [
+    "Lissamine Fast Yellow",
+    "C.I. Acid Yellow 17",
+    "C.I. 18965",
+    "Light Fast Yellow 2G",
+    "C.I. Food Yellow 5",
+    "Acid Leather Yellow 2GL",
+    "Erio Flavine SX",
+    "Fenalan Yellow G",
+    "Erio Flavine 3G",
+    "Kayacyl Yellow GG"
+]
+e_number = "E107"
+state = "vegan"
+description = """
+Yellow 2G is a food coloring.
+It has the appearance of a yellow powder, and it is soluble in water. It is a synthetic yellow azo dye.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Yellow_2G" },
+]
+vegan_alternatives = []
