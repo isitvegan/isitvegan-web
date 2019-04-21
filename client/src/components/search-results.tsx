@@ -144,12 +144,12 @@ function Sources({ sources }: { sources: Source[] }) {
     return null;
   } else {
     return (
-      <div class='section'>
-        <h3 class='title'>Sources</h3>
+      <details class='section'>
+        <summary class='title'>Sources</summary>
         <ul class='content links-list'>
           {sources.map((source) => <Source source={source} />)}
         </ul>
-      </div>
+      </details>
     )
   }
 }
