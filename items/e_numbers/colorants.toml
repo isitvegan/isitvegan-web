@@ -368,3 +368,24 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Scarlet_GN)" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Ponceau 6R"
+alternative_names = [
+    "Crystal ponceau 6R",
+    "Crystal scarlet",
+    "Brilliant crystal scarlet 6R",
+    "Acid Red 44",
+    "C.I. 16250"
+]
+e_number = "E126"
+state = "vegan"
+description = """
+Ponceau 6R is a red azo dye. It is soluble in water and slightly soluble in ethanol.
+It is closely related to Amaranth (E123).
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Scarlet_GN)" }
+]
+vegan_alternatives = []
