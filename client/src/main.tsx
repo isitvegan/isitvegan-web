@@ -24,7 +24,7 @@ class App extends Component<{}, AppState> {
           <div class='inner'>
               <span class='text'>Is</span>
               <SearchInput query={query} className='input' placeholder='Oat Milk' onSearch={this._onSearch} />
-              <span class='text'>vegan?</span>
+              <span class='text'>Vegan?</span>
           </div>
         </div>
         <SearchResults query={query.trim()} onSearchTermClick={this._onSearch} />
