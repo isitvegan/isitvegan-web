@@ -73,9 +73,55 @@ impl SearchEngine for ElasticSearch {
             .index(INDEX)
             .create()
             .body(json!({
+                "settings": {
+                    "analysis": {
+                        "analyzer": {
+                            "autocomplete": {
+                                "tokenizer": "autocomplete",
+                                "filter": [
+                                    "lowercase"
+                                ]
+                            },
+                            "autocomplete_search": {
+                                "tokenizer": "lowercase"
+                            }
+                        },
+                        "tokenizer": {
+                            "autocomplete": {
+                                "type": "edge_ngram",
+                                "min_gram": 2,
+                                "max_gram": 10,
+                                "token_chars": [
+                                    "letter",
+                                    "digit"
+                                ]
+                            }
+                        }
+                    }
+                },
                 "mappings": {
                     "item": {
                         "properties": {
+                            "name": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "autocomplete_search"
+                            },
+                            "alternative_names": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "autocomplete_search"
+                            },
+                            "e_number": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "autocomplete_search"
+                            },
+                            "description": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "autocomplete_search"
+                            },
                             "slug": {
                                 "type": "keyword"
                             }
