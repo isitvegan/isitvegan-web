@@ -458,15 +458,25 @@ vegan_alternatives = []
 [[items]]
 name = "Indanthrone blue"
 alternative_names = [
-    "indanthrene"
+    "Food Blue 5",
+    "Sulphan Blue",
+    "Acid Blue 3",
+    "L-Blau 3",
+    "C-Blau 20",
+    "Patentblau V",
+    "Sky Blue",
+    "C.I. 42051"
 ]
-e_number = "E130"
+e_number = "E131"
 state = "vegan"
 description = """
-An organic blue dye. It is used to dye unmordanted cotton and as a pigment in quality paints and enamels.
+A dark bluish-violet synthetic coal tar dye.
+Not widely used, but can be found in jellies, blue Curaçao and candles.
+It is used diagnostically to colour lymph vessels.
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "https://en.wikipedia.org/wiki/Indanthrone_blue" }
+    { type = "url", value = "https://en.wikipedia.org/wiki/Patent_Blue_V" },
+    { type = "url", value = "http://www.ukfoodguide.net/e131.htm" }
 ]
 vegan_alternatives = []

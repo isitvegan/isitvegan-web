@@ -126,7 +126,7 @@ These E Numbers are definitely vegan. They are derived from mineral, or vegetabl
 - [X] E128
 - [X] E129
 - [X] E130
-- [ ] E131
+- [X] E131
 - [ ] E132
 - [ ] E133
 - [ ] E140
