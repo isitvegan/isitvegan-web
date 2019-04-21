@@ -14,7 +14,7 @@ Apart from its culinary uses, turmeric is used as a preservative, colorant and f
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "https://www.ukfoodguide.net/e100.htm" },
+    { type = "url", value = "http://www.ukfoodguide.net/e100.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Curcumin" }
 ]
 vegan_alternatives = []
@@ -35,7 +35,7 @@ It can be found in such foods as baby foods, breakfast cereals, sauces, fruit dr
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "https://www.ukfoodguide.net/e101.htm" },
+    { type = "url", value = "http://www.ukfoodguide.net/e101.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Riboflavin" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Flavin_mononucleotide" }
 ]
@@ -53,7 +53,7 @@ It can also be used with Brilliant Blue FCF, (E133) to produce various green sha
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Tartrazine" },
-    { type = "url", value = "https://www.ukfoodguide.net/e102.htm" }
+    { type = "url", value = "http://www.ukfoodguide.net/e102.htm" }
 ]
 vegan_alternatives = []
 
@@ -98,7 +98,7 @@ Used in lipsticks hair products, colognes; also in a wide range of medications.
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Quinoline_Yellow_WS" },
-    { type = "url", value = "https://www.ukfoodguide.net/e104.htm" }
+    { type = "url", value = "http://www.ukfoodguide.net/e104.htm" }
 ]
 vegan_alternatives = []
 
