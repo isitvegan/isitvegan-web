@@ -95,8 +95,9 @@ impl SearchEngine for ElasticSearch {
             .index(INDEX)
             .body(json!({
                 "query": {
-                    "query_string": {
+                    "multi_match": {
                         "query": query,
+                        "fields": ["name^4", "alternative_names^3", "description^2", "vegan_alternatives"],
                     }
                 }
             }))
