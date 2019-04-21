@@ -1,4 +1,4 @@
-# Is it vegan?
+# Is it Vegan?
 
 A simple tool to check whether an item is vegan 🌱
 
