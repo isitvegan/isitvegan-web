@@ -454,3 +454,19 @@ sources = [
     { type = "url", value = "http://www.ukfoodguide.net/e129.htm" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Indanthrone blue"
+alternative_names = [
+    "indanthrene"
+]
+e_number = "E130"
+state = "vegan"
+description = """
+An organic blue dye. It is used to dye unmordanted cotton and as a pigment in quality paints and enamels.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Indanthrone_blue" }
+]
+vegan_alternatives = []
