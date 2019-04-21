@@ -37,5 +37,4 @@ class App extends Component<{}, AppState> {
   }
 }
 
-const main = document.querySelector('main') as HTMLMainElement;
-render(<App />, main);
+render(<App />, document.body);
