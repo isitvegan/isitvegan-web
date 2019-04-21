@@ -10,7 +10,7 @@ e_numbers = ["E100"]
 state = "vegan"
 description = """
 An orange yellow colour derived from the root of the curcuma (turmeric) plant.
-Apart from its culinary uses, turmeric is used as a preservative, colorant and flavouring agent in many food products including baked foods, pickles and meat products.
+Apart from its culinary uses, turmeric is used as a preservative, colorant and flavouring agent in many food products including baked foods and pickles.
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
@@ -31,7 +31,7 @@ e_numbers = ["E101", "E101a (as Riboflavin-5'-phosphate)", "E106 (as Riboflavin-
 state = "vegan"
 description = """
 Riboflavin is yellow or orange-yellow in colour and in addition to being used as a food colouring it is also used to fortify some foods.
-It can be found in such foods as baby foods, breakfast cereals, sauces, processed cheese, fruit drinks and vitamin-enriched milk products as well as being widely used in vitamin supplements.
+It can be found in such foods as baby foods, breakfast cereals, sauces, fruit drinks and vitamin-enriched milk products as well as being widely used in vitamin supplements.
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
@@ -47,7 +47,7 @@ alternative_names = ["FD&C Yellow 5"]
 e_numbers = ["E102"]
 state = "vegan"
 description = """
-A synthetic yellow azo dye found in fruit squash, fruit cordial, coloured fizzy drinks, instant puddings, cake mixes, custard powder, soups, sauces, ice cream, ice lollies, sweets, chewing gum, marzipan, jam, jelly, marmalade, mustard, yoghurt and many convenience foods together with glycerine, lemon and honey products. It can also be found in the shells of medicinal capsules.
+A synthetic yellow azo dye found in fruit squash, fruit cordial, coloured fizzy drinks, instant puddings, cake mixes, custard powder, soups, sauces, ice cream, ice lollies, sweets, chewing gum, marzipan, jam, jelly, marmalade, mustard, yoghurt and many convenience foods together with glycerine and lemon. It can also be found in the shells of medicinal capsules.
 It can also be used with Brilliant Blue FCF, (E133) to produce various green shades e.g. for tinned processed peas.
 """
 sources = [
