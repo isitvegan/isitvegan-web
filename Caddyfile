@@ -1,4 +1,6 @@
 localhost:2015
 
 root client
-proxy /search localhost:8080
+proxy /api localhost:8080 {
+    without /api
+}

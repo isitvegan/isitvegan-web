@@ -18,5 +18,5 @@ function mapItem(item: any): Item {
 }
 
 function searchUrl(queryString: string): string {
-  return `/search?query=${encodeURIComponent(queryString)}`;
+  return `/api/search?query=${encodeURIComponent(queryString)}`;
 }
