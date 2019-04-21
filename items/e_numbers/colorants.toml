@@ -389,3 +389,22 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Ponceau_6R" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Erythrosine"
+alternative_names = [
+    "Red No. 3",
+    "FD&C Red 3"
+]
+e_number = "E127"
+state = "vegan"
+description = """
+A cherry-pink/red synthetic coal tar dye found in cocktail, glacé and tinned cherries, canned fruit, sweets, bakery, snack foods, biscuits, chocolate and stuffed olives.
+It is also used to reveal plaque in dental disclosing tablets. 
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Erythrosine" },
+    { type = "url", value = "http://www.ukfoodguide.net/e127.htm" }
+]
+vegan_alternatives = []
