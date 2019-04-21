@@ -9,7 +9,7 @@ A useful tool to check wether food is vegan 🌱
 #### Milk
 
 - [X] Cow's Milk
-- [ ] Oat Milk
+- [X] Oat Milk
 - [ ] Soy Milk
 - [ ] Rice Milk
 - [ ] Cashew Milk

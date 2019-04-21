@@ -16,3 +16,18 @@ sources = [
     { type = "url", value = "https://www.peta.org/issues/animals-used-for-food/animals-used-food-factsheets/cows-milk-cruel-unhealthy-product/" }
 ]
 vegan_alternatives = ["Oat Milk", "Soy Milk", "Rice Milk", "Cashew Milk", "Almond Milk", "Coconut Drink"]
+
+[[items]]
+name = "Oat Milk"
+alternative_names = []
+state = "vegan"
+description = """
+Oat milk is a type of plant milk derived from whole oat grains by soaking the plant material to extract its nutrients.
+Oat milk naturally has a creamy texture and a characteristically oatmeal-like flavor, though it is sold commercially in various flavor-varieties such as sweetened, unsweetened, vanilla, and chocolate.
+Unlike other plant milks, whose origins date as early as the 13th century, oat milk is a modern creation, developed by the Swedish scientist Rickard Oste in the early 1990s,
+who went on to found Oatly, the first commercial manufacturer of oat milk."""
+sources = [
+    { type = "url", value = "https://en.wikipedia.org/wiki/Oat_milk" },
+    { type = "url", value = "https://www.oatly.com/int/the-oatly-way" }
+]
+vegan_alternatives = []
