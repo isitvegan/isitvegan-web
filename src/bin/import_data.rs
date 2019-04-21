@@ -1,12 +1,18 @@
 use is_it_vegan::{
-    constant::*,
+    config_loader::{ConfigLoader, DotEnvConfigLoader},
     item_loader::{ItemLoader, TomlItemLoader},
     search_engine::{ElasticSearch, SearchEngine},
 };
 
 fn main() {
-    let search_engine = ElasticSearch::try_new(ELASTICSEARCH_ADDRESS, ELASTICSEARCH_PORT).unwrap();
-    let item_loader = TomlItemLoader::new(ITEMS_TOML.to_string());
+    let config_loader = DotEnvConfigLoader::new();
+
+    let search_engine = ElasticSearch::try_new(
+        &config_loader.elasticsearch_address().unwrap(),
+        config_loader.elasticsearch_port().unwrap(),
+    )
+    .unwrap();
+    let item_loader = TomlItemLoader::new(config_loader.items_file().unwrap());
 
     let items = item_loader.load_items().unwrap();
 

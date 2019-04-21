@@ -3,6 +3,7 @@
 #![warn(missing_docs, clippy::dbg_macro, clippy::unimplemented)]
 #![feature(proc_macro_hygiene)]
 #![feature(decl_macro)]
+#![feature(non_exhaustive)]
 #![deny(
     rust_2018_idioms,
     future_incompatible,
@@ -18,7 +19,7 @@
 #[macro_use]
 extern crate rocket;
 
-pub mod constant;
+pub mod config_loader;
 pub mod item_loader;
 pub mod model;
 pub mod search_engine;
