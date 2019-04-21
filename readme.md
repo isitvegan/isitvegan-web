@@ -89,14 +89,14 @@ Be aware that suppliers will sometimes change their source without correcting th
 These E Numbers are definitely vegan. They are derived from mineral, or vegetable sources.
 
 √ Food Colourings
-- [ ] E100
-- [ ] E101
-- [ ] E101a
-- [ ] E102
-- [ ] E103
-- [ ] E104
-- [ ] E105
-- [ ] E106
+- [X] E100
+- [X] E101
+- [X] E101a
+- [X] E102
+- [X] E103
+- [X] E104
+- [X] E105
+- [X] E106
 - [ ] E107
 - [ ] E110
 - [ ] E111
