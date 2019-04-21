@@ -297,3 +297,25 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Azorubine" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Amaranth"
+alternative_names = [
+    "FD&C Red No. 2",
+    "C.I. Food Red 9",
+    "Acid Red 27",
+    "Azorubin S",
+    "C.I. 16185"
+]
+e_number = "E123"
+state = "vegan"
+description = """
+Derived from the small herbaceous plant of the same name. 
+A purplish-red (blackcurrant) synthetic coal tar or azo dye found in ice creams, gravy granules, jams, jelly, tinned fruit pie fillings, packeted cake mixes and soups.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "http://www.ukfoodguide.net/e123.htm" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Amaranth_(dye)" }
+]
+vegan_alternatives = []
