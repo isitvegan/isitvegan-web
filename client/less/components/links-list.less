@@ -1,0 +1,17 @@
+.links-list {
+    > .item:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    > .item > .link {
+        display: grid;
+        align-items: center;
+        grid-template-columns: max-content auto;
+        grid-gap: 8px;
+    }
+
+    > .item > .link > .icon {
+        width: 14px;
+        height: 14px;
+    }
+}
