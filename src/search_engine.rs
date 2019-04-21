@@ -54,11 +54,7 @@ impl SearchEngine for ElasticSearch {
                 .index(serde_json::to_value(item).unwrap())
                 .id(index)
         });
-        self.client
-            .bulk()
-            .index(INDEX)
-            .extend(operations)
-            .send()?;
+        self.client.bulk().index(INDEX).extend(operations).send()?;
         Ok(())
     }
 
