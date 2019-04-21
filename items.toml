@@ -210,7 +210,6 @@ sources = [
 ]
 vegan_alternatives = []
 
-
 [[items]]
 name = "Orange GGN"
 alternative_names = [
@@ -229,3 +228,28 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Orange_GGN" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Carmine"
+alternative_names = [
+    "Cochineal",
+    "Carminic acid",
+    "C.I. Natural Red 4",
+    "Crimson Lake",
+    "C.I. 75470"    
+]
+e_number = "E120"
+state = "carnist"
+description = """
+An expensive red colouring extracted from the crushed carcasses of the female Dactylopius coccus, a cactus-feeding scale insect,
+which are killed by either immersion in hot water or by exposure to sunlight, steam, or the heat of an oven.
+The variety in the appearance of commercial cochineal is caused by these differing extraction methods.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Carmine" },
+    { type = "url", value = "http://www.ukfoodguide.net/e120.htm" },
+    { type = "url", value = "https://www.vegan.com/carmine/" }
+
+]
+vegan_alternatives = ["Beetroot Juice", "Allura Red AC"]

@@ -15,7 +15,7 @@ Sources:
 
 These E Numbers are to be avoided as they are definitely of animal origin.
 
-- [ ] E120 – Carmine Dye from Cochineal Beetles, Natural Red 4
+- [X] E120 – Carmine Dye from Cochineal Beetles, Natural Red 4
 - [ ] E441 – Gelatine
 - [ ] E542 – Edible Bone Phosphate
 - [ ] E901 – Beeswax, white and yellow
