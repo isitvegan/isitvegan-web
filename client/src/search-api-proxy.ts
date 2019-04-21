@@ -1,4 +1,4 @@
-import { Item } from './searchApiReturnTypes';
+import { Item } from './search-api-return-types';
 
 export async function search(queryString: string, abortSignal: AbortSignal): Promise<Item[]> {
   const response = await fetch(searchUrl(queryString), { signal: abortSignal });

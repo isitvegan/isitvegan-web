@@ -1,6 +1,6 @@
 import { Component, h } from 'preact';
-import { Item, State, Source } from '../searchApiReturnTypes';
-import { search } from '../searchApiProxy';
+import { Item, State, Source } from '../search-api-return-types';
+import { search } from '../search-api-proxy';
 
 export interface SearchResultsProps {
   query: string,
