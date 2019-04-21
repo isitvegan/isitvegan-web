@@ -319,3 +319,25 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Amaranth_(dye)" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Ponceau 4R"
+alternative_names = [
+    "C.I. 16255",
+    "Cochineal Red A",
+    "C.I. Acid Red 18",
+    "Brilliant Scarlet 3R",
+    "Brilliant Scarlet 4R",
+    "New Coccine"
+]
+e_number = "E124"
+state = "vegan"
+description = """
+A red synthetic coal tar or azo dye found in dessert toppings, jelly, dressings, tinned strawberries, fruit pie fillings, packeted cake mixes and soups.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "http://www.ukfoodguide.net/e124.htm" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Ponceau_4R)" }
+]
+vegan_alternatives = []
