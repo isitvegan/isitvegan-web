@@ -189,3 +189,23 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Yellow_2G" },
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Sunset Yellow FCF"
+alternative_names = [
+    "Orange Yellow S",
+    "FD&C Yellow 6",
+    "C.I. 15985"
+]
+e_number = "E110"
+state = "vegan"
+description = """
+A synthetic 'coal tar' and azo yellow dye used in fermented foods which must be heat treated.
+Found in orange squash, marzipan, Swiss roll, apricot jam, citrus marmalade, lemon curd, sweets, hot chocolate mix and packet soups, breadcrumbs, ice cream, and many medications.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Sunset_Yellow_FCF" },
+    { type = "url", value = "http://www.ukfoodguide.net/e110.htm" },
+]
+vegan_alternatives = []
