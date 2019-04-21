@@ -432,3 +432,25 @@ sources = [
     { type = "url", value = "http://www.ukfoodguide.net/e128.htm" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Allura Red AC"
+alternative_names = [
+    "Allura Red",
+    "Food Red 17",
+    "C.I. 16035",
+    "FD&C Red 40"
+]
+e_number = "E129"
+state = "vegan"
+description = """
+Orange-red colour used in sweets, soft drinks, condiments, cotton candy, cherry flavored products, children's medications, cosmetics and tattoo ink.
+A red synthetic azo dye introduced in the early eighties to replace Amaranth, E123, in the United States of America where E123 is prohibited.
+It is by far the most commonly used red dye in the United States.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Allura_Red_AC" },
+    { type = "url", value = "http://www.ukfoodguide.net/e129.htm" }
+]
+vegan_alternatives = []
