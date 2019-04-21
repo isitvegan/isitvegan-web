@@ -26,6 +26,6 @@
         "dev-build": "yarn run rollup -c rollup.config.js && yarn run dev-build-less",
         "dev-build-watch": "yarn run rollup -c rollup.config.js --watch",
         "dev-build-less": "lessc --clean-css='--s0' less/main.less build/main.css",
-        "build": "BUILD_ENV=production yarn run rollup -c rollup.config.js"
+        "build": "BUILD_ENV=production rollup -c rollup.config.js && lessc --clean-css='--s0' less/main.less build/main.css"
     }
 }
