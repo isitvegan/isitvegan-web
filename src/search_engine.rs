@@ -17,6 +17,9 @@ pub trait SearchEngine: Debug + Sync + Send {
 
     /// Search for a query
     fn search(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>>;
+
+    /// Searches for an item by its slug
+    fn get_by_slug(&self, slug: &str) -> Result<Option<Item>, Box<dyn Error>>;
 }
 
 /// Search engine with an `ElasticSearch` backend
@@ -61,6 +64,23 @@ impl SearchEngine for ElasticSearch {
         if self.client.index(INDEX).exists().send()?.exists() {
             self.client.index(INDEX).delete().send()?;
         }
+
+        self.client
+            .index(INDEX)
+            .create()
+            .body(json!({
+                "mappings": {
+                    "item": {
+                        "properties": {
+                            "slug": {
+                                "type": "keyword"
+                            }
+                        }
+                    }
+                }
+            }))
+            .send()?;
+
         Ok(())
     }
 
@@ -81,6 +101,25 @@ impl SearchEngine for ElasticSearch {
             .into_hits()
             .filter_map(Hit::into_document)
             .collect())
+    }
+
+    fn get_by_slug(&self, slug: &str) -> Result<Option<Item>, Box<dyn Error>> {
+        Ok(self
+            .client
+            .search::<Item>()
+            .index(INDEX)
+            .body(json!({
+                "query": {
+                    "term": {
+                        "slug": slug
+                    }
+                }
+            }))
+            .send()
+            .map_err(Box::new)?
+            .into_hits()
+            .filter_map(Hit::into_document)
+            .next())
     }
 }
 

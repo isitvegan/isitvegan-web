@@ -39,7 +39,7 @@ impl Server for RocketServer {
             .map_err(Box::new)?;
 
         rocket::custom(config)
-            .mount("/", routes![search])
+            .mount("/", routes![search, item_by_slug])
             .manage(self.search_engine)
             .launch();
 
@@ -54,4 +54,13 @@ fn search(
     search_engine: State<'_, Arc<dyn SearchEngine>>,
 ) -> Result<Json<Vec<Item>>, Box<dyn Error>> {
     search_engine.search(&query).map(Json)
+}
+
+/// Returns a hello world
+#[get("/items/<slug>")]
+fn item_by_slug(
+    slug: String,
+    search_engine: State<'_, Arc<dyn SearchEngine>>,
+) -> Result<Option<Json<Item>>, Box<dyn Error>> {
+    search_engine.get_by_slug(&slug).map(|option| option.map(Json))
 }

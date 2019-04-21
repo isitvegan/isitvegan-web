@@ -16,6 +16,9 @@ pub struct Item {
     /// The item's name or title.
     pub name: String,
 
+    /// A URL-friendly identifier for this item.
+    pub slug: String,
+
     /// Alternative valid names for this item.
     pub alternative_names: Vec<String>,
 

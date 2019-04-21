@@ -1,10 +1,46 @@
 //! Data sources for items
 
-use crate::model::Items;
+use crate::model::{Source, State};
+use serde::{Deserialize, Serialize};
 use std::error::Error;
 use std::fs::File;
 use std::io::Read;
 use walkdir::WalkDir;
+
+/// All available items
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Items {
+    /// The items
+    pub items: Vec<Item>,
+}
+
+/// The description of an item.
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Item {
+    /// The item's name or title.
+    pub name: String,
+
+    /// Alternative valid names for this item.
+    pub alternative_names: Vec<String>,
+
+    /// [E number] assigned to this item.
+    ///
+    /// [E number](https://en.wikipedia.org/wiki/E_number)
+    pub e_number: Option<String>,
+
+    /// The item's vegan-ness.
+    pub state: State,
+
+    /// A text describing what the item and how it's typically used.
+    pub description: String,
+
+    /// List of sources for the item's state.
+    #[serde(default)]
+    pub sources: Vec<Source>,
+
+    /// Common vegan alternatives to this item.
+    pub vegan_alternatives: Vec<String>,
+}
 
 /// A data source for items
 pub trait ItemLoader {
