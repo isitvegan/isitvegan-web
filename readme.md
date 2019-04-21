@@ -120,7 +120,7 @@ These E Numbers are definitely vegan. They are derived from mineral, or vegetabl
 - [X] E122
 - [X] E123
 - [X] E124
-- [ ] E125
+- [X] E125
 - [ ] E126
 - [ ] E127
 - [ ] E128

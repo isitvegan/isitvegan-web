@@ -135,7 +135,8 @@ e_number = "E104"
 state = "vegan"
 description = """
 A synthetic 'coal tar' dye varying in colour between a dull yellow and greenish-yellow..
-Used in lipsticks hair products, colognes; also in a wide range of medications.
+Used in lipsticks hair products, colognes",
+ also in a wide range of medications.
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
@@ -339,5 +340,31 @@ sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "http://www.ukfoodguide.net/e124.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Ponceau_4R)" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Scarlet GN"
+alternative_names = [
+    "Crimson 4R",
+    "C.I. Food Red 1",
+    "Food red 1",
+    "FD & C Red no. 4",
+    "Hexacol Ponceau SX",
+    "Maple Ponceau SX",
+    "Ponceau SX",
+    "Purple 4R"
+]
+e_number = "E125"
+state = "vegan"
+description = """
+Scarlet GN is a red azo dye once used as a food dye.
+In the United States, it is not permitted for use in food or ingested drugs and may only be used in externally applied drugs and cosmetics.
+An exception was added in 1965 to allow the coloring of maraschino cherries, which then were considered mainly decorative and not a foodstuff.
+This exception was repealed in 1976 due to mounting evidence over its safety concerns.
+In the European Union, it is not permitted as a food additive."""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Scarlet_GN)" }
 ]
 vegan_alternatives = []
