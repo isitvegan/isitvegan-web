@@ -12,7 +12,7 @@ fn main() {
         config_loader.elasticsearch_port().unwrap(),
     )
     .unwrap();
-    let item_loader = TomlItemLoader::new(config_loader.items_file().unwrap());
+    let item_loader = TomlItemLoader::new(config_loader.items_directory().unwrap());
 
     let items = item_loader.load_items().unwrap();
 
