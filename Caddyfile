@@ -1,0 +1,4 @@
+localhost:2015
+
+root client
+proxy /search localhost:8080
