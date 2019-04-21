@@ -134,7 +134,7 @@ Be aware that suppliers will sometimes change their source without correcting th
 
 These E Numbers are definitely vegan. They are derived from mineral, or vegetable sources.
 
-√ Food Colourings
+Food Colourings
 - [X] E100
 - [X] E101
 - [X] E101a
@@ -194,7 +194,7 @@ These E Numbers are definitely vegan. They are derived from mineral, or vegetabl
 - [ ] E180
 - [ ] E181
 
-√Preservatives
+Preservatives
 - [ ] E200
 - [ ] E201
 - [ ] E202
@@ -248,7 +248,7 @@ These E Numbers are definitely vegan. They are derived from mineral, or vegetabl
 - [ ] E296
 - [ ] E297
 
-√Antioxidants
+Antioxidants
 - [ ] E300
 - [ ] E301
 - [ ] E302
@@ -336,7 +336,7 @@ These E Numbers are definitely vegan. They are derived from mineral, or vegetabl
 - [ ] E468
 - [ ] E469
 
-√Anti-Caking Agents
+Anti-Caking Agents
 - [ ] E500
 - [ ] E501
 - [ ] E503
@@ -386,7 +386,7 @@ These E Numbers are definitely vegan. They are derived from mineral, or vegetabl
 - [ ] E578
 - [ ] E579
 
-√Flavour Enhancers
+Flavour Enhancers
 - [ ] E620
 - [ ] E621
 - [ ] E622
@@ -403,7 +403,7 @@ These E Numbers are definitely vegan. They are derived from mineral, or vegetabl
 - [ ] E636
 - [ ] E637
 
-√Miscellaneous
+Miscellaneous
 - [ ] E900
 - [ ] E902
 - [ ] E903
@@ -448,7 +448,7 @@ These E Numbers are definitely vegan. They are derived from mineral, or vegetabl
 - [ ] E967
 - [ ] E999
 
-√Additional Chemicals
+Additional Chemicals
 - [ ] E1103
 - [ ] E1105
 - [ ] E1106
