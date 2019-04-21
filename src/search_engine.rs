@@ -52,9 +52,15 @@ impl SearchEngine for ElasticSearch {
         let operations = items.iter().enumerate().map(|(index, item)| {
             bulk_raw()
                 .index(serde_json::to_value(item).unwrap())
+                .ty(TYPE)
                 .id(index)
         });
-        self.client.bulk().index(INDEX).extend(operations).send()?;
+        self.client
+            .bulk()
+            .index(INDEX)
+            .ty(TYPE)
+            .extend(operations)
+            .send()?;
         Ok(())
     }
 
@@ -120,3 +126,4 @@ impl SearchEngine for ElasticSearch {
 }
 
 const INDEX: &str = "items";
+const TYPE: &str = "item";
