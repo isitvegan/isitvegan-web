@@ -1,5 +1,5 @@
 import { Component, h } from 'preact';
-import { Item, State } from '../searchApiReturnTypes';
+import { Item, State, Source } from '../searchApiReturnTypes';
 import { search } from '../searchApiProxy';
 
 export interface SearchResultsProps {
@@ -111,6 +111,7 @@ function SearchResultItem({ item }: { item: Item }) {
         <p class="content">{item.description}</p>
       </div>
       <AlternativeNames names={item.alternativeNames} />
+      <Sources sources={item.sources} />
     </article>
   );
 }
@@ -134,6 +135,37 @@ function AlternativeNames({ names }: { names: string[] }) {
         <p class='content'>{names.join(', ')}</p>
       </div>
     )
+  }
+}
+
+function Sources({ sources }: { sources: Source[] }) {
+  if (sources.length === 0) {
+    return null;
+  } else {
+    return (
+      <div class='section'>
+        <h3 class='title'>Sources</h3>
+        <ul class='content links-list'>
+          {sources.map((source) => <Source source={source} />)}
+        </ul>
+      </div>
+    )
+  }
+}
+
+function Source({ source }: { source: Source }) {
+  switch (source.type) {
+    case 'url':
+      return (
+        <li class='item'>
+          <a href={source.value} class='link'>
+            <svg class='icon'>
+              <use xlinkHref='/icons/external-link.svg#icon' href='/icons/external-link.svg#icon' />
+            </svg>
+            <span class='text'>{source.value}</span>
+          </a>
+        </li>
+      );
   }
 }
 
