@@ -270,7 +270,51 @@ Citrus Red 2 is listed by the International Agency for Research on Cancer (IARC)
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "https://en.wikipedia.org/wiki/Citrus_Red_2" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Citrus_Red_2" }
 
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Citrus Red 2"
+alternative_names = [
+    "Citrus Red No. 2",
+    "C.I. Solvent Red 80",
+    "C.I. 12156"
+]
+e_number = "E121"
+state = "vegan"
+description = """
+Citrus Red 2 is an artificial dye.
+As a food dye, it has been permitted by the US Food and Drug Administration (FDA) since 1956 to color the skin of oranges.
+Citrus Red 2 is listed by the International Agency for Research on Cancer (IARC) as a group 2B carcinogen, a substance "possibly carcinogenic to humans".
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Citrus_Red_2" }
+
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Azorubine"
+alternative_names = [
+    "Carmoisine",
+    "Food Red 3",
+    "Azorubin S",
+    "Brillantcarmoisin O",
+    "Acid Red 14",
+    "C.I. 14720"
+]
+e_number = "E122"
+state = "vegan"
+description = """
+A synthetic red azo dye used in foods which must be heat treated after fermentation.
+Also found in marzipan, Swiss roll, jams and preserves, sweets, brown sauce, flavoured yogurts, packet soups, jellies and breadcrumbs.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "http://www.ukfoodguide.net/e122.htm" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Azorubine" }
 ]
 vegan_alternatives = []
