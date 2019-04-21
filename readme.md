@@ -4,6 +4,26 @@ A useful tool to check wether food is vegan 🌱
 
 ## Supported Items
 
+### Products
+
+- [ ] Wool
+- [ ] Cotton
+- [ ] Leather
+
+### Food
+
+#### Proccessed
+
+- [ ] Bread
+- [ ] Flour
+
+#### Sweets
+
+- [ ] Gummy Bears
+- [ ] Jello
+- [ ] Honey
+- [ ] Sugar
+
 ### Drinks
 
 #### Milk
@@ -19,6 +39,9 @@ A useful tool to check wether food is vegan 🌱
 #### Energy Drinks
 
 - [X] Red Bull
+- [ ] Monster
+- [ ] ok.-
+- [ ] Energy Drinks in general
 
 ### E Numbers
 
