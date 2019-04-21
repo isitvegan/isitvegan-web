@@ -16,8 +16,7 @@ enum SearchResultsStateType {
   Error,
 }
 
-type SearchResultsStateInner =  { type: SearchResultsStateType.Loading } |
-                                { type: SearchResultsStateType.Loaded, items: Item[] } |
+type SearchResultsStateInner =  { type: SearchResultsStateType.Loaded, items: Item[] } |
                                 { type: SearchResultsStateType.Error };
 
 interface SearchResultsState {
@@ -39,8 +38,6 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
 
   render(props: SearchResultsProps, state: SearchResultsState) {
     switch (state.inner.type) {
-      case SearchResultsStateType.Loading:
-        return <Loading />;
       case SearchResultsStateType.Loaded:
         return <SearchResultItems items={state.inner.items} onSearchTermClick={props.onSearchTermClick} />
       case SearchResultsStateType.Error:
@@ -57,8 +54,6 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
   private fetchItems(query: string) {
     this.abortFetchRequest()
     this.abortController = new AbortController()
-
-    this.setState({ inner: { type: SearchResultsStateType.Loading }, query });
 
     search(query, this.abortController.signal)
       .then((items) => this.onItems(items))
@@ -231,8 +226,4 @@ function iconForState(state: State): string {
     case 'itDepends':
       return '/icons/it-depends.svg';
   }
-}
-
-function Loading () {
-  return <div></div>;
 }

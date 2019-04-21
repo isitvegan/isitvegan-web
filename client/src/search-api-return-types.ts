@@ -6,6 +6,7 @@ export interface Item {
   alternativeNames: string[],
   eNumber?: string,
   veganAlternatives: string[],
+  slug: string,
 }
 
 export interface Source {
