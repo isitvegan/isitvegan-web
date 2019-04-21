@@ -408,3 +408,27 @@ sources = [
     { type = "url", value = "http://www.ukfoodguide.net/e127.htm" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Red 2G"
+alternative_names = [
+    "Acid Red 1",
+    "Food Red 10",
+    "Amidonaphthol red G",
+    "Azogeranine",
+    "Azophloxine",
+    "Azofloxin",
+    "C.I. 18050"
+]
+e_number = "E128"
+state = "vegan"
+description = """
+A red synthetic coal tar or azo dye. Altough Red 2G is vegan, it is primarily used to colour meats.
+It can also be found in jams and drinks or as a dye for coatings, inks, paper, crepe paper and fine tissue. 
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Red_2G" },
+    { type = "url", value = "http://www.ukfoodguide.net/e128.htm" }
+]
+vegan_alternatives = []
