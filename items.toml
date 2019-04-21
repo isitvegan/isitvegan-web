@@ -1,6 +1,11 @@
 [[items]]
 name = "Curcumin"
-alternative_names = ["Natural Yellow 3"]
+alternative_names = [
+    "Diferuloylmethane",
+    "Curcumin I",
+    "C.I. 75300",
+    "Natural Yellow 3"
+]
 e_numbers = ["E100"]
 state = "vegan"
 description = """
@@ -16,7 +21,13 @@ vegan_alternatives = []
 
 [[items]]
 name = "Riboflavin"
-alternative_names = ["Riboflavin-5'-phosphate", "FMN", "Lactoflavin", "Vactochrome", "Vitamin G", "Vitamin B2"]
+alternative_names = [
+    "Riboflavin-5'-phosphate",
+    "FMN", "Lactoflavin",
+    "Vactochrome",
+    "Vitamin G",
+    "Vitamin B2"
+]
 e_numbers = ["E101", "E101a"]
 state = "vegan"
 description = """
@@ -49,7 +60,12 @@ vegan_alternatives = []
 
 [[items]]
 name = "Alkannin"
-alternative_names = ["C.I. Natural red 20", "Alkanet extract", "Anchusaic acid", "Anchusin"]
+alternative_names = [
+    "C.I. Natural red 20",
+    "Alkanet extract",
+    "Anchusaic acid",
+    "Anchusin"
+]
 e_numbers = ["E103"]
 state = "vegan"
 description = """
@@ -59,5 +75,30 @@ The dye is used as a food coloring and in cosmetics. It is used as a red-brown f
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Alkannin" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Quinoline Yellow WS"
+alternative_names = [
+    "C.I. Acid Yellow 3",
+    "Food Yellow 13",
+    "D&C Yellow No. 10",
+    "Acid yellow 3",
+    "Quinidine Yellow KT",
+    "Japan Yellow 203",
+    "Lemon Yellow ZN 3",
+    "C.I. 47005"
+]
+e_numbers = ["E104"]
+state = "vegan"
+description = """
+A synthetic 'coal tar' dye varying in colour between a dull yellow and greenish-yellow..
+Used in lipsticks hair products, colognes; also in a wide range of medications.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Quinoline_Yellow_WS" },
+    { type = "url", value = "www.ukfoodguide.net/e104.htm" }
 ]
 vegan_alternatives = []
