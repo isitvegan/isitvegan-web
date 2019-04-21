@@ -480,3 +480,29 @@ sources = [
     { type = "url", value = "http://www.ukfoodguide.net/e131.htm" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Indigo carmine"
+alternative_names = [
+    "Indigotine",
+    "5,5′-indigodisulfonic acid sodium salt",
+    "Brilliant Indigo",
+    "4 G",
+    "C.I. Acid Blue 74",
+    "C.I. 73015",
+    "Food Blue 1",
+    "FD&C Blue 2",
+    "Sicovit Indigotin 85"
+]
+e_number = "E132"
+state = "vegan"
+description = """
+A blue synthetic coal tar dye commonly added to tablets and capsules; also used in ice cream, sweets, baked goods, confectionery, biscuits. 
+It is also used diagnostically to check for coloured urine in kidney function tests.
+"""
+sources = [
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Indigo_carmine" },
+    { type = "url", value = "http://www.ukfoodguide.net/e132.htm" }
+]
+vegan_alternatives = []
