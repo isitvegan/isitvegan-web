@@ -52,17 +52,23 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
   }
 
   private fetchItems(query: string) {
-    this.abortFetchRequest()
-    this.abortController = new AbortController()
+    this.abortFetchRequest();
+    this.abortController = new AbortController();
 
-    search(query, this.abortController.signal)
-      .then((items) => this.onItems(items))
-      .catch((error) => this.onError(error))
+    this.setState({ query });
+
+    if (query === '') {
+      this.setState({ inner: { type: SearchResultsStateType.Loaded, items: [] }});
+    } else {
+      search(query, this.abortController.signal)
+        .then((items) => this.onItems(items))
+        .catch((error) => this.onError(error));
+    }
   }
 
   private onItems(items: Item[]) {
     const nextState: SearchResultsStateInner = { type: SearchResultsStateType.Loaded, items };
-    this.setState({ inner: nextState })
+    this.setState({ inner: nextState });
   }
 
   private onError(error: Error) {
@@ -75,8 +81,8 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
 
   private abortFetchRequest() {
     if (this.abortController) {
-      this.abortController.abort()
-      this.abortController = undefined
+      this.abortController.abort();
+      this.abortController = undefined;
     }
   }
 }

@@ -13,5 +13,7 @@ export const SearchInput = ({ query, onSearch, className, placeholder }: SearchI
     onSearch(target.value);
   };
 
-  return <input type='search' value={query} class={className} onInput={onInput} placeholder={placeholder} />
+  return <input type='search' value={query} class={className}
+                onInput={onInput}
+                placeholder={placeholder} />
 }
