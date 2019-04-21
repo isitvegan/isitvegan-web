@@ -6,7 +6,7 @@ alternative_names = [
     "C.I. 75300",
     "Natural Yellow 3"
 ]
-e_numbers = ["E100"]
+e_number = "E100"
 state = "vegan"
 description = """
 An orange yellow colour derived from the root of the curcuma (turmeric) plant.
@@ -28,7 +28,7 @@ alternative_names = [
     "Vitamin G",
     "Vitamin B2"
 ]
-e_numbers = ["E101"]
+e_number = "E101"
 state = "vegan"
 description = """
 Riboflavin is yellow or orange-yellow in colour and in addition to being used as a food colouring it is also used to fortify some foods.
@@ -72,7 +72,7 @@ alternative_names = [
     "Vitamin G",
     "Vitamin B2"
 ]
-e_numbers = ["E106"]
+e_number = "E106"
 state = "vegan"
 description = """
 Riboflavin-5-Sodium Phosphate is a yellow variant of E101a Riboflavin-5'-phosphate
@@ -86,7 +86,7 @@ vegan_alternatives = []
 [[items]]
 name = "Tartrazine "
 alternative_names = ["FD&C Yellow 5"]
-e_numbers = ["E102"]
+e_number = "E102"
 state = "vegan"
 description = """
 A synthetic yellow azo dye found in fruit squash, fruit cordial, coloured fizzy drinks, instant puddings, cake mixes, custard powder, soups, sauces, ice cream, ice lollies, sweets, chewing gum, marzipan, jam, jelly, marmalade, mustard, yoghurt and many convenience foods together with glycerine and lemon. It can also be found in the shells of medicinal capsules.
@@ -107,7 +107,7 @@ alternative_names = [
     "Anchusaic acid",
     "Anchusin"
 ]
-e_numbers = ["E103"]
+e_number = "E103"
 state = "vegan"
 description = """
 Alkannin is a natural dye that is obtained from the extracts of plants from the borage family Alkanna tinctoria that are found in the south of France.
@@ -131,7 +131,7 @@ alternative_names = [
     "Lemon Yellow ZN 3",
     "C.I. 47005"
 ]
-e_numbers = ["E104"]
+e_number = "E104"
 state = "vegan"
 description = """
 A synthetic 'coal tar' dye varying in colour between a dull yellow and greenish-yellow..
@@ -152,7 +152,7 @@ alternative_names = [
     "Food Yellow 2",
     "C.I. 13015"
 ]
-e_numbers = ["E105"]
+e_number = "E105"
 state = "vegan"
 description = """
 Fast Yellow AB is an azo dye. It used to be used as a food dye.

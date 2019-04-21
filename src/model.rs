@@ -19,10 +19,10 @@ pub struct Item {
     /// Alternative valid names for this item.
     pub alternative_names: Vec<String>,
 
-    /// [E numbers] assigned to this item.
+    /// [E number] assigned to this item.
     ///
-    /// [E numbers](https://en.wikipedia.org/wiki/E_number)
-    pub e_numbers: Vec<String>,
+    /// [E number](https://en.wikipedia.org/wiki/E_number)
+    pub e_number: Option<String>,
 
     /// The item's vegan-ness.
     pub state: State,
