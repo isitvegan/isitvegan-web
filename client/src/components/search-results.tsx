@@ -51,6 +51,10 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
     }
   }
 
+  componentWillMount() {
+    this.fetchItems(this.props.query);
+  }
+
   private fetchItems(query: string) {
     this.abortFetchRequest();
     this.abortController = new AbortController();
@@ -158,9 +162,14 @@ function VeganAlternatives({ alternatives, onSearchTermClick }: { alternatives: 
 
 function VeganAlternative(
   { alternative, onSearchTermClick, isLast }: { alternative: string, onSearchTermClick: OnSearchTermClick, isLast: boolean }) {
-  return (
+    const onClick = (event: MouseEvent, alternative: string) => {
+      event.preventDefault();
+      onSearchTermClick(alternative);
+    };
+
+    return (
     <span>
-      <a href='#' onClick={() => onSearchTermClick(alternative)}>{alternative}</a>
+      <a href='#' onClick={(event: MouseEvent) => onClick(event, alternative)}>{alternative}</a>
       {isLast ? null : ', '}
     </span>
   );

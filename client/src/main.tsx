@@ -2,8 +2,20 @@ import { h, render, Component } from 'preact';
 import { SearchInput } from './components/search-input';
 import { SearchResults } from './components/search-results';
 
+interface GlobalAppState {
+  query: string,
+}
+
 interface AppState {
   query: string,
+}
+
+function getGlobalAppState(): GlobalAppState|null {
+  return window.history.state;
+}
+
+function setGlobalAppState(state: GlobalAppState) {
+  window.history.replaceState(state, '');
 }
 
 class App extends Component<{}, AppState> {
@@ -12,9 +24,9 @@ class App extends Component<{}, AppState> {
 
     this._onSearch = this._onSearch.bind(this);
 
-    this.state = {
-      query: '',
-    }
+    const { query } = getGlobalAppState() || { query: '' };
+
+    this.state = { query }
   }
 
   render(props: {}, { query }: AppState) {
@@ -33,7 +45,8 @@ class App extends Component<{}, AppState> {
   }
 
   private _onSearch(query: string) {
-    this.setState({ query })
+    this.setState({ query });
+    setGlobalAppState({ query });
   }
 }
 
