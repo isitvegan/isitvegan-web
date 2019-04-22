@@ -779,6 +779,9 @@ if __name__ == "__main__":
             items.append(future.result())
 
     items = chain(*items)
+    print(f'Finished creating items, writing them to {_FILENAME}')
     with open(_FILENAME, 'w') as import_file:
         for item in items:
             import_file.write(item)
+
+    print('All done!')
