@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup, NavigableString, Tag
 import urllib.request
 import requests
 import re
+import os
 
 VEGAN_E_NUMBERS = [
     "E133",
@@ -595,8 +596,7 @@ alternative_names = ['''
     item += f''']
 e_number = "{e_number}"
 state = "vegan"
-description = """
-"""
+description = ""
 sources = [
 '''
     for source in sources:
@@ -609,21 +609,27 @@ vegan_alternatives = []
     return item
 
 
-for e_number in VEGAN_E_NUMBERS:
-    wikipedia_soup = _get_soup(_E_NUMBERS_URL)
-    e_number_soup, title_soup = _get_wikipedia_e_number_and_title_table_data(
-        wikipedia_soup, e_number)
-    wikipedia_url = _get_wikipedia_url(e_number_soup, title_soup)
-    name = _get_e_number_title(title_soup)
+_FILENAME = 'imported_vegan.toml'
 
-    sources = [wikipedia_url]
+if __name__ == "__main__":
+    os.remove(_FILENAME)
+    for e_number in VEGAN_E_NUMBERS:
+        wikipedia_soup = _get_soup(_E_NUMBERS_URL)
+        e_number_soup, title_soup = _get_wikipedia_e_number_and_title_table_data(
+            wikipedia_soup, e_number)
+        wikipedia_url = _get_wikipedia_url(e_number_soup, title_soup)
+        name = _get_e_number_title(title_soup)
 
-    uk_food_guide_url = _get_uk_food_guide_url(e_number)
-    if uk_food_guide_url is not None:
-        sources.append(uk_food_guide_url)
+        sources = [wikipedia_url]
 
-    article_soup = _get_soup(wikipedia_url)
-    alternative_names = _get_alternative_names(article_soup, e_number)
+        uk_food_guide_url = _get_uk_food_guide_url(e_number)
+        if uk_food_guide_url is not None:
+            sources.append(uk_food_guide_url)
 
-    item = _create_item_entry(name, e_number, sources, alternative_names)
-    print(item)
+        article_soup = _get_soup(wikipedia_url)
+        alternative_names = _get_alternative_names(article_soup, e_number)
+
+        item = _create_item_entry(name, e_number, sources, alternative_names)
+        print(item)
+        with open(_FILENAME, 'a') as the_file:
+            the_file.write(item)
