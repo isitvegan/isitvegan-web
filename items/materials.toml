@@ -68,3 +68,19 @@ sources = [
     { type = "url", value = "https://itdoesnttastelikechicken.com/melty-stretchy-gooey-vegan-mozarella/" }
 ]
 vegan_alternatives = ["Tapioca Starch"]
+
+[[items]]
+name = "Whey"
+alternative_names = []
+state = "carnist"
+description = """
+The liquid that remains after dairy milk has been curdled and strained.
+A by-product of the cheese industry found in surprisingly many otherwise vegan foods.
+Often found in protein shakes.
+"""
+sources = [
+    { type = "url", value = "https://www.vegan.com/whey/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Whey" },
+    { type = "url", value = "https://www.bodybuilding.com/fun/10-best-tasting-vegan-protein-powders.html" }
+]
+vegan_alternatives = ["Pea Protein", "Rice Protein"]
