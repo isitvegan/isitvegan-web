@@ -490,6 +490,20 @@ def _get_uk_food_guide_url(e_number):
         return None
 
 
+_italic_re = re.compile(r'</?i>')
+_a_re = re.compile(r'</?a( href=".*")?( title=".*")?>')
+
+_non_dot_re = re.compile(r'\n([^•])')
+_dot_re = re.compile(r'\s*•')
+
+_non_semicolon_re = re.compile(r'\n([^;])')
+_semicolon_re = re.compile(r'\s*;')
+
+_comma_space_re = re.compile(r'\s*, ')
+
+_e_number_re = re.compile(r'\b[Ee] *\d+\w*')
+
+
 def _get_alternative_names(wikipedia_soup, e_number):
     info_box = wikipedia_soup.find(class_='infobox bordered')
     if info_box is None:
@@ -502,8 +516,8 @@ def _get_alternative_names(wikipedia_soup, e_number):
                 # I hate Wikipedia's 'Other names' section
                 # It's so hecking inconsistent!
                 html = str(data)
-                html = re.sub(r'</?i>', '', html)
-                html = re.sub(r'</?a( href=".*")?( title=".*")?>', '', html)
+                html = _italic_re.sub('', html)
+                html = _a_re.sub('', html)
 
                 data = BeautifulSoup(html, 'html.parser')
 
@@ -513,18 +527,18 @@ def _get_alternative_names(wikipedia_soup, e_number):
                 names = names.replace('\n ', ' ')
                 names = names.strip()
                 if '•' in names:
-                    names = re.sub(r'\n([^•])', r'$1', names)
-                    names = re.sub(r'\s*•', '\n', names)
+                    names = _non_dot_re.sub(r'\1', names)
+                    names = _dot_re.sub('\n', names)
                 elif ';' in names:
-                    names = re.sub(r'\n([^;])', r'\1', names)
-                    names = re.sub(r'\s*;', '\n', names)
+                    names = _non_semicolon_re.sub(r'\1', names)
+                    names = _semicolon_re.sub('\n', names)
                 elif ' ' in names:
-                    names = re.sub(r'\s*, ', '\n', names)
+                    names = _comma_space_re.sub('\n', names)
                 else:
                     # CSV without spaces
-                    names = re.sub(r',', '\n', names)
+                    names = names.replace(',', '\n')
 
-                names = re.sub(r'[^\w][Ee] *\d+\w*', '', names)
+                names = _e_number_re.sub('', names)
                 names = names.split('\n')
                 names = (
                     name.strip() for name in names if _is_name_valid(name))
