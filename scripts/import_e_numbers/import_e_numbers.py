@@ -5,6 +5,9 @@ import urllib.request
 import requests
 import re
 import os
+from itertools import islice
+from concurrent.futures import ThreadPoolExecutor, Future
+import multiprocessing
 
 VEGAN_E_NUMBERS = [
     "E133",
@@ -294,100 +297,101 @@ VEGAN_E_NUMBERS = [
 
     "E1103",
     "E1105",
-    "E1106",
-    "E1107",
-    "E1108",
-    "E1109",
-    "E1110",
-    "E1111",
-    "E1112",
-    "E1113",
-    "E1114",
-    "E1115",
-    "E1116",
-    "E1117",
-    "E1118",
-    "E1119",
-    "E1120",
-    "E1121",
-    "E1122",
-    "E1123",
-    "E1124",
-    "E1125",
-    "E1126",
-    "E1127",
-    "E1128",
-    "E1129",
-    "E1130",
-    "E1131",
-    "E1132",
-    "E1133",
-    "E1134",
-    "E1135",
-    "E1136",
-    "E1137",
-    "E1138",
-    "E1139",
-    "E1140",
-    "E1141",
-    "E1142",
-    "E1143",
-    "E1144",
-    "E1145",
-    "E1146",
-    "E1147",
-    "E1148",
-    "E1149",
-    "E1150",
-    "E1151",
-    "E1152",
-    "E1153",
-    "E1154",
-    "E1155",
-    "E1156",
-    "E1157",
-    "E1158",
-    "E1159",
-    "E1160",
-    "E1161",
-    "E1162",
-    "E1163",
-    "E1164",
-    "E1165",
-    "E1166",
-    "E1167",
-    "E1168",
-    "E1169",
-    "E1170",
-    "E1171",
-    "E1172",
-    "E1173",
-    "E1174",
-    "E1175",
-    "E1176",
-    "E1177",
-    "E1178",
-    "E1179",
-    "E1180",
-    "E1181",
-    "E1182",
-    "E1183",
-    "E1184",
-    "E1185",
-    "E1186",
-    "E1187",
-    "E1188",
-    "E1189",
-    "E1190",
-    "E1191",
-    "E1192",
-    "E1193",
-    "E1194",
-    "E1195",
-    "E1196",
-    "E1197",
-    "E1198",
-    "E1199",
+    # The following don't seem to exist
+    # "E1106",
+    # "E1107",
+    # "E1108",
+    # "E1109",
+    # "E1110",
+    # "E1111",
+    # "E1112",
+    # "E1113",
+    # "E1114",
+    # "E1115",
+    # "E1116",
+    # "E1117",
+    # "E1118",
+    # "E1119",
+    # "E1120",
+    # "E1121",
+    # "E1122",
+    # "E1123",
+    # "E1124",
+    # "E1125",
+    # "E1126",
+    # "E1127",
+    # "E1128",
+    # "E1129",
+    # "E1130",
+    # "E1131",
+    # "E1132",
+    # "E1133",
+    # "E1134",
+    # "E1135",
+    # "E1136",
+    # "E1137",
+    # "E1138",
+    # "E1139",
+    # "E1140",
+    # "E1141",
+    # "E1142",
+    # "E1143",
+    # "E1144",
+    # "E1145",
+    # "E1146",
+    # "E1147",
+    # "E1148",
+    # "E1149",
+    # "E1150",
+    # "E1151",
+    # "E1152",
+    # "E1153",
+    # "E1154",
+    # "E1155",
+    # "E1156",
+    # "E1157",
+    # "E1158",
+    # "E1159",
+    # "E1160",
+    # "E1161",
+    # "E1162",
+    # "E1163",
+    # "E1164",
+    # "E1165",
+    # "E1166",
+    # "E1167",
+    # "E1168",
+    # "E1169",
+    # "E1170",
+    # "E1171",
+    # "E1172",
+    # "E1173",
+    # "E1174",
+    # "E1175",
+    # "E1176",
+    # "E1177",
+    # "E1178",
+    # "E1179",
+    # "E1180",
+    # "E1181",
+    # "E1182",
+    # "E1183",
+    # "E1184",
+    # "E1185",
+    # "E1186",
+    # "E1187",
+    # "E1188",
+    # "E1189",
+    # "E1190",
+    # "E1191",
+    # "E1192",
+    # "E1193",
+    # "E1194",
+    # "E1195",
+    # "E1196",
+    # "E1197",
+    # "E1198",
+    # "E1199",
     "E1200",
     "E1201",
     "E1202",
@@ -621,11 +625,10 @@ vegan_alternatives = []
 
 _FILENAME = 'imported_vegan.toml'
 
-if __name__ == "__main__":
-    if os.path.isfile(_FILENAME):
-        os.remove(_FILENAME)
 
-    for e_number in VEGAN_E_NUMBERS:
+def _get_items(e_numbers):
+    items = []
+    for e_number in e_numbers:
         wikipedia_soup = _get_soup(_E_NUMBERS_URL)
         e_number_soup, title_soup = _get_wikipedia_e_number_and_title_table_data(
             wikipedia_soup, e_number)
@@ -642,6 +645,43 @@ if __name__ == "__main__":
         alternative_names = _get_alternative_names(article_soup, e_number)
 
         item = _create_item_entry(name, e_number, sources, alternative_names)
-        print(item)
-        with open(_FILENAME, 'a') as the_file:
+        items.append(item)
+        print(f'Created item {e_number}')
+    return items
+
+
+def _chunks(it, size):
+    it = iter(it)
+    return iter(lambda: tuple(islice(it, size)), ())
+
+
+if __name__ == "__main__":
+    worker_count = multiprocessing.cpu_count() - 1
+    items = None
+    with ThreadPoolExecutor(max_workers=worker_count) as executor:
+        item_count = len(VEGAN_E_NUMBERS)
+        items_per_worker = int(item_count / worker_count)
+        print(f'item count: {item_count}')
+        print(f'worker count: {worker_count}')
+        print(f'items per worker: {items_per_worker}')
+
+        futures = []
+
+        if worker_count > 0:
+            all_worker_items = VEGAN_E_NUMBERS[items_per_worker:]
+            chunks = _chunks(all_worker_items, items_per_worker)
+            for index, worker_items in enumerate(chunks):
+                print(f'Running worker #{index} with items {worker_items}')
+                future = executor.submit(_get_items, worker_items)
+                futures.append(future)
+
+        main_thread_items = VEGAN_E_NUMBERS[:items_per_worker]
+        print(f'Running main thread with items {main_thread_items}')
+        items = _get_items(main_thread_items)
+
+        for future in futures:
+            items.append(future.result())
+
+    with open(_FILENAME, 'w') as the_file:
+        for item in items:
             the_file.write(item)
