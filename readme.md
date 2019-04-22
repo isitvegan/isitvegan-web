@@ -52,6 +52,8 @@ add information to the [items/ directory](https://github.com/jnferner/isitvegan.
 
 ### E Numbers
 
+All of these were imported automatically using [scripts/import_e_numbers.py](https://github.com/jnferner/isitvegan.app/tree/master/scripts/import_e_numbers.py). The unchecked items don't have any description yet.
+
 Sources:
 - <https://elated.co.za/which-e-numbers-are-vegan/>
 - <http://www.ukfoodguide.net/enumeric.htm>
