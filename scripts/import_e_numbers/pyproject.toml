@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "import_e_numbers"
+version = "0.1.0"
+description = ""
+authors = ["Jan Nils Ferner <jn_ferner@hotmail.de>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+bs4 = "^0.0.1"
+requests = "^2.21"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
