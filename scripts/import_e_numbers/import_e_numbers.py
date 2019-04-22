@@ -293,10 +293,12 @@ E_NUMBERS = [
     ("E924", "vegan"),
     ("E925", "vegan"),
     ("E926", "vegan"),
-    # Seems to be a typo, should be E927a
+    # Seems to be a typo, should probably be E927a
     # ("E927", "vegan"),
     ("E927a", "vegan"),
-    ("E297b", "vegan"),
+    # Seems to be a typo, should probably be E927b
+    # ("E297b", "vegan"),
+    ("E927b", "vegan"),
     ("E928", "vegan"),
     ("E930", "vegan"),
     ("E938", "vegan"),
