@@ -11,6 +11,6 @@ A simple tool to check whether an item is vegan 🌱
 
 ## Supported Items
 
-- All E numbers
+- All [E numbers](https://en.wikipedia.org/wiki/E_number)
 - Some materials
 - Some milks
