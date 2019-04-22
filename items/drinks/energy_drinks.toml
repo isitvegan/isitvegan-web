@@ -24,7 +24,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Monster Ultra"
+name = "Monster Energy Ultra"
 alternative_names = []
 state = "itDepends"
 description = """
@@ -38,7 +38,7 @@ sources = [
 vegan_alternatives = ["Monster Ultra Blue"]
 
 [[items]]
-name = "Monster Hydro"
+name = "Monster Energy Hydro"
 alternative_names = []
 state = "vegan"
 description = """
@@ -50,7 +50,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Juice Monster"
+name = "Monster Energy Juice"
 alternative_names = []
 state = "vegan"
 description = """
@@ -63,7 +63,7 @@ vegan_alternatives = ["Monster Ultra Blue"]
 
 
 [[items]]
-name = "Java Monster"
+name = "Monster Energy Java"
 alternative_names = []
 state = "carnist"
 description = """
