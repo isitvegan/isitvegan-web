@@ -612,7 +612,9 @@ vegan_alternatives = []
 _FILENAME = 'imported_vegan.toml'
 
 if __name__ == "__main__":
-    os.remove(_FILENAME)
+    if os.path.isfile(_FILENAME):
+        os.remove(_FILENAME)
+
     for e_number in VEGAN_E_NUMBERS:
         wikipedia_soup = _get_soup(_E_NUMBERS_URL)
         e_number_soup, title_soup = _get_wikipedia_e_number_and_title_table_data(
