@@ -446,13 +446,19 @@ def _get_wikipedia_article_url(article):
     return f'https://en.wikipedia.org/wiki/{article}'
 
 
+def _does_article_exist(url):
+    return url.find('redlink=1') == -1
+
+
 def _get_wikipedia_url(e_number_soup, title_soup):
     possible_urls = [_get_url(e_number_soup), _get_url(title_soup)]
 
     for url_fragment in possible_urls:
         if url_fragment is not None:
             article = url_fragment.replace('/wiki/', '')
-            return _get_wikipedia_article_url(article)
+            url = _get_wikipedia_article_url(article)
+            if _does_article_exist(url):
+                return url
 
     return _E_NUMBERS_URL
 
