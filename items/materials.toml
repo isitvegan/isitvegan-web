@@ -87,7 +87,9 @@ vegan_alternatives = ["Pea Protein", "Rice Protein"]
 
 [[items]]
 name = "Lactose"
-alternative_names = []
+alternative_names = [
+    "Milk sugar"
+]
 state = "carnist"
 description = """
 A sugar found in dairy milk. About 65% of the global population are lactose intolerant,

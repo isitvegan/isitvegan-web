@@ -1,7 +1,8 @@
 [[items]]
 name = "Milk"
 alternative_names = [
-    "Cow's Milk"
+    "Cow's Milk",
+    "Dairy Milk"
 ]
 state = "carnist"
 description = """
