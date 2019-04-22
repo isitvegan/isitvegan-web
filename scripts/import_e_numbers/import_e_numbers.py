@@ -5,7 +5,7 @@ import urllib.request
 import requests
 import re
 import os
-from itertools import islice
+from itertools import islice, chain
 from concurrent.futures import ThreadPoolExecutor, Future
 import multiprocessing
 from pprint import pprint
@@ -771,13 +771,14 @@ if __name__ == "__main__":
                 futures.append(future)
 
         main_thread_items = E_NUMBERS[:items_per_worker]
-        print(f'Running main thread with the following items.'
+        print(f'Running main thread with the following items.')
         pprint(main_thread_items)
         items = _get_items(main_thread_items)
 
         for future in futures:
             items.append(future.result())
 
+    items = chain(*items)
     with open(_FILENAME, 'w') as the_file:
         for item in items:
             the_file.write(item)
