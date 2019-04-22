@@ -533,16 +533,16 @@ def _get_alternative_names(wikipedia_soup, e_number):
 
 
 def _is_name_valid(name):
-    invalid_names = ['and', 'or', '']
     if name is None:
         return False
     name = name.strip()
+    invalid_names = ['and', 'or']
     is_invalid = name.strip() in invalid_names
     is_e_number = _contains_the_word_e_number(name)
 
     length = len(name)
     is_valid_length = 1 < length < 25
-    return not is_invalid and not is_e_number and is_valid_length
+    return not is_invalid and not is_e_number and not name.isspace() and is_valid_length
 
 
 def _get_e_number_variations(e_number):
@@ -555,16 +555,18 @@ def _create_item_entry(name, e_number, sources, alternative_names):
     item = f'''
 [[items]]
 name = "{name}"
-alternative_names = [
-'''
+alternative_names = ['''
 
-    alternative_names = (
-        f'{INDENTATION}"{name}"' for name in alternative_names)
-    names = ',\n'.join(alternative_names)
-    item += names
+    alternative_names = list(alternative_names)
+    if len(alternative_names) > 0:
+        alternative_names = (
+            f'{INDENTATION}"{name}"' for name in alternative_names)
+        names = ',\n'.join(alternative_names)
+        item += '\n'
+        item += names
+        item += '\n'
 
-    item += f'''
-]
+    item += f''']
 e_number = "{e_number}"
 state = "vegan"
 description = """
