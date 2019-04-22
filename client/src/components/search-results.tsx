@@ -112,9 +112,7 @@ function SearchResultItem({ item, onSearchTermClick }: { item: Item, onSearchTer
           </div>
           {item.eNumber ? <span class='enumber'>{item.eNumber}</span> : null}
       </header>
-      <div class="section">
-        <p class="content">{item.description}</p>
-      </div>
+      <Description description={item.description} />
       <AlternativeNames names={item.alternativeNames} />
       <VeganAlternatives alternatives={item.veganAlternatives} onSearchTermClick={onSearchTermClick} />
       <Sources sources={item.sources} />
@@ -129,6 +127,18 @@ function StateIcon({ state }: { state: State }) {
         <use xlinkHref={icon} href={icon} />
     </svg>
   )
+}
+
+function Description({ description }: { description: string }) {
+  if (description === "") {
+    return null;
+  } else {
+    return (
+      <div class="section">
+        <p class="content">{description}</p>
+      </div>
+    );
+  }
 }
 
 function VeganAlternatives({ alternatives, onSearchTermClick }: { alternatives: string[], onSearchTermClick: OnSearchTermClick }) {
