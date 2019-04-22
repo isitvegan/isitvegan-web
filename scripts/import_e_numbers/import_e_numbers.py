@@ -414,27 +414,56 @@ VEGAN_E_NUMBERS = [
     "E1520",
 ]
 
-
-def _get_first_table_data(haystack, needle):
-    for index, item in enumerate(haystack):
-        item_text = item.get_text().strip()
-        if item_text == needle:
-            return index
-    return None
+_E_NUMBERS_URL = 'https://en.wikipedia.org/wiki/E_number'
 
 
-def _get_wikipedia_url(item):
-    sanitized_item = item.replace('/wiki/', '')
-    return f'https://en.wikipedia.org/wiki/{sanitized_item}'
+def _get_wikipedia_e_number_and_title_table_data(e_numbers_soup, e_number):
+    e_number_table_data = None
+
+    for table in e_numbers_soup.find_all('table'):
+        table_body = table.find('tbody')
+        for table_row in table_body.find_all('tr'):
+            for table_data in table_row.find_all('td'):
+                text = table_data.get_text().strip()
+                if text == e_number:
+                    e_number_table_data = table_data
+                elif e_number_table_data is not None:
+                    # We're in the title table data
+                    return e_number_table_data, table_data
+    raise ValueError(
+        f'{e_number} was not found on Wikipedia page {_E_NUMBERS_URL}')
+
+
+def _get_url(soup):
+    anchor = soup.a
+    if anchor is None:
+        return None
+    return anchor['href']
+
+
+def _get_wikipedia_article_url(article):
+    return f'https://en.wikipedia.org/wiki/{article}'
+
+
+def _get_wikipedia_url(e_number_soup, title_soup):
+    possible_urls = [_get_url(e_number_soup), _get_url(title_soup)]
+
+    for url_fragment in possible_urls:
+        if url_fragment is not None:
+            article = url_fragment.replace('/wiki/', '')
+            return _get_wikipedia_article_url(article)
+
+    return _E_NUMBERS_URL
+
+
+def _get_e_number_title(title_soup):
+    text = title_soup.get_text().strip()
+    return text
 
 
 def _get_soup(url):
     content = urllib.request.urlopen(url)
     return BeautifulSoup(content, 'html.parser')
-
-
-def _get_wikipedia_title(wikipedia_soup):
-    return wikipedia_soup.find(id='firstHeading').get_text().strip()
 
 
 def _contains_e_number(text, e_number):
@@ -452,40 +481,6 @@ def _contains_the_word_e_number(text):
         if e_number_variation in text:
             return True
     return False
-
-
-def _take_first_possibility_that_matches(wikipedia_soup, predicate):
-    possible_pages = wikipedia_soup.find(
-        id='mw-content-text').find('ul').find_all('li')
-
-    for possible_page in possible_pages:
-        possible_page_text = possible_page.get_text().strip()
-        if predicate(possible_page_text):
-            for link in possible_page.find_all('a', href=True):
-                wikipedia_url = _get_wikipedia_url(link['href'])
-                wikipedia_soup = _get_soup(wikipedia_url)
-                name = _get_wikipedia_title(wikipedia_soup)
-                if not _contains_the_word_e_number(name):
-                    return wikipedia_url, wikipedia_soup, name
-    return None
-
-
-def _resolve_disambiguation(wikipedia_soup):
-    result = _take_first_possibility_that_matches(wikipedia_soup, lambda possible_page_text: _contains_the_word_e_number(
-        possible_page_text) or 'additive' in possible_page_text)
-
-    if result is not None:
-        return result
-
-    # Fallback: Just take the first one that's not a car route
-    result = _take_first_possibility_that_matches(
-        wikipedia_soup, lambda possible_page_text: 'route' not in possible_page_text)
-
-    if result is not None:
-        return result
-
-    # The page doesn't exist
-    return None
 
 
 def _get_uk_food_guide_url(e_number):
@@ -512,8 +507,8 @@ _comma_space_re = re.compile(r'\s*, ')
 _e_number_re = re.compile(r'\b[Ee] *\d+\w*')
 
 
-def _get_alternative_names(wikipedia_soup, e_number):
-    info_box = wikipedia_soup.find(class_='infobox bordered')
+def _get_alternative_names(article_soup, e_number):
+    info_box = article_soup.find(class_='infobox bordered')
     if info_box is None:
         return []
     for row in info_box.find_all('tr'):
@@ -606,23 +601,20 @@ vegan_alternatives = []
 
 
 for e_number in VEGAN_E_NUMBERS:
-    wikipedia_url = _get_wikipedia_url(e_number)
-    wikipedia_soup = _get_soup(wikipedia_url)
-    name = _get_wikipedia_title(wikipedia_soup)
+    wikipedia_soup = _get_soup(_E_NUMBERS_URL)
+    e_number_soup, title_soup = _get_wikipedia_e_number_and_title_table_data(
+        wikipedia_soup, e_number)
+    wikipedia_url = _get_wikipedia_url(e_number_soup, title_soup)
+    name = _get_e_number_title(title_soup)
 
-    if name == e_number:
-        wikipedia_url, wikipedia_soup, name = _resolve_disambiguation(
-            wikipedia_soup)
-
-    sources = []
-    if wikipedia_url is not None:
-        sources.append(wikipedia_url)
+    sources = [wikipedia_url]
 
     uk_food_guide_url = _get_uk_food_guide_url(e_number)
     if uk_food_guide_url is not None:
         sources.append(uk_food_guide_url)
 
-    alternative_names = _get_alternative_names(wikipedia_soup, e_number)
+    article_soup = _get_soup(wikipedia_url)
+    alternative_names = _get_alternative_names(article_soup, e_number)
 
     item = _create_item_entry(name, e_number, sources, alternative_names)
     print(item)
