@@ -1,0 +1,119 @@
+[[items]]
+name = "Feldschlösschen Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Feldschlösschen Getränke AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Heineken Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Heineken AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Eichhof Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Eichhof AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Baar Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Baar AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Felsenau Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Felsenau AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Fischerstube Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Fischerstube AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Locher Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Locher AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Rosengarten Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Rosengarten AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Schützengarten Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Schützengarten AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Stadtbühl Beers"
+alternative_names = []
+state = "vegan"
+description = """
+All beers brewed by the Stadtbühl AG are vegan.
+"""
+sources = [
+    { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
+]
+vegan_alternatives = []
