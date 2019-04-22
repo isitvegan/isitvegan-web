@@ -1,6 +1,6 @@
 # Is it Vegan?
 
-A simple tool to check whether an item is vegan 🌱
+This repo is home to [isitvegan.app](https://www.isitvegan.app), a simple tool to check whether an item is vegan 🌱
 
 ## Features
 
