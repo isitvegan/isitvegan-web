@@ -516,7 +516,7 @@ def _get_alternative_names(wikipedia_soup, e_number):
                     names = re.sub(r'\n([^•])', r'$1', names)
                     names = re.sub(r'\s*•', '\n', names)
                 elif ';' in names:
-                    names = re.sub(r'\n([^;])', r'$1', names)
+                    names = re.sub(r'\n([^;])', r'\1', names)
                     names = re.sub(r'\s*;', '\n', names)
                 elif ' ' in names:
                     names = re.sub(r'\s*, ', '\n', names)
