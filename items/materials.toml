@@ -54,3 +54,17 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Isinglass" }
 ]
 vegan_alternatives = ["Pectin", "Pea Protein"]
+
+[[items]]
+name = "Casein"
+alternative_names = []
+state = "carnist"
+description = """
+A family of proteins found in dairy milk resposible the strechiness typically associated with melted cheese.
+"""
+sources = [
+    { type = "url", value = "https://www.vegan.com/casein/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Casein" },
+    { type = "url", value = "https://itdoesnttastelikechicken.com/melty-stretchy-gooey-vegan-mozarella/" }
+]
+vegan_alternatives = ["Tapioca Starch"]
