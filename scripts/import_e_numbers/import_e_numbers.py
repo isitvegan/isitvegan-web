@@ -484,9 +484,8 @@ def _resolve_disambiguation(wikipedia_soup):
     if result is not None:
         return result
 
-    disambiguation_title = _get_wikipedia_title(wikipedia_soup)
-    raise ValueError(
-        f'Disambiguation could not be resolved for page {disambiguation_title}')
+    # The page doesn't exist
+    return None
 
 
 def _get_uk_food_guide_url(e_number):
@@ -615,7 +614,10 @@ for e_number in VEGAN_E_NUMBERS:
         wikipedia_url, wikipedia_soup, name = _resolve_disambiguation(
             wikipedia_soup)
 
-    sources = [wikipedia_url]
+    sources = []
+    if wikipedia_url is not None:
+        sources.append(wikipedia_url)
+
     uk_food_guide_url = _get_uk_food_guide_url(e_number)
     if uk_food_guide_url is not None:
         sources.append(uk_food_guide_url)
