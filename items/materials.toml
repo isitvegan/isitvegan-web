@@ -84,3 +84,18 @@ sources = [
     { type = "url", value = "https://www.bodybuilding.com/fun/10-best-tasting-vegan-protein-powders.html" }
 ]
 vegan_alternatives = ["Pea Protein", "Rice Protein"]
+
+[[items]]
+name = "Lactose"
+alternative_names = []
+state = "carnist"
+description = """
+A sugar found in dairy milk. About 65% of the global population are lactose intolerant,
+which pushes the market to produce a wide variety of dairy-free products.
+"""
+sources = [
+    { type = "url", value = "https://www.vegan.com/dairy-free/" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Lactose" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Lactose_intolerance" }
+]
+vegan_alternatives = []
