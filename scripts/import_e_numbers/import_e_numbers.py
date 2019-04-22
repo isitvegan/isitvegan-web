@@ -8,6 +8,7 @@ import os
 from itertools import islice
 from concurrent.futures import ThreadPoolExecutor, Future
 import multiprocessing
+from pprint import pprint
 
 E_NUMBERS = [
     # The following were already added manually
@@ -764,12 +765,14 @@ if __name__ == "__main__":
             all_worker_items = E_NUMBERS[items_per_worker:]
             chunks = _chunks(all_worker_items, items_per_worker)
             for index, worker_items in enumerate(chunks):
-                print(f'Running worker #{index} with items {worker_items}')
+                print(f'Running worker #{index} with the following items.')
+                pprint(worker_items)
                 future = executor.submit(_get_items, worker_items)
                 futures.append(future)
 
         main_thread_items = E_NUMBERS[:items_per_worker]
-        print(f'Running main thread with items {main_thread_items}')
+        print(f'Running main thread with the following items.'
+        pprint(main_thread_items)
         items = _get_items(main_thread_items)
 
         for future in futures:
