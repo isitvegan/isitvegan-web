@@ -456,9 +456,18 @@ def _get_wikipedia_url(e_number_soup, title_soup):
     return _E_NUMBERS_URL
 
 
+_title_re = re.compile(r'[\(\)\:]')
+
+
 def _get_e_number_title(title_soup):
-    text = title_soup.get_text().strip()
-    return text
+    title = title_soup.get_text().strip()
+
+    ugly_title_result = _title_re.search(title)
+    if ugly_title_result is not None:
+        end_of_pretty_title = ugly_title_result.start()
+        return title[:end_of_pretty_title].strip()
+
+    return title
 
 
 def _get_soup(url):
