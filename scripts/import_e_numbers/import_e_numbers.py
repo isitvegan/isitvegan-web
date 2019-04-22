@@ -779,6 +779,6 @@ if __name__ == "__main__":
             items.append(future.result())
 
     items = chain(*items)
-    with open(_FILENAME, 'w') as the_file:
+    with open(_FILENAME, 'w') as import_file:
         for item in items:
-            the_file.write(item)
+            import_file.write(item)
