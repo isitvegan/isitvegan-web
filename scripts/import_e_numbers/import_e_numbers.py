@@ -444,18 +444,28 @@ def _contains_e_number(text, e_number):
     return False
 
 
-def _resolve_disambiguation(wikipedia_soup, e_number):
+def _contains_the_word_e_number(text):
+    e_number = 'E Number'
+    e_number_variations = [e_number, e_number.lower(), e_number.replace(
+        'E', 'e'), e_number.replace('N', 'n')]
+    for e_number_variation in e_number_variations:
+        if e_number_variation in text:
+            return True
+    return False
+
+
+def _resolve_disambiguation(wikipedia_soup):
     disambiguation_title = _get_wikipedia_title(wikipedia_soup)
     possible_pages = wikipedia_soup.find(
         id='mw-content-text').find('ul').find_all('li')
     for possible_page in possible_pages:
         possible_page_text = possible_page.get_text().strip()
-        if _contains_e_number(possible_page_text, e_number):
+        if _contains_the_word_e_number(possible_page_text):
             for link in possible_page.find_all('a', href=True):
                 wikipedia_url = _get_wikipedia_url(link['href'])
                 wikipedia_soup = _get_soup(wikipedia_url)
                 name = _get_wikipedia_title(wikipedia_soup)
-                if not _contains_e_number(name, e_number):
+                if not _contains_the_word_e_number(name):
                     return wikipedia_url, wikipedia_soup, name
     raise ValueError(
         f'Disambiguation could not be resolved for page {disambiguation_title}')
@@ -480,22 +490,50 @@ def _get_alternative_names(wikipedia_soup, e_number):
             text = data.get_text()
             ALTERNATIVE_NAMES_IDENTIFIER = "Other names"
             if ALTERNATIVE_NAMES_IDENTIFIER in text:
+                # I hate Wikipedia's 'Other names' section
+                # It's so hecking inconsistent!
+                html = str(data)
+                html = re.sub(r'</?i>', '', html)
+                html = re.sub(r'</?a( href=".*")?( title=".*")?>', '', html)
+
+                data = BeautifulSoup(html, 'html.parser')
+
                 name_list = data.get_text("\n")
                 names = name_list.replace(ALTERNATIVE_NAMES_IDENTIFIER, '')
                 names = names.strip()
                 names = names.replace('\n ', ' ')
-                names = re.sub(r'\s*;\s*', '\n', names)
-                names = re.sub(r'\s*,\s*', '\n', names)
-                names = names.splitlines()
+                names = names.strip()
+                if '•' in names:
+                    names = re.sub(r'\n([^•])', r'$1', names)
+                    names = re.sub(r'\s*•', '\n', names)
+                elif ';' in names:
+                    names = re.sub(r'\n([^;])', r'$1', names)
+                    names = re.sub(r'\s*;', '\n', names)
+                elif ' ' in names:
+                    names = re.sub(r'\s*, ', '\n', names)
+                else:
+                    # CSV without spaces
+                    names = re.sub(r',', '\n', names)
+
+                names = re.sub(r'[^\w][Ee] *\d+\w*', '', names)
+                names = names.split('\n')
                 names = (
-                    name.strip() for name in names if _get_is_valid_alternative_name(e_number))
+                    name.strip() for name in names if _is_name_valid(name))
                 return names
     return []
 
 
-def _get_is_valid_alternative_name(e_number):
-    invalid_names = ['and', 'or', ''] + _get_e_number_variations(e_number)
-    return lambda name: name is not None and name.strip() not in invalid_names
+def _is_name_valid(name):
+    invalid_names = ['and', 'or', '']
+    if name is None:
+        return False
+    name = name.strip()
+    is_invalid = name.strip() in invalid_names
+    is_e_number = _contains_the_word_e_number(name)
+
+    length = len(name)
+    is_valid_length = 1 < length < 25
+    return not is_invalid and not is_e_number and is_valid_length
 
 
 def _get_e_number_variations(e_number):
@@ -541,7 +579,7 @@ for e_number in VEGAN_E_NUMBERS:
 
     if name == e_number:
         wikipedia_url, wikipedia_soup, name = _resolve_disambiguation(
-            wikipedia_soup, e_number)
+            wikipedia_soup)
 
     sources = [wikipedia_url]
     uk_food_guide_url = _get_uk_food_guide_url(e_number)
