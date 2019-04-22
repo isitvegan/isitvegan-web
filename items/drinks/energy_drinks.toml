@@ -9,3 +9,67 @@ sources = [
     { type = "url", value = "https://energydrink.redbull.com/red-bull-vegan-and-gluten-free" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Monster Energy"
+alternative_names = []
+state = "vegan"
+description = """
+Altough Monster has never been officially certified vegan,
+all Monster Classic Energy drinks use no animal bi-products according to the manufacturer.
+"""
+sources = [
+    { type = "url", value = "https://vegfaqs.com/is-monster-energy-drink-vegan/" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Monster Ultra"
+alternative_names = []
+state = "itDepends"
+description = """
+All Monster Ultra Energy drinks in North America use no animal bi-products.
+However, the European Ultra Red edition uses E120 Cochineal, which is not vegan.
+Europeans may resort to the Monster Ultra Blue edition.
+"""
+sources = [
+    { type = "url", value = "https://vegfaqs.com/is-monster-energy-drink-vegan/" }
+]
+vegan_alternatives = ["Monster Ultra Blue"]
+
+[[items]]
+name = "Monster Hydro"
+alternative_names = []
+state = "vegan"
+description = """
+Just like Monster Classic Energy, Monster Hydro uses no animal by-products.
+"""
+sources = [
+    { type = "url", value = "https://vegfaqs.com/is-monster-energy-drink-vegan/" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Juice Monster"
+alternative_names = []
+state = "vegan"
+description = """
+Just like Monster Classic Energy, Juice Monster uses no animal by-products.
+"""
+sources = [
+    { type = "url", value = "https://vegfaqs.com/is-monster-energy-drink-vegan/" }
+]
+vegan_alternatives = ["Monster Ultra Blue"]
+
+
+[[items]]
+name = "Java Monster"
+alternative_names = []
+state = "carnist"
+description = """
+All flavours of Java Monster Energy drinks contain dairy milk and are therefore not vegan,
+"""
+sources = [
+    { type = "url", value = "https://vegfaqs.com/is-monster-energy-drink-vegan/" }
+]
+vegan_alternatives = ["Monster Energy"]
