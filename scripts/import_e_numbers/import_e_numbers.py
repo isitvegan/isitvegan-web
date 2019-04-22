@@ -460,13 +460,22 @@ def _resolve_disambiguation(wikipedia_soup):
         id='mw-content-text').find('ul').find_all('li')
     for possible_page in possible_pages:
         possible_page_text = possible_page.get_text().strip()
-        if _contains_the_word_e_number(possible_page_text):
+        if _contains_the_word_e_number(possible_page_text) or 'additive' in possible_page_text:
             for link in possible_page.find_all('a', href=True):
                 wikipedia_url = _get_wikipedia_url(link['href'])
                 wikipedia_soup = _get_soup(wikipedia_url)
                 name = _get_wikipedia_title(wikipedia_soup)
                 if not _contains_the_word_e_number(name):
                     return wikipedia_url, wikipedia_soup, name
+
+    # Fallback: Just take the first one
+    for link in possible_pages[0].find_all('a', href=True):
+        wikipedia_url = _get_wikipedia_url(link['href'])
+        wikipedia_soup = _get_soup(wikipedia_url)
+        name = _get_wikipedia_title(wikipedia_soup)
+        if not _contains_the_word_e_number(name):
+            return wikipedia_url, wikipedia_soup, name
+
     raise ValueError(
         f'Disambiguation could not be resolved for page {disambiguation_title}')
 
