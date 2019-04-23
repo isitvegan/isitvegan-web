@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import urllib.request
 import itertools
 from collections import namedtuple
+import re
 
 
 def _get_soup(url):
@@ -29,6 +30,18 @@ def _get_product_from_row(row_soup):
     return _ParsedProduct(status, name, url)
 
 
+_name_re = re.compile(r'[\(\)\-]')
+
+
+def _map_name(name):
+    ugly_name_result = _name_re.search(name)
+    if ugly_name_result is not None:
+        end_of_pretty_name = ugly_name_result.start()
+        return name[:end_of_pretty_name].strip()
+
+    return name
+
+
 def _map_status_to_state(status):
     if status == 'Vegan Friendly':
         return 'vegan'
@@ -53,7 +66,7 @@ def _map_url(url):
 
 
 def _map_product_to_item(parsed_product):
-    name = parsed_product.name
+    name = _map_name(parsed_product.name)
     state = _map_status_to_state(parsed_product.status)
     description = _map_description(state)
     url = _map_url(parsed_product.url)
@@ -88,10 +101,9 @@ def _import_all_products(product):
             parsed_product = _get_product_from_row(product_row)
             item = _map_product_to_item(parsed_product)
             items.append(item)
-            if parsed_product.status == 'Unknown':
-                print(
-                    f'Created {product} item #{page}.{index}: {parsed_product.name}')
-                print(item)
+            print(
+                f'Created {product} item #{page}.{index}: {parsed_product.name}')
+            print(item)
     return items
 
 
