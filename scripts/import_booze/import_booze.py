@@ -38,9 +38,8 @@ def _map_name(name):
     ugly_name_result = _name_re.search(name)
     if ugly_name_result is not None:
         end_of_pretty_name = ugly_name_result.start()
-        return name[:end_of_pretty_name].strip()
-
-    return name
+        name = name[:end_of_pretty_name]
+    return name.replace('"', '\\"').strip()
 
 
 def _map_status_to_state(status):
