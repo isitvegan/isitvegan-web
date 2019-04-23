@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib.request
-import itertools
+from itertools import count, chain
 from collections import namedtuple
 import re
 
@@ -91,7 +91,7 @@ vegan_alternatives = []
 
 def _import_all_products(product):
     items = []
-    for page in itertools.count(1):
+    for page in count(1):
         soup = _get_product_soup(product, page)
         products_soup = soup.find('ul', class_='products')
         if products_soup is None:
@@ -107,8 +107,19 @@ def _import_all_products(product):
     return items
 
 
+_FILENAME = 'automatically_imported_booze.toml'
+
+
 if __name__ == '__main__':
     items = []
     items.append(_import_all_products('beer'))
     items.append(_import_all_products('wine'))
     items.append(_import_all_products('liquor'))
+
+    items = chain(*items)
+    print(f'Finished creating items, writing them to {_FILENAME}')
+    with open(_FILENAME, 'w') as import_file:
+        for item in items:
+            import_file.write(item)
+
+    print('All done!')
