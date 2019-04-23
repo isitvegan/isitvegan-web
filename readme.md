@@ -12,9 +12,9 @@ This repo is home to [isitvegan.app](https://www.isitvegan.app), a simple tool t
 ## Supported Items
 
 - ⚗️ All [E numbers](https://en.wikipedia.org/wiki/E_number)
+- 🍺 Over 40'000 beers, wines and liquors from our friends at [barnivore](http://barnivore.com)
 - 🔨 Some materials
 - 🥛 Some milks
-- 🍺 Some beers
 
 Keep in mind that the app is quite young, so there are still many items missing.
 We are continuously adding new one to the database. 
