@@ -13,7 +13,7 @@ pub trait ItemMapper: Debug {
 }
 
 /// Default implementation of [`ItemMapper`].
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct ItemMapperImpl;
 
 impl ItemMapperImpl {
