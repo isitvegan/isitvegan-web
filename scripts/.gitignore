@@ -1,2 +1,4 @@
 .python-version
 automatically_imported_items.toml
+pip-wheel-metadata/
+*egg-info/
