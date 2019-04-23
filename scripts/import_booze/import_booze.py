@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib.request
+import itertools
 
 
 def _get_soup(url):
@@ -10,14 +11,30 @@ def _get_soup(url):
 _BARNIVORE_URL = 'http://www.barnivore.com'
 
 
-def _get_beer_soup(page):
-    barnivore_beer_url = f'{_BARNIVORE_URL}/beer?page={page}'
-    print(barnivore_beer_url)
-    return _get_soup(barnivore_beer_url)
+def _get_product_soup(product, page):
+    product_url = f'{_BARNIVORE_URL}/{product}?page={page}'
+    return _get_soup(product_url)
+
+
+def _print_all_products(product):
+    for i in itertools.count(1):
+        soup = _get_product_soup(product, i)
+        products = soup.find('ul', class_='products')
+        if products is None:
+            break
+
+        for product_row in products.find_all('li'):
+            status = product_row.find(class_='status').get_text().strip()
+            product_soup = product_row.find(class_='info').find(class_='name')
+            product_name = product_soup.get_text().strip()
+            product_url = product_soup.a['href'].strip()
+            print('---')
+            print(f'Status: {status}')
+            print(f'Name: {product_name}')
+            print(f'URL: {product_url}')
 
 
 if __name__ == '__main__':
-    soup = _get_beer_soup(1)
-    products = soup.find(class_='products').find_all('li')
-    for product in products:
-        print(product.find(class_='info').get_text())
+    _print_all_products('beer')
+    _print_all_products('wine')
+    _print_all_products('liquor')
