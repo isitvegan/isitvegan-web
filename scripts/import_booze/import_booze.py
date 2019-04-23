@@ -86,7 +86,7 @@ sources = [
     {{ type = "url", value = "{url}" }}
 ]
 vegan_alternatives = []
-    '''
+'''
     return item
 
 
