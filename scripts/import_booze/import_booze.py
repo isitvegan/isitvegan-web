@@ -31,7 +31,7 @@ def _get_product_from_row(row_soup):
     return _ParsedProduct(status, name, url)
 
 
-_name_re = re.compile(r'[\(\)\-]')
+_name_re = re.compile(r'[\(\)\-\t]')
 
 
 def _map_name(name):
