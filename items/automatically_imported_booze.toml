@@ -17469,7 +17469,7 @@ vegan_alternatives = []
 [[items]]
 name = "Beamish & Crawford"
 alternative_names = []
-state = "None"
+state = "carnist"
 description = ""
 sources = [
     { type = "url", value = "http://www.barnivore.com/products/5842-beamish-crawford" }
@@ -56915,7 +56915,7 @@ vegan_alternatives = []
 [[items]]
 name = "Cooper's Cave Ale Company"
 alternative_names = []
-state = "None"
+state = "carnist"
 description = ""
 sources = [
     { type = "url", value = "http://www.barnivore.com/products/5920-coopers-cave-ale-company" }
@@ -129873,7 +129873,7 @@ vegan_alternatives = []
 [[items]]
 name = "Coyote's Run Estate Winery"
 alternative_names = []
-state = "None"
+state = "carnist"
 description = ""
 sources = [
     { type = "url", value = "http://www.barnivore.com/products/5641-coyotes-run-estate-winery" }
@@ -149532,7 +149532,7 @@ vegan_alternatives = []
 [[items]]
 name = "Amarula Cream Liqueur"
 alternative_names = []
-state = "None"
+state = "carnist"
 description = ""
 sources = [
     { type = "url", value = "http://www.barnivore.com/products/5889-amarula-cream-liqueur" }
@@ -157710,7 +157710,7 @@ vegan_alternatives = []
 [[items]]
 name = "Dooleys Toffee Cream Liqueur"
 alternative_names = []
-state = "None"
+state = "carnist"
 description = ""
 sources = [
     { type = "url", value = "http://www.barnivore.com/products/5888-dooleys-toffee-cream-liqueur" }

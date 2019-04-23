@@ -43,13 +43,14 @@ def _map_name(name):
 
 
 def _map_status_to_state(status):
-    if status == 'Vegan Friendly':
+    status = status.lower()
+    if status == 'vegan friendly':
         return 'vegan'
-    if status == 'Not Vegan Friendly':
+    if status == 'not vegan friendly':
         return 'carnist'
-    if status == 'Unknown':
+    if status == 'unknown':
         return 'itDepends'
-    return None
+    raise ValueError(f'Unexpected status: {status}')
 
 
 def _map_description(status):
