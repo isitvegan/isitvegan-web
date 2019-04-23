@@ -66,7 +66,16 @@ impl ItemLoader for TomlItemLoader {
         let items: Vec<_> = WalkDir::new(&self.items_directory)
             .follow_links(true)
             .into_iter()
-            .filter_map(Result::ok)
+            .filter_map(|entry| match entry {
+                Ok(entry) => {
+                    println!("Loading {}", entry.file_name().to_string_lossy());
+                    Some(entry)
+                }
+                Err(error) => {
+                    println!("Failed to load file: {}", error);
+                    None
+                }
+            })
             .map(|entry| entry.into_path().to_string_lossy().into_owned())
             .filter(|file_path| file_path.ends_with(".toml"))
             .map(|file_path| load_items_from_file(&file_path).into_iter())
