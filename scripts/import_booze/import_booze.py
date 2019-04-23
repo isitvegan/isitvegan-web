@@ -29,7 +29,7 @@ def _get_product_from_row(row_soup):
     return _ParsedProduct(status, name, url)
 
 
-def _map_status(status):
+def _map_status_to_state(status):
     if status == 'Vegan Friendly':
         return 'vegan'
     if status == 'Not Vegan Friendly':
@@ -39,30 +39,64 @@ def _map_status(status):
     return None
 
 
-def _parse_all_products(product):
-    products = []
-    for i in itertools.count(1):
-        soup = _get_product_soup(product, i)
+def _map_description(status):
+    if status == 'itDepends':
+        return '''
+Some variants of this item may contain animal products. 
+Check the provided sources for further details.
+'''
+    return None
+
+
+def _map_url(url):
+    return _BARNIVORE_URL + url
+
+
+def _map_product_to_item(parsed_product):
+    name = parsed_product.name
+    state = _map_status_to_state(parsed_product.status)
+    description = _map_description(state)
+    url = _map_url(parsed_product.url)
+    item = f'''
+[[items]]
+name = "{name}"
+alternative_names = []
+state = "{state}"
+description = '''
+    if description is None:
+        item += '""'
+    else:
+        item += f'"""{description}"""'
+    item += f'''
+sources = [
+    {{ type = "url", value = "{url}" }}
+]
+vegan_alternatives = []
+    '''
+    return item
+
+
+def _import_all_products(product):
+    items = []
+    for page in itertools.count(1):
+        soup = _get_product_soup(product, page)
         products_soup = soup.find('ul', class_='products')
         if products_soup is None:
             break
 
-        for product_row in products_soup.find_all('li'):
+        for index, product_row in enumerate(products_soup.find_all('li')):
             parsed_product = _get_product_from_row(product_row)
-            products.append(parsed_product)
-    return products
-
-
-def _print_all_products(product):
-    products = _parse_all_products(product)
-    for parsed_product in products:
-        print('--')
-        print(f'Status: {parsed_product.status}')
-        print(f'Name: {parsed_product.name}')
-        print(f'URL: {parsed_product.url}')
+            item = _map_product_to_item(parsed_product)
+            items.append(item)
+            if parsed_product.status == 'Unknown':
+                print(
+                    f'Created {product} item #{page}.{index}: {parsed_product.name}')
+                print(item)
+    return items
 
 
 if __name__ == '__main__':
-    _print_all_products('beer')
-    _print_all_products('wine')
-    _print_all_products('liquor')
+    items = []
+    items.append(_import_all_products('beer'))
+    items.append(_import_all_products('wine'))
+    items.append(_import_all_products('liquor'))
