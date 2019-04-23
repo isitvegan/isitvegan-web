@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import itertools
+from collections import namedtuple
 
 
 def _get_soup(url):
@@ -16,22 +17,49 @@ def _get_product_soup(product, page):
     return _get_soup(product_url)
 
 
-def _print_all_products(product):
+_ParsedProduct = namedtuple("_ParsedProduct", "status name url")
+
+
+def _get_product_from_row(row_soup):
+    status = row_soup.find(class_='status').get_text().strip()
+    product_soup = row_soup.find(class_='info').find(class_='name')
+    name = product_soup.get_text().strip()
+    url = product_soup.a['href'].strip()
+
+    return _ParsedProduct(status, name, url)
+
+
+def _map_status(status):
+    if status == 'Vegan Friendly':
+        return 'vegan'
+    if status == 'Not Vegan Friendly':
+        return 'carnist'
+    if status == 'Unknown':
+        return 'itDepends'
+    return None
+
+
+def _parse_all_products(product):
+    products = []
     for i in itertools.count(1):
         soup = _get_product_soup(product, i)
-        products = soup.find('ul', class_='products')
-        if products is None:
+        products_soup = soup.find('ul', class_='products')
+        if products_soup is None:
             break
 
-        for product_row in products.find_all('li'):
-            status = product_row.find(class_='status').get_text().strip()
-            product_soup = product_row.find(class_='info').find(class_='name')
-            product_name = product_soup.get_text().strip()
-            product_url = product_soup.a['href'].strip()
-            print('---')
-            print(f'Status: {status}')
-            print(f'Name: {product_name}')
-            print(f'URL: {product_url}')
+        for product_row in products_soup.find_all('li'):
+            parsed_product = _get_product_from_row(product_row)
+            products.append(parsed_product)
+    return products
+
+
+def _print_all_products(product):
+    products = _parse_all_products(product)
+    for parsed_product in products:
+        print('--')
+        print(f'Status: {parsed_product.status}')
+        print(f'Name: {parsed_product.name}')
+        print(f'URL: {parsed_product.url}')
 
 
 if __name__ == '__main__':
