@@ -3,6 +3,7 @@ import urllib.request
 from itertools import count, chain
 from collections import namedtuple
 import re
+from concurrent.futures import ThreadPoolExecutor, Future
 
 
 def _get_soup(url):
@@ -103,7 +104,6 @@ def _import_all_products(product):
             items.append(item)
             print(
                 f'Created {product} item #{page}.{index}: {parsed_product.name}')
-            print(item)
     return items
 
 
@@ -112,9 +112,23 @@ _FILENAME = 'automatically_imported_booze.toml'
 
 if __name__ == '__main__':
     items = []
-    items.append(_import_all_products('beer'))
-    items.append(_import_all_products('wine'))
-    items.append(_import_all_products('liquor'))
+    worker_count = 2
+    with ThreadPoolExecutor(max_workers=worker_count) as executor:
+        futures = []
+
+        print(f'Running worker #0 with the import of wine.')
+        future = executor.submit(_import_all_products, 'wine')
+        futures.append(future)
+
+        print(f'Running worker #1 with the import of liquor.')
+        future = executor.submit(_import_all_products, 'liquor')
+        futures.append(future)
+
+        print(f'Running main thread with the import of beer.')
+        items = _import_all_products('beer')
+
+        for future in futures:
+            items.append(future.result())
 
     items = chain(*items)
     print(f'Finished creating items, writing them to {_FILENAME}')
