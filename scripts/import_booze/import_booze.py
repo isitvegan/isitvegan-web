@@ -118,7 +118,7 @@ def _import_all_products(product):
     return items
 
 
-_FILENAME = 'automatically_imported_booze.toml'
+_FILENAME = 'booze.toml'
 
 
 if __name__ == '__main__':

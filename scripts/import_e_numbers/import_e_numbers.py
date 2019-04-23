@@ -716,7 +716,7 @@ vegan_alternatives = []
     return item
 
 
-_FILENAME = 'automatically_imported_items.toml'
+_FILENAME = 'e_numbers.toml'
 
 
 def _get_items(e_numbers):
