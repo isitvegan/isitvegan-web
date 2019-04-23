@@ -14,8 +14,8 @@ def _get_soup(url):
 _BARNIVORE_URL = 'http://www.barnivore.com'
 
 
-def _get_product_soup(product, page):
-    product_url = f'{_BARNIVORE_URL}/{product}?page={page}'
+def _get_product_soup(product, group, page):
+    product_url = f'{_BARNIVORE_URL}/{product}/{group}?page={page}'
     return _get_soup(product_url)
 
 
@@ -90,20 +90,31 @@ vegan_alternatives = []
     return item
 
 
+_GROUPS = [
+    "0-9",
+    "a-f",
+    "g-l",
+    "m-r",
+    "s-t",
+    "u-z"
+]
+
+
 def _import_all_products(product):
     items = []
-    for page in count(1):
-        soup = _get_product_soup(product, page)
-        products_soup = soup.find('ul', class_='products')
-        if products_soup is None:
-            break
+    for group in _GROUPS:
+        for page in count(1):
+            soup = _get_product_soup(product, group, page)
+            products_soup = soup.find('ul', class_='products')
+            if products_soup is None:
+                break
 
-        for index, product_row in enumerate(products_soup.find_all('li')):
-            parsed_product = _get_product_from_row(product_row)
-            item = _map_product_to_item(parsed_product)
-            items.append(item)
-            print(
-                f'Created {product} item #{page}.{index}: {parsed_product.name}')
+            for index, product_row in enumerate(products_soup.find_all('li')):
+                parsed_product = _get_product_from_row(product_row)
+                item = _map_product_to_item(parsed_product)
+                items.append(item)
+                print(
+                    f'Created {group} {product} item #{page}.{index}: {parsed_product.name}')
     return items
 
 
