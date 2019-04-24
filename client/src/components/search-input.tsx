@@ -15,5 +15,5 @@ export const SearchInput = ({ query, onSearch, className, placeholder }: SearchI
 
   return <input type='search' value={query} class={className}
                 onInput={onInput}
-                placeholder={placeholder} />
+                placeholder={placeholder} autofocus={true} />
 }
