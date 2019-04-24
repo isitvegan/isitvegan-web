@@ -2,9 +2,12 @@
 
 use crate::model::{Source, State};
 use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
 use std::error::Error;
 use std::fs::File;
 use std::io::Read;
+use std::path::MAIN_SEPARATOR;
+use walkdir::DirEntry;
 use walkdir::WalkDir;
 
 /// All available items
@@ -63,31 +66,69 @@ impl TomlItemLoader {
 
 impl ItemLoader for TomlItemLoader {
     fn load_items(&self) -> Result<Items, Box<dyn Error>> {
-        let items: Vec<_> = WalkDir::new(&self.items_directory)
+        let imported_items_directory =
+            format!("{}{}{}", self.items_directory, MAIN_SEPARATOR, "imported");
+
+        println!("Loading imported items");
+        let imported_entries = WalkDir::new(&imported_items_directory)
             .follow_links(true)
             .into_iter()
             .filter_map(|entry| match entry {
-                Ok(entry) => {
-                    println!("Loading {}", entry.file_name().to_string_lossy());
-                    Some(entry)
-                }
+                Ok(entry) => Some(entry),
                 Err(error) => {
-                    println!("Failed to load file: {}", error);
+                    println!("Failed to load a filesystem item: {}", error);
+                    None
+                }
+            });
+        let imported_items = load_items_from_entries(imported_entries);
+        println!("Finished loading imported items");
+
+        println!("Loading manual items");
+        let manual_entries = WalkDir::new(&self.items_directory)
+            .follow_links(true)
+            .into_iter()
+            .filter_map(|entry| match entry {
+                Ok(entry) => Some(entry),
+                Err(error) => {
+                    println!("Failed to load a filesystem item: {}", error);
                     None
                 }
             })
-            .map(|entry| entry.into_path().to_string_lossy().into_owned())
-            .filter(|file_path| file_path.ends_with(".toml"))
-            .map(|file_path| load_items_from_file(&file_path).into_iter())
-            .flatten()
-            .map(|items| items.items.into_iter())
-            .flatten()
+            .filter(|entry| {
+                !entry
+                    .path()
+                    .to_string_lossy()
+                    .contains(&imported_items_directory)
+            });
+        let manual_items = load_items_from_entries(manual_entries);
+        println!("Finished loading manual items");
+
+        println!("Resolving duplicated items");
+        let unique_items: HashMap<_, _> = imported_items
+            .into_iter()
+            .chain(manual_items.into_iter())
             .collect();
+        let items: Vec<_> = unique_items.into_iter().map(|(_, item)| item).collect();
+        println!("Finished importing items");
+
         Ok(Items { items })
     }
 }
 
+fn load_items_from_entries(entries: impl Iterator<Item = DirEntry>) -> HashMap<String, Item> {
+    entries
+        .map(|entry| entry.path().to_string_lossy().into_owned())
+        .filter(|file_path| file_path.ends_with(".toml"))
+        .map(|file_path| load_items_from_file(&file_path).into_iter())
+        .flatten()
+        .map(|items| items.items.into_iter())
+        .flatten()
+        .map(|item| (item.name.clone(), item))
+        .collect()
+}
+
 fn load_items_from_file(file_path: &str) -> Result<Items, Box<dyn Error>> {
+    println!("Loading items from {}", file_path);
     let mut file = File::open(file_path)?;
     let mut file_content = String::new();
     file.read_to_string(&mut file_content)?;
