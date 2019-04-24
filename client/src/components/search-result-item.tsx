@@ -1,8 +1,14 @@
 import { h } from 'preact';
 import { Item, State, Source } from '../search-api-return-types';
 import { OnSearchTermClick } from './search-results';
+import { Component, Attributes } from 'preact';
 
-export function SearchResultItem({ item, onSearchTermClick }: { item: Item, onSearchTermClick: OnSearchTermClick }) {
+interface SearchResultItemProps extends Attributes {
+  item: Item,
+  onSearchTermClick: OnSearchTermClick,
+}
+
+export function SearchResultItem({ item, onSearchTermClick }: SearchResultItemProps) {
   const headerClass = `header ${colorClassForState(item.state)}`;
 
   return (

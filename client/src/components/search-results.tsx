@@ -99,7 +99,7 @@ function Error() {
 function SearchResultItems({ items, onSearchTermClick }: { items: Item[], onSearchTermClick: OnSearchTermClick }) {
   return (
     <div class='search-results'>
-      {items.map((item) => <SearchResultItem item={item} onSearchTermClick={onSearchTermClick} />)}
+      {items.map((item) => <SearchResultItem key={item.slug} item={item} onSearchTermClick={onSearchTermClick} />)}
     </div>
   );
 }
