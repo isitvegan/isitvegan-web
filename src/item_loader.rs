@@ -7,8 +7,7 @@ use std::error::Error;
 use std::fs::File;
 use std::io::Read;
 use std::path::MAIN_SEPARATOR;
-use walkdir::DirEntry;
-use walkdir::WalkDir;
+use walkdir::{DirEntry, WalkDir};
 
 /// All available items
 #[derive(Debug, Serialize, Deserialize)]
