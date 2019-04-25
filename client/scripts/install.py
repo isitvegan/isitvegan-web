@@ -22,7 +22,7 @@ def copy_files(target: str):
     icons_dir = os.path.join(target, 'icons')
     if os.path.exists(icons_dir):
         shutil.rmtree(icons_dir)
-    shutil.copytree('icons', icons_dir)
+    shutil.copytree('icons', icons_dir, copy_function=shutil.copy)
 
 
 if __name__ == '__main__':
