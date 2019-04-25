@@ -46,7 +46,7 @@ alternative_names = []
 state = "carnist"
 description = """
 A collagen used for making jellies, glue and clarifying and fining beer and wine.
-The substance is obtained fro dried swim bladders of fish, usually sturgeon or cod.
+The substance is obtained from dried swim bladders of fish, usually sturgeon or cod.
 Needless to say, the fish have to be killed in order to extract their guts.
 """
 sources = [
