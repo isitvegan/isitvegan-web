@@ -11,7 +11,7 @@ This repo is home to [isitvegan.app](https://www.isitvegan.app), a simple tool t
 
 ## Supported Items
 
-- ⚗️ All [E numbers](https://en.wikipedia.org/wiki/E_number)
+- ⚗️ All [E numbers](https://en.wikipedia.org/wiki/E_number) and their common names found on labels
 - 🍺 Over 40'000 beers, wines and liquors from our friends at [barnivore.com](http://barnivore.com)
 - 🔨 Some materials
 - 🥛 Some milks
