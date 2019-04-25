@@ -47,7 +47,7 @@ impl Server for RocketServer {
     }
 }
 
-/// Returns a hello world
+/// Searches a single item
 #[get("/search?<query>")]
 fn search(
     query: String,
@@ -56,7 +56,7 @@ fn search(
     search_engine.search(&query).map(Json)
 }
 
-/// Returns a hello world
+/// Searches a single item per slug
 #[get("/items/<slug>")]
 fn item_by_slug(
     slug: String,
