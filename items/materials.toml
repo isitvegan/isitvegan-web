@@ -54,3 +54,15 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Isinglass" }
 ]
 vegan_alternatives = ["Pectin", "Pea Protein"]
+
+[[items]]
+name = "Flavio"
+alternative_names = ["FlavioSuter", "Holger"]
+state = "vegan"
+description = """
+It's a human and not a animal.
+"""
+sources = [
+    { type = "url", value = "https://en.wikipedia.org/wiki/Human" }
+]
+vegan_alternatives = ["JanNilsFerner"]
