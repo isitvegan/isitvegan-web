@@ -8,14 +8,33 @@
         display: grid;
         align-items: center;
         grid-gap: 16px 32px;
+        grid-template-areas: 'text-before input text-after'
+                             '. scope-bar .';
         grid-template-columns: max-content 1fr max-content;
         margin: auto;
         max-width: 600px;
     }
 
+    > .inner > .text.-before {
+        grid-area: text-before;
+    }
+
+    > .inner > .text.-after {
+        grid-area: text-after;
+    }
+
+    > .inner > .input {
+        grid-area: input;
+    }
+
+    > .inner > .search-scope-bar {
+        grid-area: scope-bar;
+    }
+
     @media (max-width: 600px) {
         > .inner {
             grid-template-columns: 100%;
+            grid-template-areas: 'text-before' 'input' 'scope-bar' 'text-after';
         }
     }
 
