@@ -47,10 +47,23 @@ impl Server for RocketServer {
     }
 }
 
+/// The selected search scope
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(tag = "type", content = "value")]
+#[serde(rename_all = "camelCase")]
+pub enum Scope {
+    /// Search by name and alternative names
+    Title,
+    /// Search only e numbers
+    ENumber,
+}
+
+
 /// Searches a single item
 #[get("/search?<query>")]
 fn search(
     query: String,
+    scope: Scope,
     search_engine: State<'_, Arc<dyn SearchEngine>>,
 ) -> Result<Json<Vec<Item>>, Box<dyn Error>> {
     search_engine.search(&query).map(Json)
