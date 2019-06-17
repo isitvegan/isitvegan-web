@@ -10,7 +10,7 @@ interface AppState {
   query: string,
 }
 
-function getGlobalAppState(): GlobalAppState|null {
+function getGlobalAppState(): GlobalAppState | null {
   return window.history.state;
 }
 
@@ -30,13 +30,16 @@ class App extends Component<{}, AppState> {
   }
 
   render(props: {}, { query }: AppState) {
+    const placeholderItems = ['Wool', 'E120', 'Cider', '…'];
+    const placeholder = placeholderItems.join(', ');
+
     return (
       <div>
         <div class='search-bar'>
           <div class='inner'>
-              <span class='text'>Is</span>
-              <SearchInput query={query} className='input' placeholder='Oat Milk' onSearch={this._onSearch} />
-              <span class='text'>Vegan?</span>
+            <span class='text'>Is</span>
+            <SearchInput query={query} className='input' placeholder={placeholder} onSearch={this._onSearch} />
+            <span class='text'>Vegan?</span>
           </div>
         </div>
         <SearchResults query={query.trim()} onSearchTermClick={this._onSearch} />
