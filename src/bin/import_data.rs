@@ -1,3 +1,4 @@
+use is_it_vegan::item_packer::{ItemPacker, JsonItemPacker};
 use is_it_vegan::{
     config_loader::{ConfigLoader, DotEnvConfigLoader},
     item_loader::{ItemLoader, TomlItemLoader},
@@ -23,6 +24,11 @@ fn main() {
     if items.is_empty() {
         eprintln!("No items could be imported. Is the path to the items directory correct?");
     }
+
+    let item_packer = JsonItemPacker::new();
+    item_packer
+        .pack(&items, config_loader.item_pack().unwrap().as_ref())
+        .unwrap();
 
     search_engine.wipe_storage().unwrap();
     search_engine.import_items(&items).unwrap();

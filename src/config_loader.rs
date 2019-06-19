@@ -21,6 +21,9 @@ pub trait ConfigLoader: Debug {
 
     /// Returns the path to a directory containing files that contain the definition of all items
     fn items_directory(&self) -> Result<String, Box<dyn Error>>;
+
+    /// Returns the path to a file that will be filled with all serialized items
+    fn item_pack(&self) -> Result<String, Box<dyn Error>>;
 }
 
 /// Provides configurations found in environment variables, loading them
@@ -66,5 +69,9 @@ impl ConfigLoader for DotEnvConfigLoader {
 
     fn items_directory(&self) -> Result<String, Box<dyn Error>> {
         Ok(var("ITEMS_DIRECTORY")?)
+    }
+
+    fn item_pack(&self) -> Result<String, Box<dyn Error>> {
+        Ok(var("ITEM_PACK")?)
     }
 }
