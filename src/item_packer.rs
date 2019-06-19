@@ -11,7 +11,7 @@ pub trait ItemPacker {
     fn pack(&self, items: &[Item], target_file_path: &Path) -> Result<(), Box<dyn Error>>;
 }
 
-/// Implementation of [`ItemPacker`\ that stores all items as JSON.
+/// Implementation of [`ItemPacker`] that stores all items as JSON.
 #[derive(Debug, Default)]
 pub struct JsonItemPacker;
 
