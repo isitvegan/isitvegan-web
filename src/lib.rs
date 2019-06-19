@@ -23,6 +23,7 @@ extern crate rocket;
 pub mod config_loader;
 pub mod item_loader;
 pub mod item_mapper;
+pub mod item_packer;
 pub mod model;
 pub mod search_engine;
 pub mod server;
