@@ -116,6 +116,11 @@ impl SearchEngine for ElasticSearch {
                                 "type": "text",
                                 "analyzer": "autocomplete"
                             },
+                            "description": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "autocomplete_search"
+                            },
                             "slug": {
                                 "type": "keyword"
                             }
