@@ -90,7 +90,7 @@ impl SearchEngine for ElasticSearch {
                             "autocomplete": {
                                 "type": "edge_ngram",
                                 "min_gram": 2,
-                                "max_gram": 10,
+                                "max_gram": 20,
                                 "token_chars": [
                                     "letter",
                                     "digit"
