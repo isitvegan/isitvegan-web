@@ -140,9 +140,22 @@ impl SearchEngine for ElasticSearch {
             .index(INDEX)
             .body(json!({
                 "query": {
-                    "multi_match": {
-                        "query": query,
-                        "fields": ["name^4", "e_number^4", "alternative_names^3"],
+                    "bool": {
+                        "should": [
+                            {
+                                "term": {
+                                    "e_number": {
+                                        "value": query,
+                                        "boost": 100
+                                    }
+                                }
+                            }, {
+                                "multi_match": {
+                                    "query": query,
+                                    "fields": ["name^4", "e_number^4", "alternative_names^3"],
+                                }
+                            }
+                        ]
                     }
                 }
             }))
