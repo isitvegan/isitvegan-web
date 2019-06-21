@@ -142,7 +142,7 @@ impl SearchEngine for ElasticSearch {
                 "query": {
                     "multi_match": {
                         "query": query,
-                        "fields": ["name^4", "e_number^4", "alternative_names^3", "vegan_alternatives^2", "description"],
+                        "fields": ["name^4", "e_number^4", "alternative_names^3"],
                     }
                 }
             }))
