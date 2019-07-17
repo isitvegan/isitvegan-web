@@ -10,17 +10,17 @@
         "rollup-plugin-uglify": "^6.0.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.4.3",
-        "@babel/preset-env": "^7.4.3",
+        "@babel/core": "^7.5.4",
+        "@babel/preset-env": "^7.5.4",
         "less": "^3.9.0",
         "less-plugin-clean-css": "^1.5.1",
         "preact": "^8.4.2",
-        "rollup": "^1.10.1",
-        "rollup-plugin-babel": "^4.3.2",
-        "rollup-plugin-node-resolve": "^4.2.3",
-        "rollup-plugin-typescript2": "^0.20.1",
-        "tslib": "^1.9.3",
-        "typescript": "^3.4.4"
+        "rollup": "^1.17.0",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-typescript2": "^0.22.0",
+        "tslib": "^1.10.0",
+        "typescript": "^3.5.3"
     },
     "scripts": {
         "dev-build": "yarn run rollup -c rollup.config.js && yarn run dev-build-less",
