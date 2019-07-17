@@ -698,12 +698,16 @@ vegan_alternatives = []
 
 [[items]]
 name = "Sodium propyl para-hydroxybenzoate"
-alternative_names = []
+alternative_names = [
+    "Propyl paraben",
+    "Propyl p-hydroxybenzoate",
+    "Nipasol"
+]
 e_number = "E217"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/E217" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Sodium_propyl_para-hydroxybenzoate" },
     { type = "url", value = "http://www.ukfoodguide.net/e217.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
@@ -1348,7 +1352,7 @@ name = "Fumaric acid"
 alternative_names = [
     "Fumaric acid",
     "2-Butenedioic acid",
-    "trans-butenedioic acid",
+    "trans-Butenedioic acid",
     "Allomaleic acid",
     "Boletic acid",
     "Donitic acid",
@@ -2029,7 +2033,7 @@ name = "Calcium fumarate"
 alternative_names = [
     "Fumaric acid",
     "2-Butenedioic acid",
-    "trans-butenedioic acid",
+    "trans-Butenedioic acid",
     "Allomaleic acid",
     "Boletic acid",
     "Donitic acid",
@@ -2990,6 +2994,7 @@ vegan_alternatives = []
 [[items]]
 name = "Magnesium hydroxide"
 alternative_names = [
+    "Magnesium dihydroxide",
     "Milk of magnesia"
 ]
 e_number = "E528"
@@ -4183,7 +4188,6 @@ name = "Polyvinylpyrrolidone"
 alternative_names = [
     "PVP",
     "Povidone",
-    "Copovidone",
     "PVPP",
     "Crospovidone",
     "Polyvidone",
@@ -4375,7 +4379,11 @@ vegan_alternatives = []
 
 [[items]]
 name = "Hydroxy propyl starch"
-alternative_names = []
+alternative_names = [
+    "Hydroxyl propyl starch",
+    "2-Hydroxypropyl starch",
+    "Hydroxylpropyl starch"
+]
 e_number = "E1440"
 state = "vegan"
 description = ""
