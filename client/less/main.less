@@ -2,6 +2,19 @@
     --color-green: #378E5E;
     --color-red: #D11F4D;
     --color-orange: #FF8951;
+    --background-level-0-color: #f8f8f8;
+    --background-level-1-color: #fff;
+    --text-color: #000;
+    --divider-color: #f6f6f6;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-level-0-color: #292929;
+        --background-level-1-color: rgba(0, 0, 0, .2);
+        --text-color: #fff;
+        --divider-color: rgba(0, 0, 0, .2);
+    }
 }
 
 @import './core/reset.less';
