@@ -1,7 +1,8 @@
 .search-scope-bar {
-    border: 2px solid #fff;
+    background-color: var(--control-background-color);
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: var(--control-border-radius);
+    padding: 6px;
     display: grid;
     grid-auto-flow: column;
 
@@ -15,6 +16,7 @@
         display: flex;
         padding: 4px 16px;
         transition: background .25s, color .25s;
+        border-radius: var(--control-border-radius);
     }
 
     > .item > .radio {
