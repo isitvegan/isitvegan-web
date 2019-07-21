@@ -8,6 +8,8 @@ use rocket_contrib::json::Json;
 use std::error::Error;
 use std::fmt::Debug;
 use std::sync::Arc;
+use rocket::request::{FromFormValue};
+use rocket::http::RawStr;
 
 /// The server running the application
 pub trait Server: Debug {
@@ -48,25 +50,40 @@ impl Server for RocketServer {
 }
 
 /// The selected search scope
-#[derive(Debug, Serialize, Deserialize)]
-#[serde(tag = "type", content = "value")]
-#[serde(rename_all = "camelCase")]
+#[derive(Debug)]
 pub enum Scope {
     /// Search by name and alternative names
-    Title,
+    Names,
     /// Search only e numbers
     ENumber,
 }
 
+impl<'v> FromFormValue<'v> for Scope {
+    type Error = &'v RawStr;
 
-/// Searches a single item
-#[get("/search?<query>")]
+    fn from_form_value(form_value: &'v RawStr) -> Result<Self, &'v RawStr> {
+        let decoded_value = form_value.percent_decode().map_err(|_| form_value)?;
+        match decoded_value.as_ref() {
+            "names" => Ok(Scope::Names),
+            "eNumber" => Ok(Scope::ENumber),
+            _ => Err(form_value)
+        }
+    }
+}
+
+/// Searches a single item with a scope
+#[get("/search?<query>&<scope>")]
 fn search(
     query: String,
-    scope: Scope,
+    scope: Option<Scope>,
     search_engine: State<'_, Arc<dyn SearchEngine>>,
 ) -> Result<Json<Vec<Item>>, Box<dyn Error>> {
-    search_engine.search(&query).map(Json)
+    let results = match scope {
+        Some(Scope::Names) => search_engine.search_by_names(&query),
+        Some(Scope::ENumber) => search_engine.search_by_e_number(&query),
+        None => search_engine.search(&query),
+    };
+    results.map(Json)
 }
 
 /// Searches a single item per slug
