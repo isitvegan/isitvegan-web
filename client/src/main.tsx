@@ -56,10 +56,7 @@ class App extends Component<{}, AppState> {
 
   private _onSelectScope(selectedScope: SearchScope) {
     this.setState({ selectedScope });
-    console.log('Setting selected scope', selectedScope);
-    console.log('State before', window.history.state);
     this._updateGlobalAppState({ selectedScope });
-    console.log('State after', window.history.state);
   }
 
   private _onSearch(query: string) {
