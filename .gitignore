@@ -7,3 +7,6 @@
 
 # File loaded by dotenv
 .env
+
+# Vagrant
+.vagrant
