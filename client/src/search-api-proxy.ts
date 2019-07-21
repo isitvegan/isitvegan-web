@@ -1,7 +1,8 @@
 import { Item } from './search-api-return-types';
+import { SearchScope } from './search-scope';
 
-export async function search(queryString: string, abortSignal: AbortSignal): Promise<Item[]> {
-  const response = await fetch(searchUrl(queryString), { signal: abortSignal });
+export async function search(queryString: string, scope: SearchScope, abortSignal: AbortSignal): Promise<Item[]> {
+  const response = await fetch(searchUrl(queryString, scope), { signal: abortSignal });
   const data = await response.json();
 
   return data.map(mapItem);
@@ -20,6 +21,15 @@ function mapItem(item: any): Item {
   }
 }
 
-function searchUrl(queryString: string): string {
-  return `/api/search?query=${encodeURIComponent(queryString)}`;
+function searchUrl(queryString: string, scope: SearchScope): string {
+  return `/api/search?query=${encodeURIComponent(queryString)}&scope=${searchScopeToString(scope)}`;
+}
+
+function searchScopeToString(scope: SearchScope): string {
+  switch (scope) {
+    case SearchScope.Names:
+      return 'names';
+    case SearchScope.ENumbers:
+      return 'eNumber';
+  }
 }

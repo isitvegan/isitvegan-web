@@ -1,5 +1,5 @@
 import { h, render, Component } from 'preact';
-import { SearchInput } from './components/search-input';
+import { SearchInput, SearchInputType } from './components/search-input';
 import { SearchResults } from './components/search-results';
 import { SearchScopeBar } from './components/search-scope-bar';
 import { SearchScope } from './search-scope';
@@ -34,7 +34,7 @@ class App extends Component<{}, AppState> {
     this.state = { query, selectedScope };
   }
 
-  render(props: {}, { query, selectedScope }: AppState) {
+  render(_props: {}, { query, selectedScope }: AppState) {
     const placeholderItems = ['Wool', 'E120', 'Cider', '…'];
     const placeholder = placeholderItems.join(', ');
 
@@ -43,12 +43,13 @@ class App extends Component<{}, AppState> {
         <div class='search-bar'>
           <div class='inner'>
               <span class='text -before'>Is</span>
-              <SearchInput query={query} className='input' placeholder={placeholder} onSearch={this._onSearch} />
+              <SearchInput query={query} className='input' type={mapToSearchInputType(selectedScope)}
+                           placeholder={placeholder} onSearch={this._onSearch} />
               <SearchScopeBar selectedScope={selectedScope} onSelectScope={this._onSelectScope} />
               <span class='text -after'>Vegan?</span>
           </div>
         </div>
-        <SearchResults query={query.trim()} onSearchTermClick={this._onSearch} />
+        <SearchResults query={query.trim()} scope={selectedScope} onSearchTermClick={this._onSearch} />
       </div>
     )
   }
@@ -68,6 +69,15 @@ class App extends Component<{}, AppState> {
 
   private _updateGlobalAppState(updates: Partial<AppState>) {
     setGlobalAppState({ query: this.state.query, selectedScope: this.state.selectedScope, ...updates });
+  }
+}
+
+const mapToSearchInputType = (scope: SearchScope): SearchInputType => {
+  switch (scope) {
+    case SearchScope.Names:
+      return SearchInputType.Default;
+    case SearchScope.ENumbers:
+      return SearchInputType.NumbersOnly;
   }
 }
 
