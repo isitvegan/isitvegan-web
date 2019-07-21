@@ -199,7 +199,7 @@ impl SearchEngine for ElasticSearch {
     }
 
     fn search_by_e_number(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
-        let query_prefixed_with_e = format!("E{query}", query=query);
+        let query_prefixed_with_e = format!("E{query}", query = query);
         Ok(self
             .client
             .search::<Item>()

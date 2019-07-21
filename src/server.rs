@@ -3,13 +3,13 @@
 use crate::model::Item;
 use crate::search_engine::SearchEngine;
 use rocket::config::{Config, Environment};
+use rocket::http::RawStr;
+use rocket::request::FromFormValue;
 use rocket::State;
 use rocket_contrib::json::Json;
 use std::error::Error;
 use std::fmt::Debug;
 use std::sync::Arc;
-use rocket::request::{FromFormValue};
-use rocket::http::RawStr;
 
 /// The server running the application
 pub trait Server: Debug {
@@ -66,7 +66,7 @@ impl<'v> FromFormValue<'v> for Scope {
         match decoded_value.as_ref() {
             "names" => Ok(Scope::Names),
             "eNumber" => Ok(Scope::ENumber),
-            _ => Err(form_value)
+            _ => Err(form_value),
         }
     }
 }
