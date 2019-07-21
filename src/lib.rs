@@ -1,5 +1,6 @@
 //! A useful tool to check wether food is vegan 🌱
 
+#![type_length_limit = "2965010"]
 #![warn(missing_docs, clippy::dbg_macro, clippy::unimplemented)]
 #![feature(proc_macro_hygiene)]
 #![feature(decl_macro)]
@@ -22,6 +23,7 @@ extern crate rocket;
 pub mod config_loader;
 pub mod item_loader;
 pub mod item_mapper;
+pub mod item_packer;
 pub mod model;
 pub mod search_engine;
 pub mod server;

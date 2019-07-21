@@ -14,7 +14,7 @@ interface AppState {
   selectedScope: SearchScope,
 }
 
-function getGlobalAppState(): GlobalAppState|null {
+function getGlobalAppState(): GlobalAppState | null {
   return window.history.state;
 }
 
@@ -35,12 +35,15 @@ class App extends Component<{}, AppState> {
   }
 
   render(props: {}, { query, selectedScope }: AppState) {
+    const placeholderItems = ['Wool', 'E120', 'Cider', '…'];
+    const placeholder = placeholderItems.join(', ');
+
     return (
       <div>
         <div class='search-bar'>
           <div class='inner'>
               <span class='text -before'>Is</span>
-              <SearchInput query={query} className='input' placeholder='Oat Milk' onSearch={this._onSearch} />
+              <SearchInput query={query} className='input' placeholder={placeholder} onSearch={this._onSearch} />
               <SearchScopeBar selectedScope={selectedScope} onSelectScope={this._onSelectScope} />
               <span class='text -after'>Vegan?</span>
           </div>

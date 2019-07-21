@@ -1,5 +1,8 @@
 # Is it Vegan?
 
+[![Build Status](https://travis-ci.com/isitvegan/isitvegan.app.svg?branch=master)](https://travis-ci.com/isitvegan/isitvegan.app)
+[![Code Coverage](https://img.shields.io/badge/tests-none-success.svg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 This repo is home to [isitvegan.app](https://www.isitvegan.app), a simple tool to check whether an item is vegan 🌱
 
 ## Features

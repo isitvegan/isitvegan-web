@@ -90,7 +90,7 @@ impl SearchEngine for ElasticSearch {
                             "autocomplete": {
                                 "type": "edge_ngram",
                                 "min_gram": 2,
-                                "max_gram": 10,
+                                "max_gram": 20,
                                 "token_chars": [
                                     "letter",
                                     "digit"
@@ -140,9 +140,22 @@ impl SearchEngine for ElasticSearch {
             .index(INDEX)
             .body(json!({
                 "query": {
-                    "multi_match": {
-                        "query": query,
-                        "fields": ["name^4", "e_number^4", "alternative_names^3", "vegan_alternatives^2", "description"],
+                    "bool": {
+                        "should": [
+                            {
+                                "term": {
+                                    "e_number": {
+                                        "value": query,
+                                        "boost": 100
+                                    }
+                                }
+                            }, {
+                                "multi_match": {
+                                    "query": query,
+                                    "fields": ["name^4", "e_number^4", "alternative_names^3"],
+                                }
+                            }
+                        ]
                     }
                 }
             }))
