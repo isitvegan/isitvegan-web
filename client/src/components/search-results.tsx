@@ -51,7 +51,9 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
   }
 
   componentWillReceiveProps(nextProps: SearchResultsProps, _: SearchResultsState) {
-    if (this.state.query !== nextProps.query || this.state.scope !== nextProps.scope) {
+    const propsMatchWithState = this.state.query === nextProps.query &&
+                                this.state.scope === nextProps.scope;
+    if (!propsMatchWithState) {
       this.fetchItems(nextProps.query, nextProps.scope);
     }
   }
