@@ -28,10 +28,11 @@ const Item = ({ scope, selected, onSelect }: { scope: SearchScope, selected: boo
 }
 
 function labelForScope(scope: SearchScope): string {
+  const NO_BREAK_SPACE = '\u{00A0}';
   switch (scope) {
     case SearchScope.Names:
       return 'Search names';
     case SearchScope.ENumbers:
-      return 'Search E\u{00A0}numbers';
+      return `Search E${NO_BREAK_SPACE}numbers`;
   }
 }
