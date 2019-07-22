@@ -15,7 +15,7 @@
         padding: 20px 36px;
         background-color: var(--header-color);
         display: grid;
-        grid-gap: 8px 18px;
+        grid-gap: 0 18px;
         grid-template-columns: repeat(3, auto);
         grid-template-areas: "title title status" "enumber . .";
         align-items: center;
@@ -47,6 +47,7 @@
         padding: 6px 10px;
         color: var(--header-color);
         grid-area: enumber;
+        margin-top: 8px;
     }
 
     > .header > .status {
