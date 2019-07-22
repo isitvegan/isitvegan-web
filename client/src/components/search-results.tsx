@@ -1,12 +1,14 @@
 import { Component, h } from 'preact';
-import { Item, State, Source } from '../search-api-return-types';
+import { Item } from '../search-api-return-types';
 import { search } from '../search-api-proxy';
 import { SearchResultItem } from './search-result-item';
+import { SearchScope } from '../search-scope';
 
 export type OnSearchTermClick = (searchTerm: string) => void;
 
 export interface SearchResultsProps {
   query: string,
+  scope: SearchScope,
   onSearchTermClick: OnSearchTermClick,
 }
 
@@ -23,6 +25,7 @@ type SearchResultsStateInner =  { type: SearchResultsStateType.Loaded, items: It
 interface SearchResultsState {
   inner: SearchResultsStateInner,
   query: string,
+  scope: SearchScope,
 }
 
 export class SearchResults extends Component<SearchResultsProps, SearchResultsState> {
@@ -34,6 +37,7 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
     this.setState({
       inner: { type: SearchResultsStateType.Loaded, items: [] },
       query: '',
+      scope: SearchScope.Names,
     })
   }
 
@@ -47,25 +51,27 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
   }
 
   componentWillReceiveProps(nextProps: SearchResultsProps, _: SearchResultsState) {
-    if (this.state.query !== nextProps.query) {
-      this.fetchItems(nextProps.query);
+    const propsMatchWithState = this.state.query === nextProps.query &&
+                                this.state.scope === nextProps.scope;
+    if (!propsMatchWithState) {
+      this.fetchItems(nextProps.query, nextProps.scope);
     }
   }
 
   componentWillMount() {
-    this.fetchItems(this.props.query);
+    this.fetchItems(this.props.query, this.props.scope);
   }
 
-  private fetchItems(query: string) {
+  private fetchItems(query: string, scope: SearchScope) {
     this.abortFetchRequest();
     this.abortController = new AbortController();
 
-    this.setState({ query });
+    this.setState({ query, scope });
 
     if (query === '') {
       this.setState({ inner: { type: SearchResultsStateType.Loaded, items: [] }});
     } else {
-      search(query, this.abortController.signal)
+      search(query, scope, this.abortController.signal)
         .then((items) => this.onItems(items))
         .catch((error) => this.onError(error));
     }

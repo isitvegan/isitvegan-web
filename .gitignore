@@ -10,3 +10,6 @@
 
 # Packed items
 item_pack.json
+
+# Vagrant
+.vagrant/

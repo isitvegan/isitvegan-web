@@ -3,6 +3,8 @@
 use crate::model::Item;
 use crate::search_engine::SearchEngine;
 use rocket::config::{Config, Environment};
+use rocket::http::RawStr;
+use rocket::request::FromFormValue;
 use rocket::State;
 use rocket_contrib::json::Json;
 use std::error::Error;
@@ -47,13 +49,40 @@ impl Server for RocketServer {
     }
 }
 
-/// Searches a single item
-#[get("/search?<query>")]
+/// The selected search scope
+#[derive(Debug)]
+pub enum Scope {
+    /// Search by name and alternative names
+    Names,
+    /// Search only e numbers
+    ENumber,
+}
+
+impl<'v> FromFormValue<'v> for Scope {
+    type Error = &'v RawStr;
+
+    fn from_form_value(form_value: &'v RawStr) -> Result<Self, &'v RawStr> {
+        let decoded_value = form_value.percent_decode().map_err(|_| form_value)?;
+        match decoded_value.as_ref() {
+            "names" => Ok(Scope::Names),
+            "eNumber" => Ok(Scope::ENumber),
+            _ => Err(form_value),
+        }
+    }
+}
+
+/// Searches a single item with a scope
+#[get("/search?<query>&<scope>")]
 fn search(
     query: String,
+    scope: Scope,
     search_engine: State<'_, Arc<dyn SearchEngine>>,
 ) -> Result<Json<Vec<Item>>, Box<dyn Error>> {
-    search_engine.search(&query).map(Json)
+    let results = match scope {
+        Scope::Names => search_engine.search_by_names(&query),
+        Scope::ENumber => search_engine.search_by_e_number(&query),
+    };
+    results.map(Json)
 }
 
 /// Searches a single item per slug
