@@ -21,7 +21,8 @@ export const SearchScopeBar = ({ selectedScope, onSelectScope }: SearchScopeBarP
 const Item = ({ scope, selected, onSelect }: { scope: SearchScope, selected: boolean, onSelect: () => void }) => {
   return (
     <label class='item'>
-      <input type='radio' value={scope} name='search-scope' class='radio' onInput={onSelect} checked={selected} />
+      <input type='radio' name='search-scope' class='radio'
+             value={scope} onInput={onSelect} checked={selected} />
       <span class='label'>{labelForScope(scope)}</span>
     </label>
   )
