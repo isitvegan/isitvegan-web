@@ -75,13 +75,12 @@ impl<'v> FromFormValue<'v> for Scope {
 #[get("/search?<query>&<scope>")]
 fn search(
     query: String,
-    scope: Option<Scope>,
+    scope: Scope,
     search_engine: State<'_, Arc<dyn SearchEngine>>,
 ) -> Result<Json<Vec<Item>>, Box<dyn Error>> {
     let results = match scope {
-        Some(Scope::Names) => search_engine.search_by_names(&query),
-        Some(Scope::ENumber) => search_engine.search_by_e_number(&query),
-        None => search_engine.search(&query),
+        Scope::Names => search_engine.search_by_names(&query),
+        Scope::ENumber => search_engine.search_by_e_number(&query),
     };
     results.map(Json)
 }

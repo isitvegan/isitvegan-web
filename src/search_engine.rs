@@ -15,9 +15,6 @@ pub trait SearchEngine: Debug + Sync + Send {
     /// Remove all items from the internal storage
     fn wipe_storage(&self) -> Result<(), Box<dyn Error>>;
 
-    /// Search for a query
-    fn search(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>>;
-
     /// Search by name and alternative names for a query
     fn search_by_names(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>>;
 
@@ -137,39 +134,6 @@ impl SearchEngine for ElasticSearch {
             .send()?;
 
         Ok(())
-    }
-
-    fn search(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
-        Ok(self
-            .client
-            .search::<Item>()
-            .index(INDEX)
-            .body(json!({
-                "query": {
-                    "bool": {
-                        "should": [
-                            {
-                                "term": {
-                                    "e_number": {
-                                        "value": query,
-                                        "boost": 100
-                                    }
-                                }
-                            }, {
-                                "multi_match": {
-                                    "query": query,
-                                    "fields": ["name^4", "e_number^4", "alternative_names^3"],
-                                }
-                            }
-                        ]
-                    }
-                }
-            }))
-            .send()
-            .map_err(Box::new)?
-            .into_hits()
-            .filter_map(Hit::into_document)
-            .collect())
     }
 
     fn search_by_names(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
