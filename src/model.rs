@@ -60,7 +60,6 @@ pub enum State {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Source {
     /// The date when this source was last checked.
-    #[serde(flatten)]
     pub last_checked: Option<UtcDate>,
     /// The value of this source.
     #[serde(flatten)]
@@ -69,6 +68,7 @@ pub struct Source {
 
 /// Newtype
 #[derive(Debug, Serialize, Deserialize)]
+#[serde(transparent)]
 pub struct UtcDate(#[serde(with = "serde_date_format")] Date<Utc>);
 
 /// A source for an item's [`State`]
@@ -82,7 +82,7 @@ pub enum SourceKind {
 }
 
 mod serde_date_format {
-    use chrono::{Date, TimeZone, Utc};
+    use chrono::{Date, Utc, NaiveDate};
     use serde::{self, Deserialize, Deserializer, Serializer};
 
     const FORMAT: &'static str = "%Y-%m-%d";
@@ -99,9 +99,8 @@ mod serde_date_format {
     where
         D: Deserializer<'de>,
     {
-        let s = String::deserialize(deserializer)?;
-        Utc.datetime_from_str(&s, FORMAT)
-            .map_err(serde::de::Error::custom)
-            .map(|dt| dt.date())
+        let string = String::deserialize(deserializer)?;
+        let naive_date = NaiveDate::parse_from_str(&string, FORMAT).map_err(serde::de::Error::custom)?;
+        Ok(Date::from_utc(naive_date, Utc))
     }
 }
