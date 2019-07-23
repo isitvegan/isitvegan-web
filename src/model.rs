@@ -1,5 +1,6 @@
 //! Plain old data types
 
+use chrono::{Date, Utc};
 use serde::{Deserialize, Serialize};
 use url::Url;
 
@@ -57,10 +58,50 @@ pub enum State {
 
 /// A source for an item's [`State`]
 #[derive(Debug, Serialize, Deserialize)]
+pub struct Source {
+    /// The date when this source was last checked.
+    #[serde(flatten)]
+    pub last_checked: Option<UtcDate>,
+    /// The value of this source.
+    #[serde(flatten)]
+    pub kind: SourceKind,
+}
+
+/// Newtype
+#[derive(Debug, Serialize, Deserialize)]
+pub struct UtcDate(#[serde(with = "serde_date_format")] Date<Utc>);
+
+/// A source for an item's [`State`]
+#[derive(Debug, Serialize, Deserialize)]
 #[serde(tag = "type", content = "value")]
 #[serde(rename_all = "camelCase")]
-pub enum Source {
+pub enum SourceKind {
     /// An online source
     #[serde(with = "url_serde")]
     Url(Url),
+}
+
+mod serde_date_format {
+    use chrono::{Date, TimeZone, Utc};
+    use serde::{self, Deserialize, Deserializer, Serializer};
+
+    const FORMAT: &'static str = "%Y-%m-%d";
+
+    pub fn serialize<S>(date: &Date<Utc>, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: Serializer,
+    {
+        let s = format!("{}", date.format(FORMAT));
+        serializer.serialize_str(&s)
+    }
+
+    pub fn deserialize<'de, D>(deserializer: D) -> Result<Date<Utc>, D::Error>
+    where
+        D: Deserializer<'de>,
+    {
+        let s = String::deserialize(deserializer)?;
+        Utc.datetime_from_str(&s, FORMAT)
+            .map_err(serde::de::Error::custom)
+            .map(|dt| dt.date())
+    }
 }
