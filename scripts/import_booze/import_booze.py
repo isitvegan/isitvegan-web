@@ -4,6 +4,7 @@ from itertools import count, chain
 from collections import namedtuple
 import re
 from concurrent.futures import ThreadPoolExecutor, Future
+from datetime import datetime
 
 
 def _get_soup(url):
@@ -71,6 +72,7 @@ def _map_product_to_item(parsed_product):
     state = _map_status_to_state(parsed_product.status)
     description = _map_description(state)
     url = _map_url(parsed_product.url)
+    last_checked = datetime.utcnow().strftime('%Y-%m-%d')
     item = f'''
 [[items]]
 name = "{name}"
@@ -83,7 +85,7 @@ description = '''
         item += f'"""{description}"""'
     item += f'''
 sources = [
-    {{ type = "url", value = "{url}" }}
+    {{ type = "url", value = "{url}", last_checked = "{last_checked}" }}
 ]
 vegan_alternatives = []
 '''
