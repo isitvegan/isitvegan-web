@@ -12,7 +12,7 @@
                              '. scope-bar .';
         grid-template-columns: max-content 1fr max-content;
         margin: auto;
-        max-width: 600px;
+        max-width: @content-max-width;
     }
 
     > .inner > .text.-before {
@@ -31,7 +31,7 @@
         grid-area: scope-bar;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: @content-max-width) {
         > .inner {
             grid-template-columns: 100%;
             grid-template-areas: 'text-before' 'input' 'scope-bar' 'text-after';
