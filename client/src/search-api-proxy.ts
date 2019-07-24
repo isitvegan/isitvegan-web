@@ -1,4 +1,4 @@
-import { Item } from './search-api-return-types';
+import { Item, Source } from './search-api-return-types';
 import { SearchScope } from './search-scope';
 
 export async function search(queryString: string, scope: SearchScope, abortSignal: AbortSignal): Promise<Item[]> {
@@ -13,11 +13,19 @@ function mapItem(item: any): Item {
     name: item.name,
     state: item.state,
     description: item.description,
-    sources: item.sources,
+    sources: (item.sources as any[]).map(mapSource),
     alternativeNames: item.alternative_names,
     eNumber: item.e_number,
     veganAlternatives: item.vegan_alternatives,
     slug: item.slug,
+  }
+}
+
+function mapSource(source: any): Source {
+  return {
+    type: source.type,
+    value: source.value,
+    lastChecked: source.last_checked,
   }
 }
 

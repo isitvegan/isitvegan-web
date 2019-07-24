@@ -115,15 +115,31 @@ function Source({ source }: { source: Source }) {
     case 'url':
       return (
         <li class='item'>
-          <a href={source.value} class='link'>
-            <svg class='icon'>
-              <use xlinkHref='/icons/external-link.svg#icon' href='/icons/external-link.svg#icon' />
-            </svg>
-            <span class='text'>{source.value}</span>
-          </a>
+          <svg class='icon'>
+            <use xlinkHref='/icons/external-link.svg#icon' href='/icons/external-link.svg#icon' />
+          </svg>
+          <a href={source.value} class='text'>{source.value}</a>
+          {source.lastChecked != null && <SourceLastChecked date={source.lastChecked} />}
         </li>
       );
   }
+}
+
+function SourceLastChecked({ date }: { date: string }) {
+  const locales = determineEnglishLocales();
+  const dateTimeFormat = new Intl.DateTimeFormat(locales, { year: 'numeric', month: 'long', day: 'numeric' });
+  const formattedDate = dateTimeFormat.format(Date.parse(date));
+  return <span class='date'>Last checked: {formattedDate}</span>;
+}
+
+function determineEnglishLocales(): string[] {
+  const FALLBACK_LOCALE = 'en-GB';
+  const userChosenLocales = navigator.languages.filter(isEnglishLocale);
+  return [...userChosenLocales, FALLBACK_LOCALE];
+}
+
+function isEnglishLocale(language: string): boolean {
+  return language.startsWith('en-') || language === 'en';
 }
 
 function labelForState(state: State): string {

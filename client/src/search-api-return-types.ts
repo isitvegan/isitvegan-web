@@ -12,6 +12,7 @@ export interface Item {
 export interface Source {
   type: SourceType;
   value: string;
+  lastChecked: string;
 }
 
 export type State = "vegan" | "carnist" | "itDepends";
