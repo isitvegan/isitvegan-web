@@ -1,16 +1,28 @@
 .links-list {
+    > .item {
+        display: grid;
+        align-items: center;
+        grid-template-columns: max-content auto;
+        grid-template-areas: 'icon text' '. date';
+        grid-column-gap: 8px;
+    }
+
     > .item:not(:last-child) {
         margin-bottom: 12px;
     }
 
-    > .item > .link {
-        display: grid;
-        align-items: center;
-        grid-template-columns: max-content auto;
-        grid-gap: 8px;
+    > .item > .text {
+        grid-area: text;
     }
 
-    > .item > .link > .icon {
+    > .item > .date {
+        grid-area: date;
+        margin-top: 4px;
+        font-size: 14px;
+    }
+
+    > .item > .icon {
+        grid-area: icon;
         width: 14px;
         height: 14px;
     }

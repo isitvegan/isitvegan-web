@@ -79,7 +79,7 @@ impl ItemLoader for TomlItemLoader {
                     None
                 }
             });
-        let imported_items = load_items_from_entries(imported_entries);
+        let imported_items = load_items_from_entries(imported_entries)?;
         println!("Finished loading imported items");
 
         println!("Loading manual items");
@@ -99,7 +99,7 @@ impl ItemLoader for TomlItemLoader {
                     .to_string_lossy()
                     .contains(&imported_items_directory)
             });
-        let manual_items = load_items_from_entries(manual_entries);
+        let manual_items = load_items_from_entries(manual_entries)?;
         println!("Finished loading manual items");
 
         println!("Resolving duplicated items");
@@ -114,16 +114,20 @@ impl ItemLoader for TomlItemLoader {
     }
 }
 
-fn load_items_from_entries(entries: impl Iterator<Item = DirEntry>) -> HashMap<String, Item> {
-    entries
+fn load_items_from_entries(
+    entries: impl Iterator<Item = DirEntry>,
+) -> Result<HashMap<String, Item>, Box<dyn Error>> {
+    let items = entries
         .map(|entry| entry.path().to_string_lossy().into_owned())
         .filter(|file_path| file_path.ends_with(".toml"))
-        .map(|file_path| load_items_from_file(&file_path).into_iter())
-        .flatten()
+        .map(|file_path| load_items_from_file(&file_path))
+        .collect::<Result<Vec<_>, _>>()?
+        .into_iter()
         .map(|items| items.items.into_iter())
         .flatten()
         .map(|item| (item.name.clone(), item))
-        .collect()
+        .collect();
+    Ok(items)
 }
 
 fn load_items_from_file(file_path: &str) -> Result<Items, Box<dyn Error>> {
