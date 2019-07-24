@@ -134,5 +134,5 @@ fn load_items_from_file(file_path: &str) -> Result<Items, Box<dyn Error>> {
     let mut file_content = String::new();
     file.read_to_string(&mut file_content)?;
 
-    Ok(toml::from_str(&file_content).expect("Toml format was not valid"))
+    Ok(toml::from_str(&file_content)?)
 }
