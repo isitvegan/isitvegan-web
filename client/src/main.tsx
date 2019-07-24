@@ -42,11 +42,10 @@ class App extends Component<{}, AppState> {
       <div>
         <div class='search-bar'>
           <div class='inner'>
-              <span class='text -before'>Is</span>
+              <span class='title'>Is it Vegan?</span>
               <SearchInput query={query} className='input' type={mapToSearchInputType(selectedScope)}
                            placeholder={placeholder} onSearch={this._onSearch} />
               <SearchScopeBar selectedScope={selectedScope} onSelectScope={this._onSelectScope} />
-              <span class='text -after'>Vegan?</span>
           </div>
         </div>
         <SearchResults query={query.trim()} scope={selectedScope} onSearchTermClick={this._onSearch} />

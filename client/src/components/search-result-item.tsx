@@ -43,9 +43,10 @@ function Description({ description }: { description: string }) {
     return null;
   } else {
     return (
-      <div class="section">
+      <details class='section'>
+        <summary class='title'>Details</summary>
         <p class="content">{description}</p>
-      </div>
+      </details>
     );
   }
 }
