@@ -1,22 +1,21 @@
 .search-bar {
     background: var(--color-green);
     color: #fff;
-    padding: 38px;
+    padding: var(--horizontal-space);
     font-size: 30px;
 
     > .inner {
         display: grid;
         align-items: center;
         grid-gap: 16px 32px;
-        grid-template-areas: 'text-before input text-after'
-                             '. scope-bar .';
-        grid-template-columns: max-content 1fr max-content;
+        grid-template-areas: 'title' 'input' 'scope-bar';
+        grid-template-columns: 100%;
         margin: auto;
         max-width: @content-max-width;
     }
 
-    > .inner > .text.-before {
-        grid-area: text-before;
+    > .inner > .title {
+        grid-area: title;
     }
 
     > .inner > .text.-after {
@@ -29,13 +28,6 @@
 
     > .inner > .search-scope-bar {
         grid-area: scope-bar;
-    }
-
-    @media (max-width: @content-max-width) {
-        > .inner {
-            grid-template-columns: 100%;
-            grid-template-areas: 'text-before' 'input' 'scope-bar' 'text-after';
-        }
     }
 
     > .inner > .input {

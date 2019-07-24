@@ -12,10 +12,10 @@
 
     > .header {
         color: #fff;
-        padding: 36px;
+        padding: 20px var(--horizontal-space);
         background-color: var(--header-color);
         display: grid;
-        grid-gap: 8px 18px;
+        grid-gap: 0 18px;
         grid-template-columns: repeat(3, auto);
         grid-template-areas: "title title status" "enumber . .";
         align-items: center;
@@ -47,6 +47,7 @@
         padding: 6px 10px;
         color: var(--header-color);
         grid-area: enumber;
+        margin-top: 8px;
     }
 
     > .header > .status {
@@ -60,13 +61,17 @@
     > .section > .text,
     > .section > .content,
     > .section > .title {
-        margin: 0 48px;
+        margin: 0 var(--horizontal-space);
     }
 
     > .section > .title  {
         font-weight: bold;
         font-size: 18px;
         margin-bottom: 12px;
+    }
+
+    > details.section:not([open]) > .title {
+        margin-bottom: 0;
     }
 
     > .section:not(:last-child) {

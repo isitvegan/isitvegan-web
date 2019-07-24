@@ -11,6 +11,8 @@
     --background-level-1-box-shadow: 0 0 2px 0 rgba(0, 0, 0, .12);
     --text-color: #000;
     --divider-color: #f6f6f6;
+    --horizontal-space: 36px;
+    --vertical-space: 48px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +21,13 @@
         --background-level-1-color: rgba(0, 0, 0, .2);
         --text-color: #fff;
         --divider-color: rgba(0, 0, 0, .2);
+    }
+}
+
+@media (max-width: @content-max-width) {
+    :root {
+        --horizontal-space: 20px;
+        --vertical-space: 20px;
     }
 }
 
