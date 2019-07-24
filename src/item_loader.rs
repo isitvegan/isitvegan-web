@@ -119,7 +119,7 @@ fn load_items_from_entries(entries: impl Iterator<Item = DirEntry>) -> Result<Ha
         .map(|entry| entry.path().to_string_lossy().into_owned())
         .filter(|file_path| file_path.ends_with(".toml"))
         .map(|file_path| load_items_from_file(&file_path))
-        .collect::<Result<Vec<_>, Box<dyn Error>>>()?
+        .collect::<Result<Vec<_>, _>>()?
         .into_iter()
         .map(|items| items.items.into_iter())
         .flatten()
