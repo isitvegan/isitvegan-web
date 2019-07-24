@@ -82,7 +82,7 @@ pub enum SourceKind {
 }
 
 mod serde_date_format {
-    use chrono::{Date, Utc, NaiveDate};
+    use chrono::{Date, NaiveDate, Utc};
     use serde::{self, Deserialize, Deserializer, Serializer};
 
     const FORMAT: &'static str = "%Y-%m-%d";
@@ -100,7 +100,8 @@ mod serde_date_format {
         D: Deserializer<'de>,
     {
         let string = String::deserialize(deserializer)?;
-        let naive_date = NaiveDate::parse_from_str(&string, FORMAT).map_err(serde::de::Error::custom)?;
+        let naive_date =
+            NaiveDate::parse_from_str(&string, FORMAT).map_err(serde::de::Error::custom)?;
         Ok(Date::from_utc(naive_date, Utc))
     }
 }

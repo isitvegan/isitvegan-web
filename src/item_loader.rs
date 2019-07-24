@@ -114,7 +114,9 @@ impl ItemLoader for TomlItemLoader {
     }
 }
 
-fn load_items_from_entries(entries: impl Iterator<Item = DirEntry>) -> Result<HashMap<String, Item>, Box<dyn Error>> {
+fn load_items_from_entries(
+    entries: impl Iterator<Item = DirEntry>,
+) -> Result<HashMap<String, Item>, Box<dyn Error>> {
     let items = entries
         .map(|entry| entry.path().to_string_lossy().into_owned())
         .filter(|file_path| file_path.ends_with(".toml"))
