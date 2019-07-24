@@ -1,12 +1,12 @@
 .search-result-item {
     background: var(--background-level-1-color);
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .12);
+    box-shadow: var(--background-level-1-box-shadow);
     border-radius: 5px;
     overflow: hidden;
-    max-width: 600px;
+    max-width: @content-max-width;
     margin: auto;
 
-    @media (max-width: 600px) {
+    @media (max-width: @content-max-width) {
         border-radius: 0;
     }
 

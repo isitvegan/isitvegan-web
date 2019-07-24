@@ -77,4 +77,5 @@ const mapToSearchInputType = (scope: SearchScope): SearchInputType => {
   }
 }
 
-render(<App />, document.body);
+let content = document.querySelector('#js-main-content') || document.body;
+render(<App />, content);
