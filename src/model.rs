@@ -85,8 +85,9 @@ mod serde_date_format {
     use chrono::{Date, NaiveDate, Utc};
     use serde::{self, Deserialize, Deserializer, Serializer};
 
-    const FORMAT: &'static str = "%Y-%m-%d";
+    const FORMAT: &str = "%Y-%m-%d";
 
+    #[allow(clippy::trivially_copy_pass_by_ref)]
     pub fn serialize<S>(date: &Date<Utc>, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: Serializer,
