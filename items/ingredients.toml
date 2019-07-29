@@ -78,3 +78,31 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Pharmaceutical_glaze" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Castoreum"
+alternative_names = [
+]
+state = "carnist"
+description = """
+This tincture used in some perfumes is a yellowish secretion from the castor sacs of beavers.
+The animals use these to mark their territory due to its strong leather-like smell.
+In order to harvest the Castoreum, the sacs are cut off from killed beavers and left to dry for two or more years.
+"""
+sources = [
+    { type = "url", value = "https://en.wikipedia.org/wiki/Castoreum" }
+]
+vegan_alternatives = [ "castor oil" ]
+
+[[items]]
+name = "Castor oil"
+alternative_names = [
+]
+state = "vegan"
+description = """
+Not to be confused with the carnist castoreum, castor oil is pressed from castor beans.
+"""
+sources = [
+    { type = "url", value = "https://en.wikipedia.org/wiki/Castor_oil" }
+]
+vegan_alternatives = [ ]
