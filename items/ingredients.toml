@@ -44,3 +44,18 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Lactose_intolerance" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Cholesterol"
+alternative_names = [
+    "Cholesterin",
+    "Cholesteryl alcohol"
+]
+state = "carnist"
+description = """
+Cholesterol is produced in an animal's liver.
+"""
+sources = [
+    { type = "url", value = "https://en.wikipedia.org/wiki/Cholesterol" }
+]
+vegan_alternatives = []
