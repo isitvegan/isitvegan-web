@@ -59,3 +59,22 @@ sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Cholesterol" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Confectioner's glaze"
+alternative_names = [
+    "Pharmaceutical glaze",
+    "Resinous glaze",
+    "Pure food glaze",
+    "Natural glaze",
+    "Confectioner's resin"
+]
+state = "carnist"
+description = """
+Confectioner's glaze is an alcohol based solution containing shellac,
+which is a resin secreted by the female lac bug when building a cocoon.
+"""
+sources = [
+    { type = "url", value = "https://en.wikipedia.org/wiki/Pharmaceutical_glaze" }
+]
+vegan_alternatives = []
