@@ -61,7 +61,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Confectioner's glaze"
+name = "Confectioner's Glaze"
 alternative_names = [
     "Pharmaceutical glaze",
     "Resinous glaze",
@@ -95,7 +95,7 @@ sources = [
 vegan_alternatives = [ "castor oil" ]
 
 [[items]]
-name = "Castor oil"
+name = "Castor Oil"
 alternative_names = [
 ]
 state = "vegan"
