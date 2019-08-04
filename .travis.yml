@@ -16,9 +16,11 @@ env:
 
 jobs:
   include:
-    - name: "Server"
+    - stage: "Test"
+      name: "Server"
       script: ./ci/test_server.sh
-    - name: "Client"
+    - stage: "Test"
+      name: "Client"
       script: ./ci/test_client.sh
 
 script:
