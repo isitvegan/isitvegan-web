@@ -1,13 +1,6 @@
 sudo: false
 dist: trusty
-language: rust
-node_js:
-- node
-
-install:
-- rustup component add rustfmt clippy
-- rustup target add wasm32-unknown-unknown
-- cargo install -f grcov
+language: generic
 
 env:
   global:
@@ -18,18 +11,18 @@ jobs:
   include:
     - stage: "Test"
       name: "Server"
+      language: rust
+      install:
+      - rustup component add rustfmt clippy
+      - rustup target add wasm32-unknown-unknown
+      - cargo install -f grcov
       script: ./ci/test_server.sh
+
     - stage: "Test"
       name: "Client"
       script: ./ci/test_client.sh
-
-script:
-- cargo build --all-features --verbose $CARGO_OPTIONS 
-- cargo test --all-features --verbose $CARGO_OPTIONS
-- ./coverage.sh
-- cargo clippy --all-features --tests -- -Dwarnings
-- cargo fmt --all -- --check
-- cargo doc --no-deps
+      node_js:
+        - node
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -f lcov.info
