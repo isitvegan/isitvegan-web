@@ -1,6 +1,8 @@
 sudo: false
 dist: trusty
 language: rust
+node_js:
+- node
 
 install:
 - rustup component add rustfmt clippy
@@ -11,6 +13,13 @@ env:
   global:
   - CARGO_INCREMENTAL=0
   - RUSTFLAGS='-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
+
+jobs:
+  include:
+    - name: "Server"
+      script: ./ci/test_server.sh
+    - name: "Client"
+      script: ./ci/test_client.sh
 
 script:
 - cargo build --all-features --verbose $CARGO_OPTIONS 
