@@ -1,6 +1,6 @@
 import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
-import rollupTypescript from 'rollup-plugin-typescript2';
+import rollupTypescript from 'rollup-plugin-typescript';
 import typescript from 'typescript';
 import tslib from 'tslib';
 import resolve from 'rollup-plugin-node-resolve';
@@ -8,7 +8,7 @@ import resolve from 'rollup-plugin-node-resolve';
 const isProduction = process.env['BUILD_ENV'] === 'production';
 
 const plugins = [
-  rollupTypescript({ typescript, tslib, tsconfig: 'tsconfig.json', allowNonTsExtensions: true }),
+  rollupTypescript({ typescript, tslib, tsconfig: 'tsconfig.json' }),
   resolve(),
   babel({
     babelrc: false,
