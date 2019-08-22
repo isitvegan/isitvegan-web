@@ -10,12 +10,12 @@
         "rollup-plugin-uglify": "^6.0.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.5.4",
-        "@babel/preset-env": "^7.5.4",
-        "less": "^3.9.0",
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "less": "^3.10.2",
         "less-plugin-clean-css": "^1.5.1",
-        "preact": "^8.4.2",
-        "rollup": "^1.17.0",
+        "preact": "^8.5.2",
+        "rollup": "^1.20.0",
         "rollup-plugin-babel": "^4.3.3",
         "rollup-plugin-node-resolve": "^5.2.0",
         "rollup-plugin-typescript": "^1.0.1",
