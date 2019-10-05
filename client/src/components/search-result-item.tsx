@@ -118,7 +118,9 @@ function Source({ source }: { source: Source }) {
           <svg class='icon'>
             <use xlinkHref='/icons/external-link.svg#icon' href='/icons/external-link.svg#icon' />
           </svg>
-          <a href={source.value} class='text'>{source.value}</a>
+          <a href={source.value} class='text'>
+            {simplifySourceUrl(source.value)}
+          </a>
           {source.lastChecked != null && <SourceLastChecked date={source.lastChecked} />}
         </li>
       );
@@ -173,4 +175,17 @@ function iconForState(state: State): string {
     case 'itDepends':
       return '/icons/it-depends.svg';
   }
+}
+
+function simplifySourceUrl(url: string): string {
+  const WWW_PREFIX = 'www.';
+  const parsedUrl = new URL(url);
+  const hostname = parsedUrl.hostname;
+  return withoutPrefix(hostname, WWW_PREFIX);
+}
+
+function withoutPrefix(string: string, prefix: string): string {
+  return string.startsWith(prefix)
+    ? string.substr(prefix.length)
+    : string;
 }
