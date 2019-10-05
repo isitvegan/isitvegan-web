@@ -4,7 +4,7 @@
     padding: var(--horizontal-space);
     font-size: 30px;
 
-    @supports (padding: env(safe-area-inset-right)) {
+    @supports (padding: max(0)) {
         padding: 
             var(--horizontal-space)
             ~"max(env(safe-area-inset-right) + var(--horizontal-space))"
