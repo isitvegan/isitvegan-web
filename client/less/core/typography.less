@@ -1,6 +1,13 @@
 :root {
+    supported-color-schemes: light dark;
     font-family: 'SF Hello', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-size: 16px;
     background-color: var(--background-level-0-color);
     color: var(--text-color );
 }
+
+@supports (supported-color-schemes: light dark) {
+    :root {
+      background-color: initial;
+    }
+  }
