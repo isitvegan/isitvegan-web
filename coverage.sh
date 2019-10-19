@@ -8,5 +8,5 @@ grcov coverage.zip \
        --llvm \
        --branch \
        --ignore-not-existing \
-       --ignore-dir '/*' \
+       --ignore '/*' \
        > lcov.info
