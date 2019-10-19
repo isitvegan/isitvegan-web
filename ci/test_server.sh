@@ -2,6 +2,7 @@
 
 set -e
 
+./ci/install_grcov.sh
 cargo build --all-features --verbose $CARGO_OPTIONS 
 cargo test --all-features --verbose $CARGO_OPTIONS
 ./coverage.sh

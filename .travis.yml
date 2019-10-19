@@ -15,7 +15,6 @@ jobs:
       install:
       - rustup component add rustfmt clippy
       - rustup target add wasm32-unknown-unknown
-      - cargo install -f grcov
       script: ./ci/test_server.sh
 
     - stage: "Test"
