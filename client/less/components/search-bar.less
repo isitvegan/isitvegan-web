@@ -4,6 +4,14 @@
     padding: var(--horizontal-space);
     font-size: 30px;
 
+    @supports (padding: max(0)) {
+        padding: 
+            var(--horizontal-space)
+            ~"max(env(safe-area-inset-right) + var(--horizontal-space))"
+            var(--horizontal-space)
+            ~"max(env(safe-area-inset-left) + var(--horizontal-space))";
+    }
+
     > .inner {
         display: grid;
         align-items: center;
