@@ -94,7 +94,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Caustic sulphite caramel"
+name = "Caustic sulfite caramel"
 alternative_names = []
 e_number = "E150b"
 state = "vegan"
@@ -118,7 +118,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Sulphite ammonia caramel"
+name = "Sulfite ammonia caramel"
 alternative_names = []
 e_number = "E150d"
 state = "vegan"
@@ -591,7 +591,8 @@ name = "Benzoic acid"
 alternative_names = [
     "Carboxybenzene",
     "Dracylic acid",
-    "Phenylmethanoic acid"
+    "Phenylmethanoic acid",
+    "BzOH"
 ]
 e_number = "E210"
 state = "vegan"
@@ -746,7 +747,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Sulphur dioxide"
+name = "Sulfur dioxide"
 alternative_names = [
     "Sulfurous anhydride",
     "Sulfur(IV) oxide"
@@ -755,14 +756,14 @@ e_number = "E220"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/Sulphur_dioxide" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Sulfur_dioxide" },
     { type = "url", value = "http://www.ukfoodguide.net/e220.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
-name = "Sodium sulphite"
+name = "Sodium sulfite"
 alternative_names = [
     "Hypo clear (photography)"
 ]
@@ -777,7 +778,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Sodium bisulphite"
+name = "Sodium bisulfite"
 alternative_names = [
     "sodium bisulphite"
 ]
@@ -792,7 +793,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Sodium metabisulphite"
+name = "Sodium metabisulfite"
 alternative_names = [
     "Sodium pyrosulfite",
     "Sodium disulfite"
@@ -808,7 +809,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Potassium metabisulphite"
+name = "Potassium metabisulfite"
 alternative_names = [
     "Potassium pyrosulfite",
     "Dipotassium disulfite",
@@ -826,7 +827,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Potassium sulphite"
+name = "Potassium sulfite"
 alternative_names = []
 e_number = "E225"
 state = "vegan"
@@ -839,7 +840,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Calcium sulphite"
+name = "Calcium sulfite"
 alternative_names = [
     "Sulfurous acid",
     "calcium salt (1:1)"
@@ -855,7 +856,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Calcium hydrogen sulphite"
+name = "Calcium hydrogen sulfite"
 alternative_names = [
     "Calcium bisulphite"
 ]
@@ -870,7 +871,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Potassium hydrogen sulphite"
+name = "Potassium hydrogen sulfite"
 alternative_names = [
     "Potassium bisulfite",
     "sulfurous acid",
@@ -1759,7 +1760,7 @@ alternative_names = [
     "Sal tartar",
     "Disodium tartrate",
     "Bisodium tartrate",
-    "Sodium L-(+)-tartrate"
+    "Sodium l-(+)-tartrate"
 ]
 e_number = "E335"
 state = "vegan"
@@ -2794,7 +2795,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Sulphuric acid"
+name = "Sulfuric acid"
 alternative_names = [
     "Oil of vitriol"
 ]
@@ -2808,7 +2809,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Ammonium sulphate"
+name = "Ammonium sulfate"
 alternative_names = [
     "Ammonium sulfate",
     "Ammonium sulfate (2:1)",
@@ -2827,7 +2828,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Magnesium sulphate"
+name = "Magnesium sulfate"
 alternative_names = [
     "Bitter salts",
     "Bath salts"
@@ -2858,7 +2859,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Aluminium sulphate"
+name = "Aluminium sulfate"
 alternative_names = [
     "Aluminum sulfate",
     "Aluminium sulphate",
@@ -2876,7 +2877,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Aluminium sodium sulphate"
+name = "Aluminium sodium sulfate"
 alternative_names = [
     "Sodium alum",
     "Soda alum"
@@ -2891,7 +2892,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Aluminium potassium sulphate"
+name = "Aluminium potassium sulfate"
 alternative_names = [
     "Potassium alum",
     "Potash alum",
@@ -2907,7 +2908,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Aluminium ammonium sulphate"
+name = "Aluminium ammonium sulfate"
 alternative_names = [
     "Ammonium alum",
     "Tschermigite"
@@ -3138,7 +3139,7 @@ name = "Ammonium polyphosphate"
 alternative_names = [
     "Exolit AP 422",
     "FR CROS 484",
-    "APP"
+    "CS FR APP 231"
 ]
 e_number = "E545"
 state = "vegan"
@@ -3723,7 +3724,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Potassium persulphate"
+name = "Potassium persulfate"
 alternative_names = []
 e_number = "E922"
 state = "vegan"
@@ -3735,7 +3736,7 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Ammonium persulphate"
+name = "Ammonium persulfate"
 alternative_names = [
     "Ammonium peroxydisulfate"
 ]
@@ -3944,7 +3945,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Isobutane"
-alternative_names = []
+alternative_names = [
+    "Isobutane"
+]
 e_number = "E943b"
 state = "vegan"
 description = ""
