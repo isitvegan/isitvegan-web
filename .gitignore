@@ -14,4 +14,3 @@ item_pack.json
 # Vagrant
 .vagrant/
 
-/scripts/import_booze/.cache/*.json

@@ -26,9 +26,9 @@ def _fetch_json(url: str):
     return json.loads(content)
 
 def _fetch_json_cached(url: str):
-    url_hash = base64.b64encode(url.encode('utf-8')).decode('utf-8')
-    cache_file = os.path.join('.cache', f'request-{url_hash}.json')
-    
+    friendly_url = url.replace('https://', '').replace('http://', '').replace('/', '-').replace('.', '-')
+    cache_file = os.path.join('.cache', f'request-{friendly_url}')
+
     try:
         if os.path.exists(cache_file):
             return _read_json(cache_file)
