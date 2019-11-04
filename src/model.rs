@@ -77,7 +77,6 @@ pub struct UtcDate(#[serde(with = "serde_date_format")] Date<Utc>);
 #[serde(rename_all = "camelCase")]
 pub enum SourceKind {
     /// An online source
-    #[serde(with = "url_serde")]
     Url(Url),
 }
 
