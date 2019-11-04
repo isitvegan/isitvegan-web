@@ -4,7 +4,6 @@
 #![warn(missing_docs, clippy::dbg_macro, clippy::unimplemented)]
 #![feature(proc_macro_hygiene)]
 #![feature(decl_macro)]
-#![feature(non_exhaustive)]
 #![deny(
     rust_2018_idioms,
     future_incompatible,
