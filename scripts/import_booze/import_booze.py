@@ -45,7 +45,7 @@ def _read_json(file_name: str):
 
 def _write_json(file_name: str, data):
     with open(file_name, 'w+') as f:
-        json.dump(data, f)
+        json.dump(data, f, indent=4, sort_keys=True)
 
 def _fetch_company_ids(url: str) -> List[str]:
     companies = _fetch_json_cached(url)
