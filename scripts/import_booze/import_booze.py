@@ -11,15 +11,16 @@ import re
 from datetime import datetime
 import toml
 
-_BEER_URL = 'http://barnivore.com/beer.json'
-_WINE_URL = 'http://barnivore.com/wine.json'
-_LIQOR_URL = 'http://barnivore.com/liquor.json'
+_BARNIVORE_URL = 'http://www.barnivore.com'
+_BEER_URL = f'{_BARNIVORE_URL}/beer.json'
+_WINE_URL = f'{_BARNIVORE_URL}/wine.json'
+_LIQOR_URL = f'{_BARNIVORE_URL}/liquor.json'
 _name_re = re.compile(r'[\(\)\-\t]')
 
 _ParsedProduct = namedtuple("_ParsedProduct", "status name url")
 
 def _company_url(company_id: str) -> str:
-    return f'http://barnivore.com/company/{company_id}.json'
+    return f'{_BARNIVORE_URL}/company/{company_id}.json'
 
 def _fetch_json(url: str):
     content = urllib.request.urlopen(url).read().decode()
@@ -75,7 +76,7 @@ def _map_product(product) -> _ParsedProduct:
     name = product['product_name']
     state = product['status']
     product_id = product['id']
-    url = f'http://www.barnivore.com/products/{product_id}'
+    url = f'{_BARNIVORE_URL}/products/{product_id}'
     return _ParsedProduct(state, name, url)
 
 def _map_name(name):
