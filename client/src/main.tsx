@@ -1,4 +1,4 @@
-import { h, render, Component } from 'preact';
+import { h, render, Component, Fragment } from 'preact';
 import { SearchInput, SearchInputType } from './components/search-input';
 import { SearchResults } from './components/search-results';
 import { SearchScopeBar } from './components/search-scope-bar';
@@ -39,7 +39,7 @@ class App extends Component<{}, AppState> {
     const placeholder = placeholderItems.join(', ');
 
     return (
-      <div>
+      <Fragment>
         <div class='search-bar'>
           <div class='inner'>
               <span class='title'>Is it Vegan?</span>
@@ -49,7 +49,7 @@ class App extends Component<{}, AppState> {
           </div>
         </div>
         <SearchResults query={query.trim()} scope={selectedScope} onSearchTermClick={this._onSearch} />
-      </div>
+      </Fragment>
     )
   }
 
