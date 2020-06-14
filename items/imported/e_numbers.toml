@@ -1059,7 +1059,6 @@ vegan_alternatives = []
 name = "Formaldehyde"
 alternative_names = [
     "Methyl aldehyde",
-    "Methylene glycol",
     "Methylene oxide",
     "Formol",
     "Carbonyl hydride"
@@ -1807,7 +1806,7 @@ vegan_alternatives = []
 [[items]]
 name = "Orthophosphoric acid"
 alternative_names = [
-    "Phosphoric acid"
+    "Orthophosphoric acid"
 ]
 e_number = "E338"
 state = "vegan"
@@ -2373,7 +2372,7 @@ vegan_alternatives = []
 name = "Sorbitol"
 alternative_names = [
     "D-glucitol",
-    "L-Sorbitol",
+    "D-Sorbitol",
     "Sorbogem",
     "Sorbo"
 ]
@@ -2751,7 +2750,7 @@ alternative_names = [
     "Sal ammoniac",
     "Salmiac",
     "Nushadir salt",
-    "Sal armagnac",
+    "Sal armagnac,",
     "Salt armoniack",
     "Salmiak"
 ]
@@ -2797,7 +2796,8 @@ vegan_alternatives = []
 [[items]]
 name = "Sulfuric acid"
 alternative_names = [
-    "Oil of vitriol"
+    "Oil of vitriol",
+    "Hydrogen sulfate"
 ]
 e_number = "E513"
 state = "vegan"
@@ -2811,7 +2811,7 @@ vegan_alternatives = []
 [[items]]
 name = "Ammonium sulfate"
 alternative_names = [
-    "Ammonium sulfate",
+    "Ammonium sulphate",
     "Ammonium sulfate (2:1)",
     "Diammonium sulfate",
     "Mascagnite",
@@ -3046,7 +3046,6 @@ alternative_names = [
     "Gelbnatron",
     "Ferrocyannatrium",
     "Yellow blood salt",
-    "[citation needed"
 ]
 e_number = "E535"
 state = "vegan"
@@ -3171,7 +3170,8 @@ alternative_names = [
     "Silicon(IV) oxide",
     "Crystalline silica",
     "Pure Silica",
-    "Silicea"
+    "Silicea",
+    "Silica sand"
 ]
 e_number = "E551"
 state = "vegan"
@@ -3812,7 +3812,7 @@ vegan_alternatives = []
 name = "Carbamide"
 alternative_names = [
     "Carbamide",
-    "Carbonic diamide",
+    "Carbonyldiamide",
     "Carbonyldiamine",
     "Diaminomethanal",
     "Diaminomethanone"
@@ -4675,7 +4675,7 @@ vegan_alternatives = []
 name = "Zeaxanthin"
 alternative_names = [
     "β-carotene-3",
-    "3'-diol"
+    "3′-diol"
 ]
 e_number = "E161h"
 state = "itDepends"
@@ -5345,7 +5345,10 @@ vegan_alternatives = []
 
 [[items]]
 name = "Glycine and its sodium salt"
-alternative_names = []
+alternative_names = [
+    "2-Aminoethanoic acid",
+    "Glycocoll"
+]
 e_number = "E640"
 state = "itDepends"
 description = ""
