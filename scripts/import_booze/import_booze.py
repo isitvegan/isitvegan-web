@@ -104,7 +104,7 @@ def _map_description(status):
 Some variants of this item may contain animal products. 
 Check the provided sources for further details.
 '''
-    return None
+    return '' 
 
 
 def _map_product_to_item(parsed_product):
