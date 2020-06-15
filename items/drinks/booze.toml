@@ -57,3 +57,13 @@ sources = [
     { type = "url", value = "https://www.swissveg.ch/geklaertegetraenke" }
 ]
 vegan_alternatives = []
+
+[[items]]
+name = "Nilslibräu"
+alternative_names = []
+state = "vegan"
+description = """
+All drinks brewed by Nilslibräu are vegan.
+"""
+sources = []
+vegan_alternatives = []
