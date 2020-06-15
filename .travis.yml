@@ -20,9 +20,9 @@ jobs:
     - stage: "Test"
       name: "Client"
       before_script: 
-        - N_PREFIX="~/n" npm install -g n
-        - N_PREFIX="~/n" n lts
-      script: ./ci/test_client.sh
+        - N_PREFIX="$HOME/.n" npm install -g n
+        - N_PREFIX="$HOME/.n" n lts
+      script: N_PREFIX="$HOME/.n" n exec lts ./ci/test_client.sh
       python:
         - 3.7
       node_js:
