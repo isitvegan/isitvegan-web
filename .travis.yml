@@ -19,6 +19,7 @@ jobs:
 
     - stage: "Test"
       name: "Client"
+      before_script: npm install -g n && n lts
       script: ./ci/test_client.sh
       python:
         - 3.7
