@@ -6,6 +6,7 @@ env:
   global:
   - CARGO_INCREMENTAL=0
   - RUSTFLAGS='-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
+  - N_PREFIX="$HOME/.n"
 
 jobs:
   include:
@@ -19,11 +20,14 @@ jobs:
 
     - stage: "Test"
       name: "Client"
-      script: ./ci/test_client.sh
+      before_script: 
+        - npm install -g n
+        - n lts
+      script: n exec lts ./ci/test_client.sh
       python:
         - 3.7
       node_js:
-        - node
+        - 14
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -f lcov.info
