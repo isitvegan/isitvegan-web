@@ -19,6 +19,8 @@ jobs:
 
     - stage: "Test"
       name: "Client"
+      env: 
+        - N_PREFIX="$(HOME)"
       before_script: npm install -g n && n lts
       script: ./ci/test_client.sh
       python:
