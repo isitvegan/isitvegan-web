@@ -6,6 +6,7 @@ env:
   global:
   - CARGO_INCREMENTAL=0
   - RUSTFLAGS='-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
+  - N_PREFIX="$HOME/.n"
 
 jobs:
   include:
@@ -20,9 +21,9 @@ jobs:
     - stage: "Test"
       name: "Client"
       before_script: 
-        - N_PREFIX="$HOME/.n" npm install -g n
-        - N_PREFIX="$HOME/.n" n lts
-      script: N_PREFIX="$HOME/.n" n exec lts ./ci/test_client.sh
+        - npm install -g n
+        - n lts
+      script: n exec lts ./ci/test_client.sh
       python:
         - 3.7
       node_js:
