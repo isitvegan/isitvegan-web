@@ -1806,7 +1806,7 @@ vegan_alternatives = []
 [[items]]
 name = "Orthophosphoric acid"
 alternative_names = [
-    "Orthophosphoric acid"
+    "Phosphoric acid"
 ]
 e_number = "E338"
 state = "vegan"
