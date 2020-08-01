@@ -20,6 +20,7 @@ jobs:
         with:
           toolchain: nightly
           targets: wasm32-unknown-unknown
+          components: rustfmt, clippy
       - name: Run tests
         run: ./ci/test_server.sh
       - uses: codecov/codecov-action@v1
