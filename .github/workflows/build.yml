@@ -10,6 +10,9 @@ jobs:
   server:
     name: Server
     runs-on: ubuntu-latest
+    env:
+      CARGO_INCREMENTAL: 0
+      RUSTFLAGS: '-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
     steps:
       - uses: actions/checkout@v1
       - name: Install latest nightly
@@ -19,3 +22,6 @@ jobs:
           targets: wasm32-unknown-unknown
       - name: Run tests
         run: ./ci/test_server.sh
+      - uses: codecov/codecov-action@v1
+        with:
+          file: ./lcov.info
