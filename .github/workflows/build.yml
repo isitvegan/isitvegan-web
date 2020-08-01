@@ -18,7 +18,6 @@ jobs:
       - name: Install latest nightly
         uses: actions-rs/toolchain@v1
         with:
-          toolchain: nightly
           targets: wasm32-unknown-unknown
           components: rustfmt, clippy
       - name: Run tests
