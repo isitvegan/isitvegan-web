@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v2
         with:
-          node-version: 'lts'
+          node-version: '12'
       - name: Install dependencies
         run: yarn install
 
