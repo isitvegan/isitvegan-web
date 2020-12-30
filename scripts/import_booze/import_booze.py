@@ -15,6 +15,7 @@ _BARNIVORE_URL = 'http://www.barnivore.com'
 _BEER_URL = f'{_BARNIVORE_URL}/beer.json'
 _WINE_URL = f'{_BARNIVORE_URL}/wine.json'
 _LIQOR_URL = f'{_BARNIVORE_URL}/liquor.json'
+_CIDER_URL = f'{_BARNIVORE_URL}/cider.json'
 _name_re = re.compile(r'[\(\)\-\t]')
 
 _ParsedProduct = namedtuple("_ParsedProduct", "status name url")
@@ -63,7 +64,8 @@ def _fetch_companies() -> List[str]:
     beer = _fetch_company_ids(_BEER_URL)
     wine = _fetch_company_ids(_WINE_URL)
     liqor = _fetch_company_ids(_LIQOR_URL)
-    return [*beer, *wine, *liqor]
+    cider = _fetch_company_ids(_CIDER_URL)
+    return [*beer, *wine, *liqor, *cider]
 
 def _fetch_products():
     companies = _fetch_companies()
