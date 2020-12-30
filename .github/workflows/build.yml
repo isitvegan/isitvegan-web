@@ -30,13 +30,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: client
+        working-directory: ./client
     steps:
+      - uses: actions/checkout@v1
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
       - name: Install dependencies
         run: yarn install
-
       - name: Build
         run: yarn build
