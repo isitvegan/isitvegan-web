@@ -15,8 +15,6 @@ jobs:
       RUSTFLAGS: '-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
     steps:
       - uses: actions/checkout@v1
-      - name: Install Rust Toolchain
-        uses: actions-rs/toolchain@v1
       - name: Run Tests
         run: ./ci/test_server.sh
       - uses: codecov/codecov-action@v1
