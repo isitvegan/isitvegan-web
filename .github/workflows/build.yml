@@ -15,12 +15,9 @@ jobs:
       RUSTFLAGS: '-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
     steps:
       - uses: actions/checkout@v1
-      - name: Install latest nightly
+      - name: Install Rust Toolchain
         uses: actions-rs/toolchain@v1
-        with:
-          targets: wasm32-unknown-unknown
-          components: rustfmt, clippy
-      - name: Run tests
+      - name: Run Tests
         run: ./ci/test_server.sh
       - uses: codecov/codecov-action@v1
         with:
@@ -36,7 +33,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - name: Install dependencies
+      - name: Install Dependencies
         run: yarn install
       - name: Build
         run: yarn build
