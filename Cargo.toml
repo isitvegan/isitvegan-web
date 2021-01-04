@@ -8,7 +8,7 @@ edition = "2018"
 url = { version = "2", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
 # Git dependency until https://github.com/elastic-rs/elastic/issues/346 is released
-elastic = { git = "https://github.com/elastic-rs/elastic" }
+elastic = { git = "https://github.com/elastic-rs/elastic", rev = "b8171556370a4ac1ef9c29ffe3a38dcd71b00736" }
 serde_json = "1"
 rocket = "0.4.2"
 rocket_contrib = { version = "0.4.2", features = ["json"] }
