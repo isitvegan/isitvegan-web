@@ -9,7 +9,7 @@ on:
 jobs:
   server:
     name: Server
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     env:
       CARGO_INCREMENTAL: 0
       RUSTFLAGS: '-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
@@ -22,7 +22,7 @@ jobs:
           file: ./lcov.info
   client:
     name: Client
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     defaults:
       run:
         working-directory: ./client
