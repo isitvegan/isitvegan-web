@@ -9,7 +9,6 @@
         "esModuleInterop": true,
     },
     "include": [
-        "src/**/*",
-        "node_modules/**/*"
+        "src/**/*"
     ]
 }
