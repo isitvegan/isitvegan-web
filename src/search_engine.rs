@@ -39,7 +39,7 @@ impl Debug for ElasticSearch {
 impl ElasticSearch {
     /// Create a new [`ElasticSearch`] instance
     pub fn try_new(address: &str, port: u16) -> Result<ElasticSearch, elastic::Error> {
-        let url = format!("{}:{}", address, port);
+        let url = format!("{address}:{port}");
         Ok(Self {
             client: SyncClientBuilder::new().static_node(url).build()?,
         })
@@ -163,7 +163,7 @@ impl SearchEngine for ElasticSearch {
     }
 
     fn search_by_e_number(&self, query: &str) -> Result<Vec<Item>, Box<dyn Error>> {
-        let query_prefixed_with_e = format!("E{query}", query = query);
+        let query_prefixed_with_e = format!("E{query}");
         Ok(self
             .client
             .search::<Item>()
