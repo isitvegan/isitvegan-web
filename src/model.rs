@@ -1,6 +1,6 @@
 //! Plain old data types
 
-use chrono::{Date, Utc};
+use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
 use url::Url;
 
@@ -69,7 +69,7 @@ pub struct Source {
 /// Newtype
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(transparent)]
-pub struct UtcDate(#[serde(with = "serde_date_format")] Date<Utc>);
+pub struct UtcDate(NaiveDate);
 
 /// A source for an item's [`State`]
 #[derive(Debug, Serialize, Deserialize)]
@@ -78,30 +78,4 @@ pub struct UtcDate(#[serde(with = "serde_date_format")] Date<Utc>);
 pub enum SourceKind {
     /// An online source
     Url(Url),
-}
-
-mod serde_date_format {
-    use chrono::{Date, NaiveDate, Utc};
-    use serde::{self, Deserialize, Deserializer, Serializer};
-
-    const FORMAT: &str = "%Y-%m-%d";
-
-    #[allow(clippy::trivially_copy_pass_by_ref)]
-    pub fn serialize<S>(date: &Date<Utc>, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: Serializer,
-    {
-        let s = format!("{}", date.format(FORMAT));
-        serializer.serialize_str(&s)
-    }
-
-    pub fn deserialize<'de, D>(deserializer: D) -> Result<Date<Utc>, D::Error>
-    where
-        D: Deserializer<'de>,
-    {
-        let string = String::deserialize(deserializer)?;
-        let naive_date =
-            NaiveDate::parse_from_str(&string, FORMAT).map_err(serde::de::Error::custom)?;
-        Ok(Date::from_utc(naive_date, Utc))
-    }
 }

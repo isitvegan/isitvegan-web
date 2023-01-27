@@ -75,7 +75,7 @@ impl ItemLoader for TomlItemLoader {
             .filter_map(|entry| match entry {
                 Ok(entry) => Some(entry),
                 Err(error) => {
-                    println!("Failed to load a filesystem item: {}", error);
+                    println!("Failed to load a filesystem item: {error}");
                     None
                 }
             });
@@ -89,7 +89,7 @@ impl ItemLoader for TomlItemLoader {
             .filter_map(|entry| match entry {
                 Ok(entry) => Some(entry),
                 Err(error) => {
-                    println!("Failed to load a filesystem item: {}", error);
+                    println!("Failed to load a filesystem item: {error}");
                     None
                 }
             })
@@ -107,7 +107,7 @@ impl ItemLoader for TomlItemLoader {
             .into_iter()
             .chain(manual_items.into_iter())
             .collect();
-        let items: Vec<_> = unique_items.into_iter().map(|(_, item)| item).collect();
+        let items: Vec<_> = unique_items.into_values().collect();
         println!("Finished importing items");
 
         Ok(Items { items })
@@ -123,15 +123,14 @@ fn load_items_from_entries(
         .map(|file_path| load_items_from_file(&file_path))
         .collect::<Result<Vec<_>, _>>()?
         .into_iter()
-        .map(|items| items.items.into_iter())
-        .flatten()
+        .flat_map(|items| items.items.into_iter())
         .map(|item| (item.name.clone(), item))
         .collect();
     Ok(items)
 }
 
 fn load_items_from_file(file_path: &str) -> Result<Items, Box<dyn Error>> {
-    println!("Loading items from {}", file_path);
+    println!("Loading items from {file_path}");
     let mut file = File::open(file_path)?;
     let mut file_content = String::new();
     file.read_to_string(&mut file_content)?;
