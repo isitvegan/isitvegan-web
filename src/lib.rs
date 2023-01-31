@@ -2,8 +2,6 @@
 
 #![type_length_limit = "2965010"]
 #![warn(missing_docs, clippy::dbg_macro, clippy::unimplemented)]
-#![feature(proc_macro_hygiene)]
-#![feature(decl_macro)]
 #![deny(
     rust_2018_idioms,
     future_incompatible,

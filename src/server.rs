@@ -2,19 +2,22 @@
 
 use crate::model::Item;
 use crate::search_engine::SearchEngine;
-use rocket::config::{Config, Environment};
-use rocket::http::RawStr;
-use rocket::request::FromFormValue;
+use rocket::config::{Config};
+use rocket::form::{FromFormField};
 use rocket::State;
-use rocket_contrib::json::Json;
+use rocket::http::Status;
+use rocket::serde::json::Json;
 use std::error::Error;
 use std::fmt::Debug;
+use std::net::IpAddr;
 use std::sync::Arc;
+use async_trait::async_trait;
 
 /// The server running the application
+#[async_trait]
 pub trait Server: Debug {
     /// Start the application on the specified port
-    fn run(self: Box<Self>, address: &str, port: u16) -> Result<(), Box<dyn Error>>;
+    async fn run(self: Box<Self>, address: IpAddr, port: u16) -> Result<(), Box<dyn Error>>;
 }
 
 /// An implementation of [`Server`] that uses [Rocket]
@@ -32,43 +35,30 @@ impl RocketServer {
     }
 }
 
+#[async_trait]
 impl Server for RocketServer {
-    fn run(self: Box<Self>, address: &str, port: u16) -> Result<(), Box<dyn Error>> {
-        let config = Config::build(Environment::Staging)
-            .address(address)
-            .port(port)
-            .finalize()
-            .map_err(Box::new)?;
+    async fn run(self: Box<Self>, address: IpAddr, port: u16) -> Result<(), Box<dyn Error>> {
+        let config = Config { address, port, ..Default::default() };
 
-        rocket::custom(config)
+        _ = rocket::custom(config)
             .mount("/", routes![search, item_by_slug])
             .manage(self.search_engine)
-            .launch();
+            .launch()
+            .await?;
 
         Ok(())
     }
 }
 
 /// The selected search scope
-#[derive(Debug)]
+#[derive(Debug, FromFormField)]
 pub enum Scope {
     /// Search by name and alternative names
+    #[field(value = "names")]
     Names,
     /// Search only e numbers
+    #[field(value = "eNumber")]
     ENumber,
-}
-
-impl<'v> FromFormValue<'v> for Scope {
-    type Error = &'v RawStr;
-
-    fn from_form_value(form_value: &'v RawStr) -> Result<Self, &'v RawStr> {
-        let decoded_value = form_value.percent_decode().map_err(|_| form_value)?;
-        match decoded_value.as_ref() {
-            "names" => Ok(Scope::Names),
-            "eNumber" => Ok(Scope::ENumber),
-            _ => Err(form_value),
-        }
-    }
 }
 
 /// Searches a single item with a scope
@@ -76,22 +66,23 @@ impl<'v> FromFormValue<'v> for Scope {
 fn search(
     query: String,
     scope: Scope,
-    search_engine: State<'_, Arc<dyn SearchEngine>>,
-) -> Result<Json<Vec<Item>>, Box<dyn Error>> {
+    search_engine: &State<Arc<dyn SearchEngine>>,
+) -> Result<Json<Vec<Item>>, Status> {
     let results = match scope {
         Scope::Names => search_engine.search_by_names(&query),
         Scope::ENumber => search_engine.search_by_e_number(&query),
     };
-    results.map(Json)
+    results.map(Json).map_err(|_| Status::InternalServerError)
 }
 
 /// Searches a single item per slug
 #[get("/items/<slug>")]
 fn item_by_slug(
     slug: String,
-    search_engine: State<'_, Arc<dyn SearchEngine>>,
-) -> Result<Option<Json<Item>>, Box<dyn Error>> {
+    search_engine: &State<Arc<dyn SearchEngine>>,
+) -> Result<Option<Json<Item>>, Status> {
     search_engine
         .get_by_slug(&slug)
         .map(|option| option.map(Json))
+        .map_err(|_| Status::InternalServerError)
 }
