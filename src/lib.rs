@@ -1,6 +1,5 @@
 //! A useful tool to check wether food is vegan 🌱
 
-#![type_length_limit = "2965010"]
 #![warn(missing_docs, clippy::dbg_macro, clippy::unimplemented)]
 #![deny(
     rust_2018_idioms,
