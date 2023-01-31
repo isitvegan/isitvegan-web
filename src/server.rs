@@ -2,16 +2,16 @@
 
 use crate::model::Item;
 use crate::search_engine::SearchEngine;
-use rocket::config::{Config};
-use rocket::form::{FromFormField};
-use rocket::State;
+use async_trait::async_trait;
+use rocket::config::Config;
+use rocket::form::FromFormField;
 use rocket::http::Status;
 use rocket::serde::json::Json;
+use rocket::State;
 use std::error::Error;
 use std::fmt::Debug;
 use std::net::IpAddr;
 use std::sync::Arc;
-use async_trait::async_trait;
 
 /// The server running the application
 #[async_trait]
@@ -38,7 +38,11 @@ impl RocketServer {
 #[async_trait]
 impl Server for RocketServer {
     async fn run(self: Box<Self>, address: IpAddr, port: u16) -> Result<(), Box<dyn Error>> {
-        let config = Config { address, port, ..Default::default() };
+        let config = Config {
+            address,
+            port,
+            ..Default::default()
+        };
 
         _ = rocket::custom(config)
             .mount("/", routes![search, item_by_slug])

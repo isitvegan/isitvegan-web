@@ -18,11 +18,5 @@ async fn main() {
     .unwrap();
 
     let server = Box::new(RocketServer::new(Arc::new(search_engine)));
-    server
-        .run(
-            server_address,
-            server_port,
-        )
-        .await
-        .unwrap();
+    server.run(server_address, server_port).await.unwrap();
 }
