@@ -4,6 +4,7 @@ use dotenv::dotenv;
 use std::env::var;
 use std::error::Error;
 use std::fmt::Debug;
+use std::net::IpAddr;
 
 /// Provider for deployment configuration
 pub trait ConfigLoader: Debug {
@@ -14,7 +15,7 @@ pub trait ConfigLoader: Debug {
     fn elasticsearch_port(&self) -> Result<u16, Box<dyn Error>>;
 
     /// Returns the address that the server will run on
-    fn server_address(&self) -> Result<String, Box<dyn Error>>;
+    fn server_address(&self) -> Result<IpAddr, Box<dyn Error>>;
 
     /// Returns the port that the server will run on
     fn server_port(&self) -> Result<u16, Box<dyn Error>>;
@@ -59,8 +60,8 @@ impl ConfigLoader for DotEnvConfigLoader {
         Ok(var("ELASTICSEARCH_PORT")?.parse()?)
     }
 
-    fn server_address(&self) -> Result<String, Box<dyn Error>> {
-        Ok(var("SERVER_ADDRESS")?)
+    fn server_address(&self) -> Result<IpAddr, Box<dyn Error>> {
+        Ok(var("SERVER_ADDRESS")?.parse()?)
     }
 
     fn server_port(&self) -> Result<u16, Box<dyn Error>> {
