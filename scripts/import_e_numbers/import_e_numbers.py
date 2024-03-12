@@ -611,7 +611,7 @@ _e_number_re = re.compile(r'\b[Ee] *\d+\w*')
 
 
 def _get_alternative_names(article_soup, e_number):
-    info_box = article_soup.find(class_='infobox bordered')
+    info_box = article_soup.find(class_=re.compile('\s*infobox\s+.*'))
     if info_box is None:
         return []
     for row in info_box.find_all('tr'):
