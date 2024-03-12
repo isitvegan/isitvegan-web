@@ -1,4 +1,4 @@
-const cssnano = require('cssnano');
+const cssnano = require('cssnano')
 
 const plugins = [
   cssnano({
