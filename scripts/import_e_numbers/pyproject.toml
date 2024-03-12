@@ -2,7 +2,7 @@
 name = "import_e_numbers"
 version = "0.1.0"
 description = ""
-authors = ["Jan Nils Ferner <jn_ferner@hotmail.de>"]
+authors = ["Jan Hohenheim"]
 
 [tool.poetry.dependencies]
 python = "^3.7"

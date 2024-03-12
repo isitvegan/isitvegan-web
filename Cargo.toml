@@ -1,7 +1,6 @@
 [package]
 name = "is-it-vegan"
 version = "0.1.0"
-authors = ["Jan Nils Ferner <jn_ferner@hotmail.de>"]
 edition = "2018"
 
 [dependencies]
