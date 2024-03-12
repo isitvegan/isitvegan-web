@@ -22,4 +22,4 @@ This repo is home to [isitvegan.app](https://www.isitvegan.app), a simple tool t
 Keep in mind that the app is quite young, so there are still many items missing.
 We are continuously adding new one to the database. 
 
-If you wish to contribute, feel free to add items to one of the files inside the [items/ directory](https://github.com/jnferner/isitvegan.app/tree/master/items).
+If you wish to contribute, feel free to add items to one of the files inside the [items/ directory](./items/).
