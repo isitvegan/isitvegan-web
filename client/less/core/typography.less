@@ -1,13 +1,18 @@
 :root {
-    supported-color-schemes: light dark;
-    font-family: 'SF Hello', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color-scheme: light dark;
+    font-family: 'Inter', sans-serif;
+    // case = Case alternates
+    // cv02 = Open four
+    // cv03 = Open six
+    // cv04 = Open nine
+    // cv05 = Lower-case L with tail
+    // cv08 = Upper-case i with serif
+    // cv11 = Single-storey a
+    // dlig = Discretionary ligatures
+    // ss03 = Round quotes & comma
+    // zero = Slashed Zero
+    font-feature-settings: "case", "cv02", "cv03", "cv04", "cv05", "cv08", "cv11", "dlig", "ss03", "zero";
     font-size: 16px;
     background-color: var(--background-level-0-color);
     color: var(--text-color );
 }
-
-@supports (supported-color-schemes: light dark) {
-    :root {
-      background-color: initial;
-    }
-  }

@@ -23,6 +23,10 @@ def copy_files(target: str):
     if os.path.exists(icons_dir):
         shutil.rmtree(icons_dir)
     shutil.copytree('icons', icons_dir, copy_function=shutil.copy)
+    fonts_dir = os.path.join(target, 'fonts')
+    if os.path.exists(fonts_dir):
+        shutil.rmtree(fonts_dir)
+    shutil.copytree('fonts', fonts_dir, copy_function=shutil.copy)
 
 
 if __name__ == '__main__':
