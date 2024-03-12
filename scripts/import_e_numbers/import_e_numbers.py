@@ -615,45 +615,67 @@ def _get_alternative_names(article_soup, e_number):
     if info_box is None:
         return []
     for style in info_box.find_all('style'):
-        style.decompose()
+        style.decompose() # decompose = "remove this tag and all its children"
     for row in info_box.find_all('tr'):
         for data in row.find_all('td'):
             text = data.get_text()
-            text = text.replace('[citation needed]', '')
             ALTERNATIVE_NAMES_IDENTIFIER = "Other names"
             if ALTERNATIVE_NAMES_IDENTIFIER in text:
-                # I hate Wikipedia's 'Other names' section
-                # It's so hecking inconsistent!
-                html = str(data)
-                html = _italic_re.sub('', html)
-                html = _a_re.sub('', html)
-
-                data = BeautifulSoup(html, 'html.parser')
-
-                name_list = data.get_text("\n")
-                names = name_list.replace(ALTERNATIVE_NAMES_IDENTIFIER, '')
-                names = names.strip()
-                names = names.replace('\n ', ' ')
-                names = names.strip()
-                if '•' in names:
-                    names = _non_dot_re.sub(r'\1', names)
-                    names = _dot_re.sub('\n', names)
-                elif ';' in names:
-                    names = _non_semicolon_re.sub(r'\1', names)
-                    names = _semicolon_re.sub('\n', names)
-                elif ' ' in names:
-                    names = _comma_space_re.sub('\n', names)
+                list = data.find('ul')
+                if list is not None:
+                    # Some cleaned up articles correctly use a 
+                    # list instead of some garbled junk.
+                    items = list.find_all('li')
+                    names = (_extract_name(item) for item in items)
+                    return (name for name in names if _is_name_valid_2(name))
                 else:
-                    # CSV without spaces
-                    names = names.replace(',', '\n')
+                    # I hate Wikipedia's 'Other names' section
+                    # It's so hecking inconsistent!
+                    html = str(data)
+                    html = _italic_re.sub('', html)
+                    html = _a_re.sub('', html)
 
-                names = _e_number_re.sub('', names)
-                names = names.split('\n')
-                names = (
-                    name.strip() for name in names if _is_name_valid(name))
-                return names
+                    data = BeautifulSoup(html, 'html.parser')
+
+                    name_list = data.get_text("\n")
+                    names = name_list.replace(ALTERNATIVE_NAMES_IDENTIFIER, '')
+                    names = names.strip()
+                    names = names.replace('\n ', ' ')
+                    names = names.strip()
+                    if '•' in names:
+                        names = _non_dot_re.sub(r'\1', names)
+                        names = _dot_re.sub('\n', names)
+                    elif ';' in names:
+                        names = _non_semicolon_re.sub(r'\1', names)
+                        names = _semicolon_re.sub('\n', names)
+                    elif ' ' in names:
+                        names = _comma_space_re.sub('\n', names)
+                    else:
+                        # CSV without spaces
+                        names = names.replace(',', '\n')
+
+                    names = _e_number_re.sub('', names)
+                    names = names.split('\n')
+                    names = (
+                        name.strip() for name in names if _is_name_valid(name))
+                    return names
     return []
 
+_citation_re = re.compile(r'\[\d*\]')
+def _extract_name(item) -> str:
+    name = item.get_text()
+    name = _citation_re.sub('', name)
+    return (name
+        .strip()
+        .rstrip(';')
+        .replace('[citation needed]', ''))
+
+# Is name valid for nice lists, so less heuristics necessary
+def _is_name_valid_2(name: str) -> bool:
+    return (name is not None
+        and name != ''
+        and not _contains_the_word_e_number(name)
+        and _e_number_re.search(name) is None)
 
 _invalid_name_re = re.compile(r'\[\d*\]')
 
