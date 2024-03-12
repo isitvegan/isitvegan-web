@@ -596,16 +596,6 @@ def _contains_the_word_e_number(text):
     return False
 
 
-def _get_uk_food_guide_url(e_number):
-    e_number = e_number.lower()
-    url = f'http://www.ukfoodguide.net/{e_number}.htm'
-    status_code = requests.head(url).status_code
-    if status_code is 200:
-        return url
-    else:
-        return None
-
-
 _italic_re = re.compile(r'</?i>')
 _a_re = re.compile(r'</?a( href=".*")?( title=".*")?>')
 
@@ -729,10 +719,6 @@ def _get_items(e_numbers):
         name = _get_e_number_title(title_soup)
 
         sources = [wikipedia_url]
-
-        uk_food_guide_url = _get_uk_food_guide_url(e_number)
-        if uk_food_guide_url is not None:
-            sources.append(uk_food_guide_url)
 
         article_soup = _get_soup(wikipedia_url)
         alternative_names = _get_alternative_names(article_soup, e_number)
