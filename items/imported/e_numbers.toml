@@ -1,11 +1,15 @@
 
 [[items]]
-name = "Brilliant Blue FCF"
+name = "Brilliant blue FCF"
 alternative_names = [
     "C.I. 42090",
+    "CI Food Blue 2",
     "Basacid Blue 755",
     "Neolan Blue E-A",
-    "Brilliant Blue FD"
+    "Brilliant Blue FD",
+    "Brilliant Blue Lake",
+    "Blue #1 Lake",
+    "Bucacid Azure Blue"
 ]
 e_number = "E133"
 state = "vegan"
@@ -43,11 +47,11 @@ vegan_alternatives = []
 [[items]]
 name = "Green S"
 alternative_names = [
-    "Food Green S",
-    "FD&C Green 4",
-    "Acid green 50",
-    "Lissamine Green B",
-    "Wool Green S",
+    "Food green S",
+    "FD&C green 4",
+    "acid green 50",
+    "lissamine green B",
+    "wool green S",
     "C.I. 44090"
 ]
 e_number = "E142"
@@ -239,9 +243,7 @@ vegan_alternatives = []
 
 [[items]]
 name = "Lycopene"
-alternative_names = [
-    "ψ-Carotene"
-]
+alternative_names = []
 e_number = "E160d"
 state = "vegan"
 description = ""
@@ -295,7 +297,8 @@ vegan_alternatives = []
 name = "Lutein"
 alternative_names = [
     "Luteine",
-    "trans-lutein"
+    "trans-Lutein",
+    "Xanthophyll"
 ]
 e_number = "E161b"
 state = "vegan"
@@ -309,8 +312,6 @@ vegan_alternatives = []
 [[items]]
 name = "Cryptoxanthin"
 alternative_names = [
-    "(3R)-β",
-    "β-Caroten-3-ol",
     "Cryptoxanthol",
     "Caricaxanthin",
     "Hydroxy-β-carotene",
@@ -559,7 +560,12 @@ alternative_names = [
     "Carboxybenzene",
     "Dracylic acid",
     "Phenylmethanoic acid",
-    "BzOH"
+    "Phenylcarboxylic acid",
+    "Benzoyl alcohol",
+    "Benzoylic acid",
+    "Carboxylbenzene",
+    "Hydrogenphenic acid",
+    "Phenoic acid"
 ]
 e_number = "E210"
 state = "vegan"
@@ -823,9 +829,10 @@ vegan_alternatives = []
 name = "Potassium hydrogen sulfite"
 alternative_names = [
     "Potassium bisulfite",
-    "sulfurous acid",
+    "potassium bisulphite",
     "monopotassium salt",
-    "monopotassium sulfite"
+    "monopotassium sulfite",
+    "potassium hydrosulfite"
 ]
 e_number = "E228"
 state = "vegan"
@@ -840,7 +847,9 @@ vegan_alternatives = []
 name = "Biphenyl, diphenyl"
 alternative_names = [
     "Biphenyl",
-    "Phenyl benzene"
+    "Phenylbenzene",
+    "Dibenzene",
+    "Xenene"
 ]
 e_number = "E230"
 state = "vegan"
@@ -930,13 +939,16 @@ vegan_alternatives = []
 [[items]]
 name = "Formic acid"
 alternative_names = [
+    "Isocarbonous acid",
     "Carbonous acid",
     "Formylic acid",
-    "Hydrogen carboxylic acid",
+    "Methylic acid",
+    "Hydrogencarboxylic acid",
     "Hydroxy(oxo)methane",
     "Metacarbonoic acid",
     "Oxocarbinic acid",
-    "Oxomethanol"
+    "Oxomethanol",
+    "Hydroxymethylene oxide"
 ]
 e_number = "E236"
 state = "vegan"
@@ -965,7 +977,7 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium formate"
 alternative_names = [
-    "formic acid calcium salt",
+    "Formic acid calcium salt",
     "calcoform"
 ]
 e_number = "E238"
@@ -982,7 +994,10 @@ name = "Hexamine"
 alternative_names = [
     "Hexamine",
     "Methenamine",
-    "Urotropine"
+    "Urotropine",
+    "Formin",
+    "Aminoform",
+    "HMTA"
 ]
 e_number = "E239"
 state = "vegan"
@@ -999,7 +1014,9 @@ alternative_names = [
     "Methyl aldehyde",
     "Methylene oxide",
     "Formol",
-    "Carbonyl hydride"
+    "Carbonyl hydride",
+    "Methanone",
+    "Oxomethane"
 ]
 e_number = "E240"
 state = "vegan"
@@ -1070,7 +1087,8 @@ vegan_alternatives = []
 name = "Acetic acid"
 alternative_names = [
     "Vinegar (when dilute)",
-    "Hydrogen acetate"
+    "Hydrogen acetate",
+    "Methanecarboxylic acid"
 ]
 e_number = "E260"
 state = "vegan"
@@ -1084,7 +1102,7 @@ vegan_alternatives = []
 [[items]]
 name = "Potassium acetate"
 alternative_names = [
-    "Potassium salt"
+    "Potassium ethanoate"
 ]
 e_number = "E261"
 state = "vegan"
@@ -1111,8 +1129,7 @@ vegan_alternatives = []
 name = "Calcium acetate"
 alternative_names = [
     "Acetate of lime",
-    "Calcium ethanoate",
-    "Calcium diacetate"
+    "Calcium ethanoate"
 ]
 e_number = "E263"
 state = "vegan"
@@ -1138,8 +1155,12 @@ vegan_alternatives = []
 [[items]]
 name = "Propionic acid"
 alternative_names = [
-    "Propionic acid",
-    "Ethanecarboxylic acid"
+    "Carboxyethane",
+    "Ethanecarboxylic acid",
+    "Ethylformic acid",
+    "Metacetonic acid",
+    "Methylacetic acid",
+    "C3:0 (Lipid numbers)"
 ]
 e_number = "E280"
 state = "vegan"
@@ -1198,14 +1219,14 @@ vegan_alternatives = []
 [[items]]
 name = "Boric acid"
 alternative_names = [
-    "Orthoboric acid,",
-    "Boracic acid,",
-    "Sassolite,",
-    "Optibor,",
-    "Borofax,",
-    "Trihydroxyborane,",
-    "Boron(III) hydroxide,",
-    "Boron Trihydroxide"
+    "Orthoboric acid",
+    "Boracic acid",
+    "Sassolite",
+    "Borofax",
+    "Trihydroxyborane",
+    "Boranetriol",
+    "Hydrogen borate",
+    "Acidum boricum"
 ]
 e_number = "E284"
 state = "vegan"
@@ -1235,10 +1256,10 @@ name = "Carbon dioxide"
 alternative_names = [
     "Carbonic acid gas",
     "Carbonic anhydride",
+    "Carbonic dioxide",
     "Carbonic oxide",
-    "Carbon oxide",
     "Carbon(IV) oxide",
-    "Dry ice (solid phase)"
+    "Methanedione"
 ]
 e_number = "E290"
 state = "vegan"
@@ -1254,10 +1275,9 @@ name = "Malic acid"
 alternative_names = [
     "Hydroxybutanedioic acid",
     "2-Hydroxysuccinic acid",
+    "(L/D)",
     "-Malic acid",
-    "-Malic acid",
-    "(–)-Malic acid",
-    "(+)-Malic acid"
+    "(±)-Malic acid"
 ]
 e_number = "E296"
 state = "vegan"
@@ -1290,7 +1310,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Ascorbic acid"
-alternative_names = []
+alternative_names = [
+    "Vitamin C"
+]
 e_number = "E300"
 state = "vegan"
 description = ""
@@ -1476,12 +1498,13 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium erythorbate"
 alternative_names = [
-    "D-Isoascorbate",
+    "D-isoascorbate",
     "Erbit N",
     "Eribate N",
-    "Isoascorbate C sodium",
+    "isoascorbate C sodium",
     "Isona",
-    "Sodium isoascorbate"
+    "sodium isoascorbate",
+    "sodium D-isoascorbate"
 ]
 e_number = "E316"
 state = "vegan"
@@ -1536,11 +1559,7 @@ vegan_alternatives = []
 
 [[items]]
 name = "Butylated hydroxyanisole"
-alternative_names = [
-    "BOA",
-    "BHA",
-    "Antioxyne B"
-]
+alternative_names = []
 e_number = "E320"
 state = "vegan"
 description = ""
@@ -1697,9 +1716,9 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Orthophosphoric acid"
+name = "Phosphoric acid"
 alternative_names = [
-    "Phosphoric acid"
+    "Orthophosphoric acid"
 ]
 e_number = "E338"
 state = "vegan"
@@ -1712,7 +1731,10 @@ vegan_alternatives = []
 
 [[items]]
 name = "Sodium phosphates"
-alternative_names = []
+alternative_names = [
+    "Sodium phosphate",
+    "Trisodium orthophosphate"
+]
 e_number = "E339"
 state = "vegan"
 description = ""
@@ -1876,12 +1898,14 @@ vegan_alternatives = []
 
 [[items]]
 name = "Monosodium fumarate"
-alternative_names = []
+alternative_names = [
+    "Disodium fumarate"
+]
 e_number = "E365"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Sodium_fumarate" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1949,7 +1973,7 @@ e_number = "E375"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/Niacin" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Niacin_(substance)" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1987,7 +2011,7 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium disodium ethylene diamine tetraacetate,"
 alternative_names = [
-    "USAN)",
+    "Edetic acid (",
     "Versene"
 ]
 e_number = "E385"
@@ -2226,7 +2250,6 @@ vegan_alternatives = []
 [[items]]
 name = "Sorbitol"
 alternative_names = [
-    "D-glucitol",
     "D-Sorbitol",
     "Sorbogem",
     "Sorbo"
@@ -2308,7 +2331,10 @@ vegan_alternatives = []
 
 [[items]]
 name = "Diphosphates"
-alternative_names = []
+alternative_names = [
+    "Pyrophosphate",
+    "Phosphonatophosphate"
+]
 e_number = "E450"
 state = "vegan"
 description = ""
@@ -2545,7 +2571,7 @@ name = "Hydrochloric acid"
 alternative_names = [
     "Muriatic acid",
     "Hydronium chloride",
-    "Chlorhydric Acid"
+    "Chlorhydric acid"
 ]
 e_number = "E507"
 state = "vegan"
@@ -2574,8 +2600,7 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium chloride"
 alternative_names = [
-    "Calcium(II) chloride",
-    "calcium dichloride"
+    "Neutral calcium chloride"
 ]
 e_number = "E509"
 state = "vegan"
@@ -2593,6 +2618,8 @@ alternative_names = [
     "Salmiac",
     "Nushadir salt",
     "Sal armagnac,",
+    "Ammonium Muriate",
+    "Amchlor",
     "Salt armoniack",
     "Salmiak"
 ]
@@ -2672,8 +2699,9 @@ vegan_alternatives = []
 [[items]]
 name = "Magnesium sulfate"
 alternative_names = [
+    "English salt",
     "Bitter salts",
-    "Bath salts"
+    "Bath salt"
 ]
 e_number = "E518"
 state = "vegan"
@@ -2736,7 +2764,7 @@ vegan_alternatives = []
 [[items]]
 name = "Aluminium potassium sulfate"
 alternative_names = [
-    "Potassium alum",
+    "Potassium alum sulfate",
     "Potash alum",
     "Alum-(K)"
 ]
@@ -2752,7 +2780,7 @@ vegan_alternatives = []
 [[items]]
 name = "Aluminium ammonium sulfate"
 alternative_names = [
-    "Ammonium alum",
+    "Ammonium alum sulfate",
     "Tschermigite"
 ]
 e_number = "E523"
@@ -2767,11 +2795,9 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium hydroxide"
 alternative_names = [
-    "Caustic soda",
-    "Lye",
     "Ascarite",
-    "White caustic",
-    "Sodium hydrate"
+    "Caustic soda",
+    "Lye"
 ]
 e_number = "E524"
 state = "vegan"
@@ -2824,7 +2850,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Ammonium hydroxide"
-alternative_names = []
+alternative_names = [
+    "Ammonia water"
+]
 e_number = "E527"
 state = "vegan"
 description = ""
@@ -2838,7 +2866,7 @@ vegan_alternatives = []
 name = "Magnesium hydroxide"
 alternative_names = [
     "Magnesium dihydroxide",
-    "Milk of magnesia"
+    "Milk of Magnesia"
 ]
 e_number = "E528"
 state = "vegan"
@@ -2852,11 +2880,15 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium oxide"
 alternative_names = [
+    "Lime",
     "Quicklime",
-    "burnt lime",
-    "unslaked lime",
-    "pebble lime",
-    "calcia"
+    "Burnt lime",
+    "Unslaked lime",
+    "Free lime (building)",
+    "Caustic lime",
+    "Pebble lime",
+    "Calcia",
+    "Oxide of calcium"
 ]
 e_number = "E529"
 state = "vegan"
@@ -2888,6 +2920,7 @@ alternative_names = [
     "Gelbnatron",
     "Ferrocyannatrium",
     "Yellow blood salt",
+    "[citation needed"
 ]
 e_number = "E535"
 state = "vegan"
@@ -3032,7 +3065,6 @@ alternative_names = [
     "Calcium hydrosilicate",
     "Calcium metasilicate",
     "Calcium orthosilicate",
-    "Grammite",
     "Micro-cell",
     "Silene"
 ]
@@ -3217,7 +3249,7 @@ e_number = "E621"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/E621" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Monosodium_glutamate" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -3239,7 +3271,7 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium diglutamate"
 alternative_names = [
-    "Calcium glutamate"
+    "Calcium biglutamate"
 ]
 e_number = "E623"
 state = "vegan"
@@ -3281,8 +3313,7 @@ vegan_alternatives = []
 [[items]]
 name = "Guanylic acid"
 alternative_names = [
-    "5'-Guanidylic acid,",
-    "5'-Guanylic acid,"
+    "5′-Guanidylic acid,"
 ]
 e_number = "E626"
 state = "vegan"
@@ -3335,8 +3366,7 @@ vegan_alternatives = []
 [[items]]
 name = "Dipotassium inosinate"
 alternative_names = [
-    "Disodium 5'-inosinate",
-    "Sodium 5'-inosinate",
+    "Sodium 5′-inosinate",
     "Sodium inosinate"
 ]
 e_number = "E632"
@@ -3681,7 +3711,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Calcium peroxide"
-alternative_names = []
+alternative_names = [
+    "Calcium dioxide"
+]
 e_number = "E930"
 state = "vegan"
 description = ""
@@ -3758,8 +3790,12 @@ name = "Nitrous oxide"
 alternative_names = [
     "Laughing gas",
     "sweet air",
+    "nitrous",
+    "nos",
     "protoxide of nitrogen",
-    "hyponitrous oxide"
+    "hyponitrous oxide",
+    "dinitrogen oxide",
+    "dinitrogen monoxide"
 ]
 e_number = "E942"
 state = "vegan"
@@ -3787,7 +3823,8 @@ vegan_alternatives = []
 [[items]]
 name = "Isobutane"
 alternative_names = [
-    "Isobutane"
+    "Isobutane",
+    "R600a"
 ]
 e_number = "E943b"
 state = "vegan"
@@ -3880,11 +3917,7 @@ vegan_alternatives = []
 
 [[items]]
 name = "Isomalt, Isomaltitol"
-alternative_names = [
-    "1-O-alpha-",
-    "-Glucopyranosyl-",
-    "-mannitol"
-]
+alternative_names = []
 e_number = "E953"
 state = "vegan"
 description = ""
@@ -3897,7 +3930,8 @@ vegan_alternatives = []
 [[items]]
 name = "Saccharin and its sodium, potassium and calcium salts"
 alternative_names = [
-    "Benzoic sulfimide"
+    "ortho-benzoic sulfimide",
+    "ortho sulphobenzamide"
 ]
 e_number = "E954"
 state = "vegan"
@@ -4029,7 +4063,9 @@ alternative_names = [
     "PVPP",
     "Crospovidone",
     "Polyvidone",
-    "PNVP"
+    "PNVP",
+    "Kollidon",
+    "Poly-N-vinylpyrrolidine"
 ]
 e_number = "E1201"
 state = "vegan"
@@ -4044,7 +4080,8 @@ vegan_alternatives = []
 name = "Polyvinylpolypyrrolidone"
 alternative_names = [
     "crospovidone",
-    "crospolividone"
+    "crospolividone",
+    "Kollidon CL"
 ]
 e_number = "E1202"
 state = "vegan"
@@ -4283,7 +4320,8 @@ vegan_alternatives = []
 name = "Triethyl citrate"
 alternative_names = [
     "Ethyl citrate",
-    "Citric acid ethyl ester"
+    "Citric acid ethyl ester",
+    "Triethyl citrate"
 ]
 e_number = "E1505"
 state = "vegan"
@@ -4298,18 +4336,18 @@ vegan_alternatives = []
 name = "Ethanol"
 alternative_names = [
     "Absolute alcohol",
-    "alcohol",
-    "cologne spirit",
-    "drinking alcohol",
-    "ethylic alcohol",
+    "Alcohol",
+    "Cologne spirit",
+    "Drinking alcohol",
+    "Ethylic alcohol",
     "EtOH",
-    "ethyl alcohol",
-    "ethyl hydrate",
-    "ethyl hydroxide",
-    "ethylol",
-    "grain alcohol",
-    "hydroxyethane",
-    "methylcarbinol"
+    "Ethyl alcohol",
+    "Ethyl hydroxide",
+    "Ethylene hydrate",
+    "Ethylol",
+    "Grain alcohol",
+    "Hydroxyethane",
+    "Methylcarbinol"
 ]
 e_number = "E1510"
 state = "vegan"
@@ -4323,7 +4361,9 @@ vegan_alternatives = []
 [[items]]
 name = "Glyceryl triacetate or triacetin"
 alternative_names = [
-    "Glycerol triacetate"
+    "Glycerol triacetate,",
+    "1,2,3-triacetylglycerol",
+    "1,2,3-triacetoxypropane"
 ]
 e_number = "E1518"
 state = "vegan"
@@ -4451,10 +4491,7 @@ vegan_alternatives = []
 
 [[items]]
 name = "Lactitol"
-alternative_names = [
-    "Lactitol",
-    "Lacty"
-]
+alternative_names = []
 e_number = "E966"
 state = "carnist"
 description = ""
@@ -4506,10 +4543,7 @@ vegan_alternatives = []
 
 [[items]]
 name = "Zeaxanthin"
-alternative_names = [
-    "β-carotene-3",
-    "3′-diol"
-]
+alternative_names = []
 e_number = "E161h"
 state = "itDepends"
 description = ""
@@ -4538,7 +4572,8 @@ alternative_names = [
     "(3S,3'S)-Astaxanthin",
     "(S,S)-Astaxanthin",
     "Astaxanthin, all-trans-",
-    "all-trans-Astaxanthin"
+    "all-trans-Astaxanthin",
+    "trans-Astaxanthin"
 ]
 e_number = "E161j"
 state = "itDepends"
@@ -4639,7 +4674,7 @@ name = "Glycerol"
 alternative_names = [
     "Glycerin",
     "Glycerine",
-    "Propanetriol",
+    "3-Trioxypropane",
     "3-Trihydroxypropane",
     "3-Propanetriol"
 ]
@@ -5030,7 +5065,10 @@ vegan_alternatives = []
 
 [[items]]
 name = "Sorbitan monooleate"
-alternative_names = []
+alternative_names = [
+    "Sorbitan oleate",
+    "Span 80"
+]
 e_number = "E494"
 state = "itDepends"
 description = ""
@@ -5101,8 +5139,7 @@ vegan_alternatives = []
 [[items]]
 name = "Disodium guanylate, sodium guanylate"
 alternative_names = [
-    "sodium 5'-guanylate",
-    "disodium 5'-guanylate"
+    "Sodium 5'-guanylate"
 ]
 e_number = "E627"
 state = "itDepends"
@@ -5116,8 +5153,7 @@ vegan_alternatives = []
 [[items]]
 name = "Disodium inosinate"
 alternative_names = [
-    "Disodium 5'-inosinate",
-    "Sodium 5'-inosinate",
+    "Sodium 5′-inosinate",
     "Sodium inosinate"
 ]
 e_number = "E631"
@@ -5145,7 +5181,9 @@ vegan_alternatives = []
 name = "Glycine and its sodium salt"
 alternative_names = [
     "2-Aminoethanoic acid",
-    "Glycocoll"
+    "Glycocol",
+    "Glycic acid",
+    "Dicarbamic acid"
 ]
 e_number = "E640"
 state = "itDepends"
