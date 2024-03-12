@@ -614,6 +614,8 @@ def _get_alternative_names(article_soup, e_number):
     info_box = article_soup.find(class_=re.compile('\s*infobox\s+.*'))
     if info_box is None:
         return []
+    for style in info_box.find_all('style'):
+        style.decompose()
     for row in info_box.find_all('tr'):
         for data in row.find_all('td'):
             text = data.get_text()
