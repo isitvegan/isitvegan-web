@@ -619,6 +619,7 @@ def _get_alternative_names(article_soup, e_number):
     for row in info_box.find_all('tr'):
         for data in row.find_all('td'):
             text = data.get_text()
+            text = text.replace('[citation needed]', '')
             ALTERNATIVE_NAMES_IDENTIFIER = "Other names"
             if ALTERNATIVE_NAMES_IDENTIFIER in text:
                 # I hate Wikipedia's 'Other names' section
