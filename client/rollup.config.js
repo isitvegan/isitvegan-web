@@ -1,5 +1,4 @@
 import babel from '@rollup/plugin-babel';
-import uglify from 'rollup-plugin-uglify';
 import rollupTypescript from '@rollup/plugin-typescript';
 import typescript from 'typescript';
 import tslib from 'tslib';
@@ -33,10 +32,6 @@ const plugins = [
     ]
   }),
 ];
-
-if (isProduction) {
-  plugins.push(uglify);
-}
 
 export default {
   plugins: plugins,
