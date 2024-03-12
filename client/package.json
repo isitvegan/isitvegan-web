@@ -26,6 +26,7 @@
         "dev-build": "rollup -c rollup.config.js && npm run dev-build-less",
         "dev-build-watch": "rollup -c rollup.config.js --watch",
         "dev-build-less": "./scripts/build-css.py",
-        "build": "BUILD_ENV=production rollup -c rollup.config.js && ./scripts/build-css.py --release"
+        "build": "BUILD_ENV=production rollup -c rollup.config.js && ./scripts/build-css.py --release",
+        "serve": "python3 -m http.server"
     }
 }
