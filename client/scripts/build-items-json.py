@@ -15,8 +15,9 @@ items = [
     for item in toml.load(path.join(items_directory, p))["items"]
     if "e_number" in item
 ]
+sorted_items = sorted(items, key=lambda item: (len(item["e_number"]), item["e_number"]))
 
 os.makedirs(build_dir, exist_ok=True)
 
 with open(path.join(build_dir, "items.json"), "w+") as fp:
-    json.dump(items, fp, indent=4)
+    json.dump(sorted_items, fp, indent=4)

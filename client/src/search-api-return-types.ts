@@ -4,7 +4,7 @@ export interface Item {
   description: string;
   sources: Source[];
   alternativeNames: string[],
-  eNumber?: string,
+  eNumber: string,
   veganAlternatives: string[],
   slug: string,
 }

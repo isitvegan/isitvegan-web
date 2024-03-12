@@ -35,7 +35,7 @@ class App extends Component<{}, AppState> {
   }
 
   render(_props: {}, { query, selectedScope }: AppState) {
-    const placeholderItems = ['Gelatine', 'Cider', '…'];
+    const placeholderItems = ['E123', '300', '…'];
     const placeholder = placeholderItems.join(', ');
 
     return (

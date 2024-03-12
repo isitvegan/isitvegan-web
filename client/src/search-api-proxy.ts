@@ -2,10 +2,26 @@ import { Item, Source } from './search-api-return-types';
 import { SearchScope } from './search-scope';
 
 export async function search(queryString: string, scope: SearchScope, abortSignal: AbortSignal): Promise<Item[]> {
-  const response = await fetch(searchUrl(queryString, scope), { signal: abortSignal });
-  const data = await response.json();
+  const query = normalize(queryString);
+  if (query == '') return [];
+  return (await fetchItems())
+    .map(item => [item, normalize(item.eNumber).indexOf(query)] as [Item, number])
+    .filter(([_, match]) => match != -1)
+    .toSorted(([_, left], [__, right]) => left - right)
+    .map(([item, _]) => item);
+}
 
-  return data.map(mapItem);
+function normalize(query: string): string {
+  return query
+    .replace(/^E|e/, '')
+    .replace(/[\s]+/, '')
+    .toLowerCase();
+}
+
+let cachedItems
+async function fetchItems(): Promise<Item[]> {
+  cachedItems ??= (await fetch('/build/items.json').then(r => r.json())).map(mapItem);
+  return cachedItems;
 }
 
 function mapItem(item: any): Item {
@@ -26,18 +42,5 @@ function mapSource(source: any): Source {
     type: source.type,
     value: source.value,
     lastChecked: source.last_checked,
-  }
-}
-
-function searchUrl(queryString: string, scope: SearchScope): string {
-  return `/api/search?query=${encodeURIComponent(queryString)}&scope=${searchScopeToString(scope)}`;
-}
-
-function searchScopeToString(scope: SearchScope): string {
-  switch (scope) {
-    case SearchScope.Names:
-      return 'names';
-    case SearchScope.ENumbers:
-      return 'eNumber';
   }
 }
