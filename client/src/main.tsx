@@ -1,17 +1,13 @@
 import { h, render, Component, Fragment } from 'preact';
 import { SearchInput, SearchInputType } from './components/search-input';
 import { SearchResults } from './components/search-results';
-import { SearchScopeBar } from './components/search-scope-bar';
-import { SearchScope } from './search-scope';
 
 interface GlobalAppState {
   query: string,
-  selectedScope: SearchScope,
 }
 
 interface AppState {
   query: string,
-  selectedScope: SearchScope,
 }
 
 function getGlobalAppState(): GlobalAppState | null {
@@ -27,14 +23,13 @@ class App extends Component<{}, AppState> {
     super()
 
     this._onSearch = this._onSearch.bind(this);
-    this._onSelectScope = this._onSelectScope.bind(this);
 
-    const { query, selectedScope } = getGlobalAppState() || { query: '', selectedScope: SearchScope.Names };
+    const { query } = getGlobalAppState() || { query: '' };
 
-    this.state = { query, selectedScope };
+    this.state = { query };
   }
 
-  render(_props: {}, { query, selectedScope }: AppState) {
+  render(_props: {}, { query }: AppState) {
     const placeholderItems = ['E123', '300', '…'];
     const placeholder = placeholderItems.join(', ');
 
@@ -43,19 +38,13 @@ class App extends Component<{}, AppState> {
         <div class='search-bar'>
           <div class='inner'>
               <span class='title'>Is it Vegan?</span>
-              <SearchInput query={query} className='input' type={mapToSearchInputType(selectedScope)}
+              <SearchInput query={query} className='input' type={SearchInputType.NumbersOnly}
                            placeholder={placeholder} onSearch={this._onSearch} />
-              <SearchScopeBar selectedScope={selectedScope} onSelectScope={this._onSelectScope} />
           </div>
         </div>
-        <SearchResults query={query.trim()} scope={selectedScope} onSearchTermClick={this._onSearch} />
+        <SearchResults query={query.trim()} onSearchTermClick={this._onSearch} />
       </Fragment>
     )
-  }
-
-  private _onSelectScope(selectedScope: SearchScope) {
-    this.setState({ selectedScope });
-    this._updateGlobalAppState({ selectedScope });
   }
 
   private _onSearch(query: string) {
@@ -64,16 +53,7 @@ class App extends Component<{}, AppState> {
   }
 
   private _updateGlobalAppState(updates: Partial<AppState>) {
-    setGlobalAppState({ query: this.state.query, selectedScope: this.state.selectedScope, ...updates });
-  }
-}
-
-const mapToSearchInputType = (scope: SearchScope): SearchInputType => {
-  switch (scope) {
-    case SearchScope.Names:
-      return SearchInputType.Default;
-    case SearchScope.ENumbers:
-      return SearchInputType.NumbersOnly;
+    setGlobalAppState({ query: this.state.query, ...updates });
   }
 }
 

@@ -16,7 +16,7 @@
         display: grid;
         align-items: center;
         grid-gap: 16px 32px;
-        grid-template-areas: 'title' 'input' 'scope-bar';
+        grid-template-areas: 'title' 'input';
         grid-template-columns: 100%;
         margin: auto;
         max-width: @content-max-width;
@@ -32,10 +32,6 @@
 
     > .inner > .input {
         grid-area: input;
-    }
-
-    > .inner > .search-scope-bar {
-        grid-area: scope-bar;
     }
 
     > .inner > .input {

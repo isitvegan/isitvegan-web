@@ -1,7 +1,6 @@
 import { Item, Source } from './search-api-return-types';
-import { SearchScope } from './search-scope';
 
-export async function search(queryString: string, scope: SearchScope, abortSignal: AbortSignal): Promise<Item[]> {
+export async function search(queryString: string): Promise<Item[]> {
   const query = normalize(queryString);
   if (query == '') return [];
   return (await fetchItems())
