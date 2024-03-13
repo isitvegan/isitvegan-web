@@ -14,7 +14,6 @@ Apart from its culinary uses, turmeric is used as a preservative, colorant and f
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "http://www.ukfoodguide.net/e100.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Curcumin" }
 ]
 vegan_alternatives = []
@@ -36,7 +35,6 @@ It can be found in such foods as baby foods, breakfast cereals, sauces, fruit dr
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "http://www.ukfoodguide.net/e101.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Riboflavin" }
 ]
 vegan_alternatives = []
@@ -58,7 +56,6 @@ It requires more energy to produce, but is more soluble than E101 Riboflavin.
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "http://www.ukfoodguide.net/e101.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Flavin_mononucleotide" }
 ]
 vegan_alternatives = []
@@ -95,7 +92,6 @@ It can also be used with Brilliant Blue FCF, (E133) to produce various green sha
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Tartrazine" },
-    { type = "url", value = "http://www.ukfoodguide.net/e102.htm" }
 ]
 vegan_alternatives = []
 
@@ -141,7 +137,6 @@ Used in lipsticks hair products, colognes",
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Quinoline_Yellow_WS" },
-    { type = "url", value = "http://www.ukfoodguide.net/e104.htm" }
 ]
 vegan_alternatives = []
 
@@ -207,7 +202,6 @@ Found in orange squash, marzipan, Swiss roll, apricot jam, citrus marmalade, lem
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Sunset_Yellow_FCF" },
-    { type = "url", value = "http://www.ukfoodguide.net/e110.htm" }
 ]
 vegan_alternatives = []
 
@@ -249,7 +243,6 @@ The variety in the appearance of commercial cochineal is caused by these differi
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Carmine" },
-    { type = "url", value = "http://www.ukfoodguide.net/e120.htm" },
     { type = "url", value = "https://www.vegan.com/carmine/" }
 
 ]
@@ -294,7 +287,6 @@ Also found in marzipan, Swiss roll, jams and preserves, sweets, brown sauce, fla
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "http://www.ukfoodguide.net/e122.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Azorubine" }
 ]
 vegan_alternatives = []
@@ -316,7 +308,6 @@ A purplish-red (blackcurrant) synthetic coal tar or azo dye found in ice creams,
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "http://www.ukfoodguide.net/e123.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Amaranth_(dye)" }
 ]
 vegan_alternatives = []
@@ -338,7 +329,6 @@ A red synthetic coal tar or azo dye found in dessert toppings, jelly, dressings,
 """
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
-    { type = "url", value = "http://www.ukfoodguide.net/e124.htm" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Ponceau_4R" }
 ]
 vegan_alternatives = []
@@ -405,7 +395,6 @@ It is also used to reveal plaque in dental disclosing tablets.
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Erythrosine" },
-    { type = "url", value = "http://www.ukfoodguide.net/e127.htm" }
 ]
 vegan_alternatives = []
 
@@ -429,7 +418,6 @@ It can also be found in jams and drinks or as a dye for coatings, inks, paper, c
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Red_2G" },
-    { type = "url", value = "http://www.ukfoodguide.net/e128.htm" }
 ]
 vegan_alternatives = []
 
@@ -451,7 +439,6 @@ It is by far the most commonly used red dye in the United States.
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Allura_Red_AC" },
-    { type = "url", value = "http://www.ukfoodguide.net/e129.htm" }
 ]
 vegan_alternatives = []
 
@@ -477,7 +464,6 @@ It is used diagnostically to colour lymph vessels.
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Patent_Blue_V" },
-    { type = "url", value = "http://www.ukfoodguide.net/e131.htm" }
 ]
 vegan_alternatives = []
 
@@ -503,6 +489,5 @@ It is also used diagnostically to check for coloured urine in kidney function te
 sources = [
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" },
     { type = "url", value = "https://en.wikipedia.org/wiki/Indigo_carmine" },
-    { type = "url", value = "http://www.ukfoodguide.net/e132.htm" }
 ]
 vegan_alternatives = []
