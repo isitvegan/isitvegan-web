@@ -12,7 +12,8 @@ def load_items(path):
         return toml.load(fp)["items"]
 
 
-items_directory = path.join(path.dirname(__file__), "..", "..", "items")
+items_directory = path.join(path.dirname(__file__), "..", "items")
+assert(path.exists(items_directory))
 build_dir = path.join(path.dirname(__file__), "..", "build")
 
 items = [

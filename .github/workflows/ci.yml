@@ -10,9 +10,6 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./client
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -25,8 +22,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - run: mkdir ../_site
-      - run: ./scripts/install.py --target ../_site
+      - run: mkdir _site
+      - run: ./scripts/install.py --target _site
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v1
 
