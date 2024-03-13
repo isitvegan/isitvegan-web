@@ -25,8 +25,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - run: mkdir _site
-      - run: ./scripts/install.py --target _site
+      - run: mkdir ../_site
+      - run: ./scripts/install.py --target ../_site
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v1
 
