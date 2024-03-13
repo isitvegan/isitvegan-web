@@ -1,18 +1,33 @@
 
 [[items]]
-name = "Brilliant Blue FCF"
+name = "Brilliant blue FCF"
 alternative_names = [
+    "FD&C Blue No.1",
+    "Acid blue 9",
+    "D&C Blue No. 4",
+    "Atracid Blue FG",
+    "Acilan Turquoise Blue AE",
+    "Aizen Brilliant Blue FCF",
+    "Alzen Food Blue No. 1",
+    "Erioglaucine",
+    "Eriosky blue",
+    "Patent Blue AR",
+    "Xylene Blue VSG",
     "C.I. 42090",
+    "CI Food Blue 2",
     "Basacid Blue 755",
+    "Sulfacid Brilliant Blue 5 J",
     "Neolan Blue E-A",
-    "Brilliant Blue FD"
+    "Brilliant Blue FD",
+    "Brilliant Blue Lake",
+    "Blue #1 Lake",
+    "Bucacid Azure Blue"
 ]
 e_number = "E133"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E133" },
-    { type = "url", value = "http://www.ukfoodguide.net/e133.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -25,7 +40,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Chlorophyll" },
-    { type = "url", value = "http://www.ukfoodguide.net/e140.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -38,7 +52,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e141.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -46,11 +59,11 @@ vegan_alternatives = []
 [[items]]
 name = "Green S"
 alternative_names = [
-    "Food Green S",
-    "FD&C Green 4",
-    "Acid green 50",
-    "Lissamine Green B",
-    "Wool Green S",
+    "Food green S",
+    "FD&C green 4",
+    "acid green 50",
+    "lissamine green B",
+    "wool green S",
     "C.I. 44090"
 ]
 e_number = "E142"
@@ -58,7 +71,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E142" },
-    { type = "url", value = "http://www.ukfoodguide.net/e142.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -151,7 +163,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E151" },
-    { type = "url", value = "http://www.ukfoodguide.net/e151.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -183,7 +194,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E154" },
-    { type = "url", value = "http://www.ukfoodguide.net/e154.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -192,15 +202,13 @@ vegan_alternatives = []
 name = "Brown HT"
 alternative_names = [
     "Chocolate Brown HT",
-    "Food Brown 3",
-    "C.I. 20285"
+    "Food Brown 3"
 ]
 e_number = "E155"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E155" },
-    { type = "url", value = "http://www.ukfoodguide.net/e155.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -213,7 +221,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E160a" },
-    { type = "url", value = "http://www.ukfoodguide.net/e160a.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -226,7 +233,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E160b" },
-    { type = "url", value = "http://www.ukfoodguide.net/e160b.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -242,22 +248,18 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E160c" },
-    { type = "url", value = "http://www.ukfoodguide.net/e160c.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Lycopene"
-alternative_names = [
-    "ψ-Carotene"
-]
+alternative_names = []
 e_number = "E160d"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E160d" },
-    { type = "url", value = "http://www.ukfoodguide.net/e160d.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -265,6 +267,7 @@ vegan_alternatives = []
 [[items]]
 name = "Beta-apo-8'-carotenal"
 alternative_names = [
+    "trans-beta-apo-8'-carotenal",
     "C.I. Food Orange 6"
 ]
 e_number = "E160e"
@@ -272,20 +275,21 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E160e" },
-    { type = "url", value = "http://www.ukfoodguide.net/e160e.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Ethyl ester of beta-apo-8'-carotenic acid"
-alternative_names = []
+alternative_names = [
+    "Ethyl ester of beta-apo-8'-carotenic acid",
+    "Ethyl 8'-apo-beta,psi-carotenoate"
+]
 e_number = "E160f"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E160f" },
-    { type = "url", value = "http://www.ukfoodguide.net/e160f.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -293,6 +297,7 @@ vegan_alternatives = []
 [[items]]
 name = "Flavoxanthin"
 alternative_names = [
+    "5,8-Epoxy-5,8-dihydro-γ-carotene-3,3'-diol",
     "all-trans-Flavoxanthin"
 ]
 e_number = "E161a"
@@ -300,7 +305,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E161a" },
-    { type = "url", value = "http://www.ukfoodguide.net/e161a.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -309,14 +313,14 @@ vegan_alternatives = []
 name = "Lutein"
 alternative_names = [
     "Luteine",
-    "trans-lutein"
+    "trans-Lutein",
+    "Xanthophyll"
 ]
 e_number = "E161b"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E161b" },
-    { type = "url", value = "http://www.ukfoodguide.net/e161b.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -324,10 +328,9 @@ vegan_alternatives = []
 [[items]]
 name = "Cryptoxanthin"
 alternative_names = [
-    "(3R)-β",
-    "β-Caroten-3-ol",
     "Cryptoxanthol",
     "Caricaxanthin",
+    "(R)-all-trans-β-Caroten-3-ol",
     "Hydroxy-β-carotene",
     "kryptoxanthin"
 ]
@@ -336,7 +339,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E161c" },
-    { type = "url", value = "http://www.ukfoodguide.net/e161c.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -351,7 +353,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E161d" },
-    { type = "url", value = "http://www.ukfoodguide.net/e161d.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -367,20 +368,20 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E161e" },
-    { type = "url", value = "http://www.ukfoodguide.net/e161e.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Rhodoxanthin"
-alternative_names = []
+alternative_names = [
+    "4',5'-Didehydro-retro-β-carotene-3,3'-dione"
+]
 e_number = "E161f"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E161f" },
-    { type = "url", value = "http://www.ukfoodguide.net/e161f.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -393,7 +394,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E162" },
-    { type = "url", value = "http://www.ukfoodguide.net/e162.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -406,7 +406,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E163" },
-    { type = "url", value = "http://www.ukfoodguide.net/e163.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -414,6 +413,13 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium carbonate, Chalk"
 alternative_names = [
+    "Aragonite",
+    "calcite",
+    "chalk",
+    "lime",
+    "limestone",
+    "marble",
+    "oystershell",
     "pearl"
 ]
 e_number = "E170"
@@ -421,7 +427,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Calcium_carbonate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e170.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -430,6 +435,8 @@ vegan_alternatives = []
 name = "Titanium dioxide"
 alternative_names = [
     "Titania",
+    "Rutile",
+    "Anatase",
     "Brookite"
 ]
 e_number = "E171"
@@ -437,7 +444,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E171" },
-    { type = "url", value = "http://www.ukfoodguide.net/e171.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -450,7 +456,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E172" },
-    { type = "url", value = "http://www.ukfoodguide.net/e172.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -463,7 +468,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E173" },
-    { type = "url", value = "http://www.ukfoodguide.net/e173.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -476,7 +480,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E174" },
-    { type = "url", value = "http://www.ukfoodguide.net/e174.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -489,20 +492,29 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E175_(E_number)" },
-    { type = "url", value = "http://www.ukfoodguide.net/e175.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Pigment Rubine, Lithol Rubine BK"
-alternative_names = []
+alternative_names = [
+    "Pigment Rubine",
+    "Carmine 6B",
+    "Brilliant Carmine 6B",
+    "Permanent Rubin L6B",
+    "Litholrubine",
+    "Latolrubine",
+    "C.I. Pigment Red 57",
+    "C.I. Pigment Red 57:1",
+    "D&C Red No. 7",
+    "C.I. 15850:1"
+]
 e_number = "E180"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E180" },
-    { type = "url", value = "http://www.ukfoodguide.net/e180.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -526,7 +538,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Tannic_acid" },
-    { type = "url", value = "http://www.ukfoodguide.net/e181.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -539,7 +550,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sorbic_acid" },
-    { type = "url", value = "http://www.ukfoodguide.net/e200.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -552,7 +562,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sodium_sorbate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e201.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -568,7 +577,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E202" },
-    { type = "url", value = "http://www.ukfoodguide.net/e202.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -581,7 +589,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E203" },
-    { type = "url", value = "http://www.ukfoodguide.net/e203.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -592,14 +599,18 @@ alternative_names = [
     "Carboxybenzene",
     "Dracylic acid",
     "Phenylmethanoic acid",
-    "BzOH"
+    "Phenylcarboxylic acid",
+    "Benzoyl alcohol",
+    "Benzoylic acid",
+    "Carboxylbenzene",
+    "Hydrogenphenic acid",
+    "Phenoic acid"
 ]
 e_number = "E210"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E210" },
-    { type = "url", value = "http://www.ukfoodguide.net/e210.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -614,7 +625,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E211" },
-    { type = "url", value = "http://www.ukfoodguide.net/e211.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -627,7 +637,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E212" },
-    { type = "url", value = "http://www.ukfoodguide.net/e212.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -635,15 +644,13 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium benzoate"
 alternative_names = [
-    "Benzoic acid",
-    "calcium salt"
+    "Benzoic acid, calcium salt"
 ]
 e_number = "E213"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E213" },
-    { type = "url", value = "http://www.ukfoodguide.net/e213.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -652,14 +659,16 @@ vegan_alternatives = []
 name = "Ethylparaben"
 alternative_names = [
     "Ethyl paraben",
-    "Ethyl p-hydroxybenzoate"
+    "Ethyl parahydroxybenzoate",
+    "Ethyl para-hydroxybenzoate",
+    "Ethyl p-hydroxybenzoate",
+    "4-Hydroxybenzoic acid ethyl ester"
 ]
 e_number = "E214"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E214" },
-    { type = "url", value = "http://www.ukfoodguide.net/e214.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -668,14 +677,16 @@ vegan_alternatives = []
 name = "Sodium ethyl para-hydroxybenzoate"
 alternative_names = [
     "Ethyl paraben",
-    "Ethyl p-hydroxybenzoate"
+    "Ethyl parahydroxybenzoate",
+    "Ethyl para-hydroxybenzoate",
+    "Ethyl p-hydroxybenzoate",
+    "4-Hydroxybenzoic acid ethyl ester"
 ]
 e_number = "E215"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E215" },
-    { type = "url", value = "http://www.ukfoodguide.net/e215.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -685,6 +696,7 @@ name = "Propylparaben"
 alternative_names = [
     "Propyl paraben",
     "Propyl p-hydroxybenzoate",
+    "Propyl parahydroxybenzoate",
     "Nipasol"
 ]
 e_number = "E216"
@@ -692,7 +704,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E216" },
-    { type = "url", value = "http://www.ukfoodguide.net/e216.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -702,6 +713,7 @@ name = "Sodium propyl para-hydroxybenzoate"
 alternative_names = [
     "Propyl paraben",
     "Propyl p-hydroxybenzoate",
+    "Propyl parahydroxybenzoate",
     "Nipasol"
 ]
 e_number = "E217"
@@ -709,7 +721,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sodium_propyl_para-hydroxybenzoate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e217.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -719,6 +730,7 @@ name = "Methylparaben"
 alternative_names = [
     "Methyl paraben",
     "Methyl p-hydroxybenzoate",
+    "Methyl parahydroxybenzoate",
     "Nipagin M",
     "Tegosept",
     "Mycocten"
@@ -728,20 +740,21 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E218" },
-    { type = "url", value = "http://www.ukfoodguide.net/e218.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Sodium methyl para-hydroxybenzoate"
-alternative_names = []
+alternative_names = [
+    "Sodium methyl p-hydroxybenzoate",
+    "Methylparaben sodium salt"
+]
 e_number = "E219"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E219" },
-    { type = "url", value = "http://www.ukfoodguide.net/e219.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -757,7 +770,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sulfur_dioxide" },
-    { type = "url", value = "http://www.ukfoodguide.net/e220.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -772,7 +784,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E221" },
-    { type = "url", value = "http://www.ukfoodguide.net/e221.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -787,7 +798,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E222" },
-    { type = "url", value = "http://www.ukfoodguide.net/e222.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -803,7 +813,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E223" },
-    { type = "url", value = "http://www.ukfoodguide.net/e223.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -821,7 +830,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E224" },
-    { type = "url", value = "http://www.ukfoodguide.net/e224.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -834,7 +842,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E225" },
-    { type = "url", value = "http://www.ukfoodguide.net/e225.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -842,15 +849,13 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium sulfite"
 alternative_names = [
-    "Sulfurous acid",
-    "calcium salt (1:1)"
+    "Sulfurous acid, calcium salt (1:1)"
 ]
 e_number = "E226"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E226" },
-    { type = "url", value = "http://www.ukfoodguide.net/e226.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -865,7 +870,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E227" },
-    { type = "url", value = "http://www.ukfoodguide.net/e227.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -874,16 +878,16 @@ vegan_alternatives = []
 name = "Potassium hydrogen sulfite"
 alternative_names = [
     "Potassium bisulfite",
-    "sulfurous acid",
+    "potassium bisulphite",
     "monopotassium salt",
-    "monopotassium sulfite"
+    "monopotassium sulfite",
+    "potassium hydrosulfite"
 ]
 e_number = "E228"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E228" },
-    { type = "url", value = "http://www.ukfoodguide.net/e228.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -892,14 +896,15 @@ vegan_alternatives = []
 name = "Biphenyl, diphenyl"
 alternative_names = [
     "Biphenyl",
-    "Phenyl benzene"
+    "Phenylbenzene",
+    "Dibenzene",
+    "Xenene"
 ]
 e_number = "E230"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E230" },
-    { type = "url", value = "http://www.ukfoodguide.net/e230.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -921,7 +926,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/2-Phenylphenol" },
-    { type = "url", value = "http://www.ukfoodguide.net/e231.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -929,6 +933,7 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium orthophenyl phenol"
 alternative_names = [
+    "(1,1′-Biphenyl)-2-ol, sodium salt",
     "2-Hydroxydiphenyl sodium",
     "o-Phenylphenol sodium",
     "o-Phenylphenol, sodium",
@@ -941,7 +946,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E232" },
-    { type = "url", value = "http://www.ukfoodguide.net/e232.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -954,7 +958,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Thiabendazole" },
-    { type = "url", value = "http://www.ukfoodguide.net/e233.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -967,7 +970,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Nisin" },
-    { type = "url", value = "http://www.ukfoodguide.net/e234.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -980,7 +982,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E235" },
-    { type = "url", value = "http://www.ukfoodguide.net/e235.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -988,20 +989,22 @@ vegan_alternatives = []
 [[items]]
 name = "Formic acid"
 alternative_names = [
+    "Isocarbonous acid",
     "Carbonous acid",
     "Formylic acid",
-    "Hydrogen carboxylic acid",
+    "Methylic acid",
+    "Hydrogencarboxylic acid",
     "Hydroxy(oxo)methane",
     "Metacarbonoic acid",
     "Oxocarbinic acid",
-    "Oxomethanol"
+    "Oxomethanol",
+    "Hydroxymethylene oxide"
 ]
 e_number = "E236"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E236" },
-    { type = "url", value = "http://www.ukfoodguide.net/e236.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1009,15 +1012,13 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium formate"
 alternative_names = [
-    "formic acid",
-    "sodium salt"
+    "formic acid, sodium salt"
 ]
 e_number = "E237"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E237" },
-    { type = "url", value = "http://www.ukfoodguide.net/e237.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1025,7 +1026,7 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium formate"
 alternative_names = [
-    "formic acid calcium salt",
+    "Formic acid calcium salt",
     "calcoform"
 ]
 e_number = "E238"
@@ -1033,7 +1034,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E238" },
-    { type = "url", value = "http://www.ukfoodguide.net/e238.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1043,14 +1043,16 @@ name = "Hexamine"
 alternative_names = [
     "Hexamine",
     "Methenamine",
-    "Urotropine"
+    "Urotropine",
+    "Formin",
+    "Aminoform",
+    "HMTA"
 ]
 e_number = "E239"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E239" },
-    { type = "url", value = "http://www.ukfoodguide.net/e239.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1059,9 +1061,13 @@ vegan_alternatives = []
 name = "Formaldehyde"
 alternative_names = [
     "Methyl aldehyde",
+    "Methylene glycol (diol forms in aqueous solution)",
     "Methylene oxide",
+    "Formalin (aqueous solution)",
     "Formol",
-    "Carbonyl hydride"
+    "Carbonyl hydride",
+    "Methanone",
+    "Oxomethane"
 ]
 e_number = "E240"
 state = "vegan"
@@ -1084,7 +1090,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E242" },
-    { type = "url", value = "http://www.ukfoodguide.net/e242.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1097,7 +1102,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E249" },
-    { type = "url", value = "http://www.ukfoodguide.net/e249.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1110,7 +1114,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sodium_nitrite" },
-    { type = "url", value = "http://www.ukfoodguide.net/e250.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1127,7 +1130,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E251" },
-    { type = "url", value = "http://www.ukfoodguide.net/e251.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1136,14 +1138,14 @@ vegan_alternatives = []
 name = "Acetic acid"
 alternative_names = [
     "Vinegar (when dilute)",
-    "Hydrogen acetate"
+    "Hydrogen acetate",
+    "Methanecarboxylic acid"
 ]
 e_number = "E260"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Acetic_acid" },
-    { type = "url", value = "http://www.ukfoodguide.net/e260.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1151,14 +1153,13 @@ vegan_alternatives = []
 [[items]]
 name = "Potassium acetate"
 alternative_names = [
-    "Potassium salt"
+    "Potassium ethanoate"
 ]
 e_number = "E261"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Potassium_acetate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e261.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1171,7 +1172,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sodium_acetate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e262.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1180,15 +1180,13 @@ vegan_alternatives = []
 name = "Calcium acetate"
 alternative_names = [
     "Acetate of lime",
-    "Calcium ethanoate",
-    "Calcium diacetate"
+    "Calcium ethanoate"
 ]
 e_number = "E263"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Calcium_acetate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e263.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1201,7 +1199,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Ammonium_acetate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e264.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1209,15 +1206,18 @@ vegan_alternatives = []
 [[items]]
 name = "Propionic acid"
 alternative_names = [
-    "Propionic acid",
-    "Ethanecarboxylic acid"
+    "Carboxyethane",
+    "Ethanecarboxylic acid",
+    "Ethylformic acid",
+    "Metacetonic acid",
+    "Methylacetic acid",
+    "C3:0 (Lipid numbers)"
 ]
 e_number = "E280"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E280" },
-    { type = "url", value = "http://www.ukfoodguide.net/e280.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1233,7 +1233,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E281" },
-    { type = "url", value = "http://www.ukfoodguide.net/e281.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1250,7 +1249,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E282" },
-    { type = "url", value = "http://www.ukfoodguide.net/e282.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1265,7 +1263,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E283" },
-    { type = "url", value = "http://www.ukfoodguide.net/e283.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1273,21 +1270,20 @@ vegan_alternatives = []
 [[items]]
 name = "Boric acid"
 alternative_names = [
-    "Orthoboric acid,",
-    "Boracic acid,",
-    "Sassolite,",
-    "Optibor,",
-    "Borofax,",
-    "Trihydroxyborane,",
-    "Boron(III) hydroxide,",
-    "Boron Trihydroxide"
+    "Orthoboric acid",
+    "Boracic acid",
+    "Sassolite",
+    "Borofax",
+    "Trihydroxyborane",
+    "Boranetriol",
+    "Hydrogen borate",
+    "Acidum boricum"
 ]
 e_number = "E284"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E284" },
-    { type = "url", value = "http://www.ukfoodguide.net/e284.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1295,14 +1291,16 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium tetraborate"
 alternative_names = [
-    "Borax decahydrate"
+    "Borax decahydrate",
+    "Sodium borate decahydrate",
+    "Sodium tetraborate decahydrate",
+    "Sodium tetrahydroxy tetraborate hexahydrate"
 ]
 e_number = "E285"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E285" },
-    { type = "url", value = "http://www.ukfoodguide.net/e285.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1312,9 +1310,12 @@ name = "Carbon dioxide"
 alternative_names = [
     "Carbonic acid gas",
     "Carbonic anhydride",
+    "Carbonic dioxide",
     "Carbonic oxide",
-    "Carbon oxide",
     "Carbon(IV) oxide",
+    "Methanedione",
+    "R-744 (refrigerant)",
+    "R744 (refrigerant alternative spelling)",
     "Dry ice (solid phase)"
 ]
 e_number = "E290"
@@ -1322,7 +1323,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E290" },
-    { type = "url", value = "http://www.ukfoodguide.net/e290.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1332,17 +1332,15 @@ name = "Malic acid"
 alternative_names = [
     "Hydroxybutanedioic acid",
     "2-Hydroxysuccinic acid",
-    "-Malic acid",
-    "-Malic acid",
-    "(–)-Malic acid",
-    "(+)-Malic acid"
+    "(L/D)-Malic acid",
+    "(±)-Malic acid",
+    "(S/R)-Hydroxybutanedioic acid"
 ]
 e_number = "E296"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E296" },
-    { type = "url", value = "http://www.ukfoodguide.net/e296.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1351,6 +1349,7 @@ vegan_alternatives = []
 name = "Fumaric acid"
 alternative_names = [
     "Fumaric acid",
+    "trans-1,2-Ethylenedicarboxylic acid",
     "2-Butenedioic acid",
     "trans-Butenedioic acid",
     "Allomaleic acid",
@@ -1363,20 +1362,20 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E297" },
-    { type = "url", value = "http://www.ukfoodguide.net/e297.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Ascorbic acid"
-alternative_names = []
+alternative_names = [
+    "Vitamin C"
+]
 e_number = "E300"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Ascorbic_acid" },
-    { type = "url", value = "http://www.ukfoodguide.net/e300.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1392,7 +1391,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E301" },
-    { type = "url", value = "http://www.ukfoodguide.net/e301.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1411,7 +1409,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E302" },
-    { type = "url", value = "http://www.ukfoodguide.net/e302.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1427,7 +1424,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E303" },
-    { type = "url", value = "http://www.ukfoodguide.net/e303.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1442,7 +1438,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E304" },
-    { type = "url", value = "http://www.ukfoodguide.net/e304.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1455,7 +1450,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E306" },
-    { type = "url", value = "http://www.ukfoodguide.net/e306.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1468,7 +1462,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E307" },
-    { type = "url", value = "http://www.ukfoodguide.net/e307.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1481,7 +1474,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E308" },
-    { type = "url", value = "http://www.ukfoodguide.net/e308.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1494,7 +1486,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E309" },
-    { type = "url", value = "http://www.ukfoodguide.net/e309.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1511,7 +1502,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Propyl_gallate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e310.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1529,7 +1519,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Octyl_gallate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e311.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1544,7 +1533,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Dodecyl_gallate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e312.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1561,7 +1549,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E315" },
-    { type = "url", value = "http://www.ukfoodguide.net/e315.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1569,19 +1556,19 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium erythorbate"
 alternative_names = [
-    "D-Isoascorbate",
+    "D-isoascorbate",
     "Erbit N",
     "Eribate N",
-    "Isoascorbate C sodium",
+    "isoascorbate C sodium",
     "Isona",
-    "Sodium isoascorbate"
+    "sodium isoascorbate",
+    "sodium D-isoascorbate"
 ]
 e_number = "E316"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E316" },
-    { type = "url", value = "http://www.ukfoodguide.net/e316.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1610,7 +1597,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E318" },
-    { type = "url", value = "http://www.ukfoodguide.net/e318.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1625,24 +1611,18 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E319" },
-    { type = "url", value = "http://www.ukfoodguide.net/e319.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Butylated hydroxyanisole"
-alternative_names = [
-    "BOA",
-    "BHA",
-    "Antioxyne B"
-]
+alternative_names = []
 e_number = "E320"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E320" },
-    { type = "url", value = "http://www.ukfoodguide.net/e320.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1650,18 +1630,23 @@ vegan_alternatives = []
 [[items]]
 name = "Butylated hydroxytoluene"
 alternative_names = [
+    "2,6-Di-tert-butyl-p-cresol",
+    "2,6-DI-tert-butyl-4-methylphenol",
+    "3,5-Di-tert-butyl-4-hydroxytoluene",
     "DBPC",
     "BHT",
     "AO-29",
     "Avox BHT",
-    "Additin RC 7110"
+    "Additin RC 7110",
+    "Dibutylated hydroxytoluene",
+    "4-Methyl-2,6-di-tert-butyl phenol",
+    "3,5-(Dimethylethyl)-4-hydroxytoluene"
 ]
 e_number = "E321"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E321" },
-    { type = "url", value = "http://www.ukfoodguide.net/e321.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1674,7 +1659,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E329" },
-    { type = "url", value = "http://www.ukfoodguide.net/e329.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1687,7 +1671,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E330" },
-    { type = "url", value = "http://www.ukfoodguide.net/e330.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1700,7 +1683,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sodium_citrate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e331.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1713,7 +1695,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E332" },
-    { type = "url", value = "http://www.ukfoodguide.net/e332.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1728,7 +1709,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E333" },
-    { type = "url", value = "http://www.ukfoodguide.net/e333.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1748,7 +1728,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E334" },
-    { type = "url", value = "http://www.ukfoodguide.net/e334.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1766,7 +1745,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E335" },
-    { type = "url", value = "http://www.ukfoodguide.net/e335.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1782,7 +1760,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E336" },
-    { type = "url", value = "http://www.ukfoodguide.net/e336.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1798,35 +1775,36 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E337" },
-    { type = "url", value = "http://www.ukfoodguide.net/e337.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
-name = "Orthophosphoric acid"
+name = "Phosphoric acid"
 alternative_names = [
-    "Phosphoric acid"
+    "Orthophosphoric acid"
 ]
 e_number = "E338"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E338" },
-    { type = "url", value = "http://www.ukfoodguide.net/e338.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Sodium phosphates"
-alternative_names = []
+alternative_names = [
+    "Sodium phosphate",
+    "Sodium phosphate tribasic",
+    "Trisodium orthophosphate"
+]
 e_number = "E339"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E339" },
-    { type = "url", value = "http://www.ukfoodguide.net/e339.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1839,7 +1817,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E340" },
-    { type = "url", value = "http://www.ukfoodguide.net/e340.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1852,7 +1829,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E341" },
-    { type = "url", value = "http://www.ukfoodguide.net/e341.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1865,7 +1841,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E343" },
-    { type = "url", value = "http://www.ukfoodguide.net/e343.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1878,7 +1853,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E350_(food_additive)" },
-    { type = "url", value = "http://www.ukfoodguide.net/e350.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1891,7 +1865,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E351" },
-    { type = "url", value = "http://www.ukfoodguide.net/e351.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1904,7 +1877,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E352" },
-    { type = "url", value = "http://www.ukfoodguide.net/e352.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1917,7 +1889,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Metatartaric_acid" },
-    { type = "url", value = "http://www.ukfoodguide.net/e353.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1930,7 +1901,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E354" },
-    { type = "url", value = "http://www.ukfoodguide.net/e354.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1946,7 +1916,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Adipic_acid" },
-    { type = "url", value = "http://www.ukfoodguide.net/e355.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1961,7 +1930,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E356" },
-    { type = "url", value = "http://www.ukfoodguide.net/e356.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1974,7 +1942,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E357" },
-    { type = "url", value = "http://www.ukfoodguide.net/e357.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1990,20 +1957,20 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E363" },
-    { type = "url", value = "http://www.ukfoodguide.net/e363.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Monosodium fumarate"
-alternative_names = []
+alternative_names = [
+    "Disodium fumarate"
+]
 e_number = "E365"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e365.htm" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Sodium_fumarate" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2023,7 +1990,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E366" },
-    { type = "url", value = "http://www.ukfoodguide.net/e366.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2032,6 +1998,7 @@ vegan_alternatives = []
 name = "Calcium fumarate"
 alternative_names = [
     "Fumaric acid",
+    "trans-1,2-Ethylenedicarboxylic acid",
     "2-Butenedioic acid",
     "trans-Butenedioic acid",
     "Allomaleic acid",
@@ -2044,7 +2011,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E367" },
-    { type = "url", value = "http://www.ukfoodguide.net/e367.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2057,7 +2023,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e370.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2067,15 +2032,14 @@ name = "Niacin"
 alternative_names = [
     "Nicotinic acid (INN)",
     "Bionic",
-    "Vitamin B",
+    "Vitamin B3",
     "Vitamin PP"
 ]
 e_number = "E375"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/Niacin" },
-    { type = "url", value = "http://www.ukfoodguide.net/e375.htm" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Niacin_(substance)" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2090,7 +2054,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Triammonium_citrate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e380.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2107,7 +2070,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E381" },
-    { type = "url", value = "http://www.ukfoodguide.net/e381.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2115,7 +2077,9 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium disodium ethylene diamine tetraacetate,"
 alternative_names = [
-    "USAN)",
+    "EthyleneDiamineTetraAcetic acid",
+    "Diaminoethane-tetraacetic acid",
+    "Edetic acid (conjugate base edetate) (INN, USAN)",
     "Versene"
 ]
 e_number = "E385"
@@ -2123,7 +2087,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E385" },
-    { type = "url", value = "http://www.ukfoodguide.net/e385.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2138,7 +2101,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Alginic_acid" },
-    { type = "url", value = "http://www.ukfoodguide.net/e400.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2153,7 +2115,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E401" },
-    { type = "url", value = "http://www.ukfoodguide.net/e401.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2168,7 +2129,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E402" },
-    { type = "url", value = "http://www.ukfoodguide.net/e402.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2183,7 +2143,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E403" },
-    { type = "url", value = "http://www.ukfoodguide.net/e403.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2196,7 +2155,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E404" },
-    { type = "url", value = "http://www.ukfoodguide.net/e404.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2211,7 +2169,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E405" },
-    { type = "url", value = "http://www.ukfoodguide.net/e405.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2224,7 +2181,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E406" },
-    { type = "url", value = "http://www.ukfoodguide.net/e406.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2237,7 +2193,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E407" },
-    { type = "url", value = "http://www.ukfoodguide.net/e407.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2266,7 +2221,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Locust_bean_gum" },
-    { type = "url", value = "http://www.ukfoodguide.net/e410.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2279,7 +2233,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Guar_gum" },
-    { type = "url", value = "http://www.ukfoodguide.net/e412.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2292,7 +2245,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E413" },
-    { type = "url", value = "http://www.ukfoodguide.net/e413.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2305,7 +2257,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E414" },
-    { type = "url", value = "http://www.ukfoodguide.net/e414.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2318,7 +2269,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E415" },
-    { type = "url", value = "http://www.ukfoodguide.net/e415.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2335,7 +2285,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E416" },
-    { type = "url", value = "http://www.ukfoodguide.net/e416.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2348,7 +2297,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E417" },
-    { type = "url", value = "http://www.ukfoodguide.net/e417.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2363,7 +2311,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E418" },
-    { type = "url", value = "http://www.ukfoodguide.net/e418.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2371,7 +2318,6 @@ vegan_alternatives = []
 [[items]]
 name = "Sorbitol"
 alternative_names = [
-    "D-glucitol",
     "D-Sorbitol",
     "Sorbogem",
     "Sorbo"
@@ -2381,7 +2327,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E420" },
-    { type = "url", value = "http://www.ukfoodguide.net/e420.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2406,7 +2351,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E425" },
-    { type = "url", value = "http://www.ukfoodguide.net/e425.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2419,7 +2363,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E440" },
-    { type = "url", value = "http://www.ukfoodguide.net/e440.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2434,7 +2377,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sucrose_acetate_isobutyrate" },
-    { type = "url", value = "http://www.ukfoodguide.net/e444.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2451,14 +2393,16 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E445" },
-    { type = "url", value = "http://www.ukfoodguide.net/e445.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Diphosphates"
-alternative_names = []
+alternative_names = [
+    "Pyrophosphate",
+    "Phosphonatophosphate"
+]
 e_number = "E450"
 state = "vegan"
 description = ""
@@ -2516,7 +2460,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E460" },
-    { type = "url", value = "http://www.ukfoodguide.net/e460.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2533,7 +2476,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E461" },
-    { type = "url", value = "http://www.ukfoodguide.net/e461.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2565,7 +2507,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E463" },
-    { type = "url", value = "http://www.ukfoodguide.net/e463.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2580,7 +2521,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Hypromellose" },
-    { type = "url", value = "http://www.ukfoodguide.net/e464.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2596,7 +2536,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E465" },
-    { type = "url", value = "http://www.ukfoodguide.net/e465.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2612,7 +2551,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E466" },
-    { type = "url", value = "http://www.ukfoodguide.net/e466.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2625,7 +2563,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E468" },
-    { type = "url", value = "http://www.ukfoodguide.net/e468.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2641,7 +2578,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E469" },
-    { type = "url", value = "http://www.ukfoodguide.net/e469.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -2702,8 +2638,9 @@ vegan_alternatives = []
 name = "Hydrochloric acid"
 alternative_names = [
     "Muriatic acid",
+    "Spirits of salt",
     "Hydronium chloride",
-    "Chlorhydric Acid"
+    "Chlorhydric acid"
 ]
 e_number = "E507"
 state = "vegan"
@@ -2732,8 +2669,7 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium chloride"
 alternative_names = [
-    "Calcium(II) chloride",
-    "calcium dichloride"
+    "Neutral calcium chloride"
 ]
 e_number = "E509"
 state = "vegan"
@@ -2751,6 +2687,8 @@ alternative_names = [
     "Salmiac",
     "Nushadir salt",
     "Sal armagnac,",
+    "Ammonium Muriate",
+    "Amchlor",
     "Salt armoniack",
     "Salmiak"
 ]
@@ -2830,8 +2768,10 @@ vegan_alternatives = []
 [[items]]
 name = "Magnesium sulfate"
 alternative_names = [
+    "Epsom salt (Magnesium sulfate heptahydrate)",
+    "English salt",
     "Bitter salts",
-    "Bath salts"
+    "Bath salt"
 ]
 e_number = "E518"
 state = "vegan"
@@ -2846,7 +2786,11 @@ vegan_alternatives = []
 name = "Copper"
 alternative_names = [
     "Cupric sulphate",
+    "Blue vitriol (pentahydrate)",
     "Bluestone (pentahydrate)",
+    "Bonattite (trihydrate mineral)",
+    "Boothite (heptahydrate mineral)",
+    "Chalcanthite (pentahydrate mineral)",
     "Chalcocyanite (mineral)"
 ]
 e_number = "E519"
@@ -2894,7 +2838,7 @@ vegan_alternatives = []
 [[items]]
 name = "Aluminium potassium sulfate"
 alternative_names = [
-    "Potassium alum",
+    "Potassium alum sulfate",
     "Potash alum",
     "Alum-(K)"
 ]
@@ -2910,7 +2854,7 @@ vegan_alternatives = []
 [[items]]
 name = "Aluminium ammonium sulfate"
 alternative_names = [
-    "Ammonium alum",
+    "Ammonium alum sulfate",
     "Tschermigite"
 ]
 e_number = "E523"
@@ -2925,11 +2869,12 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium hydroxide"
 alternative_names = [
+    "Ascarite",
     "Caustic soda",
     "Lye",
-    "Ascarite",
-    "White caustic",
-    "Sodium hydrate"
+    "Soda lye",
+    "Sodium hydrate",
+    "White caustic"
 ]
 e_number = "E524"
 state = "vegan"
@@ -2982,7 +2927,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Ammonium hydroxide"
-alternative_names = []
+alternative_names = [
+    "Ammonia water"
+]
 e_number = "E527"
 state = "vegan"
 description = ""
@@ -2996,7 +2943,7 @@ vegan_alternatives = []
 name = "Magnesium hydroxide"
 alternative_names = [
     "Magnesium dihydroxide",
-    "Milk of magnesia"
+    "Milk of Magnesia"
 ]
 e_number = "E528"
 state = "vegan"
@@ -3010,11 +2957,15 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium oxide"
 alternative_names = [
+    "Lime",
     "Quicklime",
-    "burnt lime",
-    "unslaked lime",
-    "pebble lime",
-    "calcia"
+    "Burnt lime",
+    "Unslaked lime",
+    "Free lime (building)",
+    "Caustic lime",
+    "Pebble lime",
+    "Calcia",
+    "Oxide of calcium"
 ]
 e_number = "E529"
 state = "vegan"
@@ -3046,6 +2997,7 @@ alternative_names = [
     "Gelbnatron",
     "Ferrocyannatrium",
     "Yellow blood salt",
+    "[citation needed"
 ]
 e_number = "E535"
 state = "vegan"
@@ -3190,9 +3142,9 @@ alternative_names = [
     "Calcium hydrosilicate",
     "Calcium metasilicate",
     "Calcium orthosilicate",
-    "Grammite",
     "Micro-cell",
-    "Silene"
+    "Silene",
+    "Silicic acid calcium salt"
 ]
 e_number = "E552"
 state = "vegan"
@@ -3375,8 +3327,7 @@ e_number = "E621"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/E621" },
-    { type = "url", value = "http://www.ukfoodguide.net/e621.htm" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Monosodium_glutamate" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -3398,7 +3349,7 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium diglutamate"
 alternative_names = [
-    "Calcium glutamate"
+    "Calcium biglutamate"
 ]
 e_number = "E623"
 state = "vegan"
@@ -3440,8 +3391,7 @@ vegan_alternatives = []
 [[items]]
 name = "Guanylic acid"
 alternative_names = [
-    "5'-Guanidylic acid,",
-    "5'-Guanylic acid,"
+    "5′-Guanidylic acid,"
 ]
 e_number = "E626"
 state = "vegan"
@@ -3494,8 +3444,9 @@ vegan_alternatives = []
 [[items]]
 name = "Dipotassium inosinate"
 alternative_names = [
-    "Disodium 5'-inosinate",
-    "Sodium 5'-inosinate",
+    "Sodium 5′-inosinate",
+    "Disodium inosin 5′-monophosphate",
+    "Inosine 5′-(disodium phosphate)",
     "Sodium inosinate"
 ]
 e_number = "E632"
@@ -3664,6 +3615,8 @@ vegan_alternatives = []
 [[items]]
 name = "Crystalline wax"
 alternative_names = [
+    "Hydrogenated poly-1-decenes",
+    "Hydrogenated poly-alpha-olefin",
     "Crystalline wax"
 ]
 e_number = "E907"
@@ -3840,7 +3793,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Calcium peroxide"
-alternative_names = []
+alternative_names = [
+    "Calcium dioxide"
+]
 e_number = "E930"
 state = "vegan"
 description = ""
@@ -3917,8 +3872,12 @@ name = "Nitrous oxide"
 alternative_names = [
     "Laughing gas",
     "sweet air",
+    "nitrous",
+    "nos",
     "protoxide of nitrogen",
-    "hyponitrous oxide"
+    "hyponitrous oxide",
+    "dinitrogen oxide",
+    "dinitrogen monoxide"
 ]
 e_number = "E942"
 state = "vegan"
@@ -3946,7 +3905,8 @@ vegan_alternatives = []
 [[items]]
 name = "Isobutane"
 alternative_names = [
-    "Isobutane"
+    "Isobutane",
+    "R600a"
 ]
 e_number = "E943b"
 state = "vegan"
@@ -4004,7 +3964,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Acesulfame_potassium" },
-    { type = "url", value = "http://www.ukfoodguide.net/e950.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4022,7 +3981,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E951" },
-    { type = "url", value = "http://www.ukfoodguide.net/e951.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4041,17 +3999,12 @@ vegan_alternatives = []
 
 [[items]]
 name = "Isomalt, Isomaltitol"
-alternative_names = [
-    "1-O-alpha-",
-    "-Glucopyranosyl-",
-    "-mannitol"
-]
+alternative_names = []
 e_number = "E953"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E953" },
-    { type = "url", value = "http://www.ukfoodguide.net/e953.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4059,14 +4012,14 @@ vegan_alternatives = []
 [[items]]
 name = "Saccharin and its sodium, potassium and calcium salts"
 alternative_names = [
-    "Benzoic sulfimide"
+    "ortho-benzoic sulfimide",
+    "ortho sulphobenzamide"
 ]
 e_number = "E954"
 state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E954" },
-    { type = "url", value = "http://www.ukfoodguide.net/e954.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4156,7 +4109,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E1103" },
-    { type = "url", value = "http://www.ukfoodguide.net/e1103.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4169,7 +4121,6 @@ state = "vegan"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E1105" },
-    { type = "url", value = "http://www.ukfoodguide.net/e1105.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4194,7 +4145,9 @@ alternative_names = [
     "PVPP",
     "Crospovidone",
     "Polyvidone",
-    "PNVP"
+    "PNVP",
+    "Kollidon",
+    "Poly-N-vinylpyrrolidine"
 ]
 e_number = "E1201"
 state = "vegan"
@@ -4209,7 +4162,8 @@ vegan_alternatives = []
 name = "Polyvinylpolypyrrolidone"
 alternative_names = [
     "crospovidone",
-    "crospolividone"
+    "crospolividone",
+    "Kollidon CL"
 ]
 e_number = "E1202"
 state = "vegan"
@@ -4448,7 +4402,8 @@ vegan_alternatives = []
 name = "Triethyl citrate"
 alternative_names = [
     "Ethyl citrate",
-    "Citric acid ethyl ester"
+    "Citric acid ethyl ester",
+    "Triethyl citrate"
 ]
 e_number = "E1505"
 state = "vegan"
@@ -4463,18 +4418,18 @@ vegan_alternatives = []
 name = "Ethanol"
 alternative_names = [
     "Absolute alcohol",
-    "alcohol",
-    "cologne spirit",
-    "drinking alcohol",
-    "ethylic alcohol",
+    "Alcohol",
+    "Cologne spirit",
+    "Drinking alcohol",
+    "Ethylic alcohol",
     "EtOH",
-    "ethyl alcohol",
-    "ethyl hydrate",
-    "ethyl hydroxide",
-    "ethylol",
-    "grain alcohol",
-    "hydroxyethane",
-    "methylcarbinol"
+    "Ethyl alcohol",
+    "Ethyl hydroxide",
+    "Ethylene hydrate",
+    "Ethylol",
+    "Grain alcohol",
+    "Hydroxyethane",
+    "Methylcarbinol"
 ]
 e_number = "E1510"
 state = "vegan"
@@ -4488,7 +4443,9 @@ vegan_alternatives = []
 [[items]]
 name = "Glyceryl triacetate or triacetin"
 alternative_names = [
-    "Glycerol triacetate"
+    "Glycerol triacetate,",
+    "1,2,3-triacetylglycerol",
+    "1,2,3-triacetoxypropane"
 ]
 e_number = "E1518"
 state = "vegan"
@@ -4616,10 +4573,7 @@ vegan_alternatives = []
 
 [[items]]
 name = "Lactitol"
-alternative_names = [
-    "Lactitol",
-    "Lacty"
-]
+alternative_names = []
 e_number = "E966"
 state = "carnist"
 description = ""
@@ -4644,7 +4598,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E153" },
-    { type = "url", value = "http://www.ukfoodguide.net/e153.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4666,17 +4619,13 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E161g" },
-    { type = "url", value = "http://www.ukfoodguide.net/e161g.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Zeaxanthin"
-alternative_names = [
-    "β-carotene-3",
-    "3′-diol"
-]
+alternative_names = []
 e_number = "E161h"
 state = "itDepends"
 description = ""
@@ -4705,7 +4654,8 @@ alternative_names = [
     "(3S,3'S)-Astaxanthin",
     "(S,S)-Astaxanthin",
     "Astaxanthin, all-trans-",
-    "all-trans-Astaxanthin"
+    "all-trans-Astaxanthin",
+    "trans-Astaxanthin"
 ]
 e_number = "E161j"
 state = "itDepends"
@@ -4728,7 +4678,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E252" },
-    { type = "url", value = "http://www.ukfoodguide.net/e252.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4744,7 +4693,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E270" },
-    { type = "url", value = "http://www.ukfoodguide.net/e270.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4757,7 +4705,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E322" },
-    { type = "url", value = "http://www.ukfoodguide.net/e322.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4773,7 +4720,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E325" },
-    { type = "url", value = "http://www.ukfoodguide.net/e325.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4786,7 +4732,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E326" },
-    { type = "url", value = "http://www.ukfoodguide.net/e326.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4802,7 +4747,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E327" },
-    { type = "url", value = "http://www.ukfoodguide.net/e327.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4812,7 +4756,7 @@ name = "Glycerol"
 alternative_names = [
     "Glycerin",
     "Glycerine",
-    "Propanetriol",
+    "3-Trioxypropane",
     "3-Trihydroxypropane",
     "3-Propanetriol"
 ]
@@ -4857,7 +4801,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E432" },
-    { type = "url", value = "http://www.ukfoodguide.net/e432.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4870,7 +4813,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E433" },
-    { type = "url", value = "http://www.ukfoodguide.net/e433.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4883,7 +4825,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E434" },
-    { type = "url", value = "http://www.ukfoodguide.net/e434.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4896,7 +4837,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E435" },
-    { type = "url", value = "http://www.ukfoodguide.net/e435.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4909,7 +4849,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E436" },
-    { type = "url", value = "http://www.ukfoodguide.net/e436.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4922,7 +4861,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E442" },
-    { type = "url", value = "http://www.ukfoodguide.net/e442.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4935,7 +4873,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e470a.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4948,7 +4885,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E470b" },
-    { type = "url", value = "http://www.ukfoodguide.net/e470b.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4961,7 +4897,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E471" },
-    { type = "url", value = "http://www.ukfoodguide.net/e471.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4974,7 +4909,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e472a.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -4987,7 +4921,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e472b.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5000,7 +4933,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e472c.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5013,7 +4945,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e472d.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5026,7 +4957,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E472e" },
-    { type = "url", value = "http://www.ukfoodguide.net/e472e.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5039,7 +4969,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E_number" },
-    { type = "url", value = "http://www.ukfoodguide.net/e472f.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5052,7 +4981,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E473" },
-    { type = "url", value = "http://www.ukfoodguide.net/e473.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5065,7 +4993,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Sucroglyceride" },
-    { type = "url", value = "http://www.ukfoodguide.net/e474.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5078,7 +5005,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E475" },
-    { type = "url", value = "http://www.ukfoodguide.net/e475.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5091,7 +5017,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E476" },
-    { type = "url", value = "http://www.ukfoodguide.net/e476.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5104,7 +5029,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E477" },
-    { type = "url", value = "http://www.ukfoodguide.net/e477.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5129,7 +5053,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E479b" },
-    { type = "url", value = "http://www.ukfoodguide.net/e479b.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5145,7 +5068,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E481" },
-    { type = "url", value = "http://www.ukfoodguide.net/e481.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5161,7 +5083,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E482" },
-    { type = "url", value = "http://www.ukfoodguide.net/e482.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5177,7 +5098,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E483" },
-    { type = "url", value = "http://www.ukfoodguide.net/e483.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5190,7 +5110,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E491" },
-    { type = "url", value = "http://www.ukfoodguide.net/e491.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5205,7 +5124,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E492" },
-    { type = "url", value = "http://www.ukfoodguide.net/e492.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5223,20 +5141,21 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E493" },
-    { type = "url", value = "http://www.ukfoodguide.net/e493.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
 
 [[items]]
 name = "Sorbitan monooleate"
-alternative_names = []
+alternative_names = [
+    "Sorbitan oleate",
+    "Span 80"
+]
 e_number = "E494"
 state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E494" },
-    { type = "url", value = "http://www.ukfoodguide.net/e494.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5252,7 +5171,6 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E495" },
-    { type = "url", value = "http://www.ukfoodguide.net/e495.htm" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -5303,8 +5221,7 @@ vegan_alternatives = []
 [[items]]
 name = "Disodium guanylate, sodium guanylate"
 alternative_names = [
-    "sodium 5'-guanylate",
-    "disodium 5'-guanylate"
+    "Sodium 5'-guanylate"
 ]
 e_number = "E627"
 state = "itDepends"
@@ -5318,8 +5235,9 @@ vegan_alternatives = []
 [[items]]
 name = "Disodium inosinate"
 alternative_names = [
-    "Disodium 5'-inosinate",
-    "Sodium 5'-inosinate",
+    "Sodium 5′-inosinate",
+    "Disodium inosin 5′-monophosphate",
+    "Inosine 5′-(disodium phosphate)",
     "Sodium inosinate"
 ]
 e_number = "E631"
@@ -5347,7 +5265,9 @@ vegan_alternatives = []
 name = "Glycine and its sodium salt"
 alternative_names = [
     "2-Aminoethanoic acid",
-    "Glycocoll"
+    "Glycocol",
+    "Glycic acid",
+    "Dicarbamic acid"
 ]
 e_number = "E640"
 state = "itDepends"

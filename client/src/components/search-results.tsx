@@ -2,13 +2,11 @@ import { Component, h } from 'preact';
 import { Item } from '../search-api-return-types';
 import { search } from '../search-api-proxy';
 import { SearchResultItem } from './search-result-item';
-import { SearchScope } from '../search-scope';
 
 export type OnSearchTermClick = (searchTerm: string) => void;
 
 export interface SearchResultsProps {
   query: string,
-  scope: SearchScope,
   onSearchTermClick: OnSearchTermClick,
 }
 
@@ -25,19 +23,15 @@ type SearchResultsStateInner =  { type: SearchResultsStateType.Loaded, items: It
 interface SearchResultsState {
   inner: SearchResultsStateInner,
   query: string,
-  scope: SearchScope,
 }
 
 export class SearchResults extends Component<SearchResultsProps, SearchResultsState> {
-  private abortController?: AbortController;
-
   constructor(props: SearchResultsProps) {
     super(props);
 
     this.setState({
       inner: { type: SearchResultsStateType.Loaded, items: [] },
       query: '',
-      scope: SearchScope.Names,
     })
   }
 
@@ -51,29 +45,25 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
   }
 
   componentWillReceiveProps(nextProps: SearchResultsProps, _: SearchResultsState) {
-    const propsMatchWithState = this.state.query === nextProps.query &&
-                                this.state.scope === nextProps.scope;
+    const propsMatchWithState = this.state.query === nextProps.query;
     if (!propsMatchWithState) {
-      this.fetchItems(nextProps.query, nextProps.scope);
+      this.fetchItems(nextProps.query);
     }
   }
 
   componentWillMount() {
-    this.fetchItems(this.props.query, this.props.scope);
+    this.fetchItems(this.props.query);
   }
 
-  private fetchItems(query: string, scope: SearchScope) {
-    this.abortFetchRequest();
-    this.abortController = new AbortController();
-
-    this.setState({ query, scope });
+  private fetchItems(query: string) {
+    this.setState({ query });
 
     if (query === '') {
       this.setState({ inner: { type: SearchResultsStateType.Loaded, items: [] }});
     } else {
-      search(query, scope, this.abortController.signal)
+      search(query)
         .then((items) => this.onItems(items))
-        .catch((error) => this.onError(error));
+        .catch(() => this.onError());
     }
   }
 
@@ -82,19 +72,8 @@ export class SearchResults extends Component<SearchResultsProps, SearchResultsSt
     this.setState({ inner: nextState });
   }
 
-  private onError(error: Error) {
-    const ABORT_ERROR_NAME = 'AbortError';
-
-    if (error.name !== ABORT_ERROR_NAME) {
-      this.setState({ inner: { type: SearchResultsStateType.Error } }); 
-    }
-  }
-
-  private abortFetchRequest() {
-    if (this.abortController) {
-      this.abortController.abort();
-      this.abortController = undefined;
-    }
+  private onError() {
+    this.setState({ inner: { type: SearchResultsStateType.Error } }); 
   }
 }
 
