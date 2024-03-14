@@ -20,6 +20,7 @@ def copy_files(target: str):
         os.makedirs(build_dir)
     shutil.copy("build/main.css", build_dir)
     shutil.copy("build/main.js", build_dir)
+    shutil.copy("build/items.json", build_dir)
     icons_dir = os.path.join(target, "icons")
     if os.path.exists(icons_dir):
         shutil.rmtree(icons_dir)
