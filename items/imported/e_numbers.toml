@@ -2669,7 +2669,9 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium chloride"
 alternative_names = [
-    "Neutral calcium chloride"
+    "Neutral calcium chloride",
+    "calcium(II) chloride",
+    "calcium dichloride (1:2)"
 ]
 e_number = "E509"
 state = "vegan"
@@ -2686,7 +2688,7 @@ alternative_names = [
     "Sal ammoniac",
     "Salmiac",
     "Nushadir salt",
-    "Sal armagnac,",
+    "Sal armagnac",
     "Ammonium Muriate",
     "Amchlor",
     "Salt armoniack",
@@ -2752,6 +2754,7 @@ alternative_names = [
     "Ammonium sulphate",
     "Ammonium sulfate (2:1)",
     "Diammonium sulfate",
+    "Sulfuric acid diammonium salt",
     "Mascagnite",
     "Actamaster",
     "Dolamin"
@@ -2809,7 +2812,9 @@ alternative_names = [
     "Aluminium sulphate",
     "Cake alum",
     "Filter alum",
-    "Papermaker's alum"
+    "Papermaker's alum",
+    "Alunogenite",
+    "aluminium salt (3:2)"
 ]
 e_number = "E520"
 state = "vegan"
@@ -2994,10 +2999,12 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium ferrocyanide"
 alternative_names = [
+    "Yellow prussiate of soda (YPS)",
+    "Tetrasodium hexacyanoferrate",
     "Gelbnatron",
     "Ferrocyannatrium",
-    "Yellow blood salt",
-    "[citation needed"
+    "sodium hexacyanoferrate(II)",
+    "Yellow blood salt"
 ]
 e_number = "E535"
 state = "vegan"
@@ -3010,7 +3017,12 @@ vegan_alternatives = []
 
 [[items]]
 name = "Potassium ferrocyanide"
-alternative_names = []
+alternative_names = [
+    "(Yellow) Prussiate of Potash",
+    "Potassium hexacyanoferrate (II) trihydrate",
+    "Tetrapotassium ferrocyanide trihydrate",
+    "Ferrate hexacyano tetrapotassium trihydrate"
+]
 e_number = "E536"
 state = "vegan"
 description = ""
@@ -3022,7 +3034,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Calcium ferrocyanide"
-alternative_names = []
+alternative_names = [
+    "Dicalcium hexakis(cyano-κC)ferrate(4-)"
+]
 e_number = "E538"
 state = "vegan"
 description = ""
@@ -3035,6 +3049,7 @@ vegan_alternatives = []
 [[items]]
 name = "Dicalcium diphosphate[citation needed]"
 alternative_names = [
+    "Diphosphoric acid, calcium salt (1:2)",
     "Dicalcium diphosphate",
     "Dicalcium pyrophosphate"
 ]
@@ -3335,7 +3350,8 @@ vegan_alternatives = []
 [[items]]
 name = "Monopotassium glutamate"
 alternative_names = [
-    "Potassium glutamate"
+    "Potassium glutamate",
+    "Glutamic acid potassium salt"
 ]
 e_number = "E622"
 state = "vegan"
@@ -3349,7 +3365,8 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium diglutamate"
 alternative_names = [
-    "Calcium biglutamate"
+    "Calcium biglutamate",
+    "L-Glutamic acid calcium salt"
 ]
 e_number = "E623"
 state = "vegan"
@@ -3377,7 +3394,8 @@ vegan_alternatives = []
 [[items]]
 name = "Magnesium diglutamate"
 alternative_names = [
-    "Magnesium glutamate"
+    "Magnesium glutamate",
+    "Glutamic acid hemimagnesium salt"
 ]
 e_number = "E625"
 state = "vegan"
@@ -3391,7 +3409,7 @@ vegan_alternatives = []
 [[items]]
 name = "Guanylic acid"
 alternative_names = [
-    "5′-Guanidylic acid,"
+    "5′-Guanidylic acid"
 ]
 e_number = "E626"
 state = "vegan"
@@ -3404,7 +3422,10 @@ vegan_alternatives = []
 
 [[items]]
 name = "Dipotassium guanylate"
-alternative_names = []
+alternative_names = [
+    "5′-Guanosine monophosphate dipotassium salt",
+    "5′-Guanylic acid dipotassium salt"
+]
 e_number = "E628"
 state = "vegan"
 description = ""
@@ -3416,7 +3437,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Calcium guanylate"
-alternative_names = []
+alternative_names = [
+    "5′-Guanylic acid calcium salt"
+]
 e_number = "E629"
 state = "vegan"
 description = ""
@@ -3429,7 +3452,7 @@ vegan_alternatives = []
 [[items]]
 name = "Inosinic acid"
 alternative_names = [
-    "IMP,",
+    "IMP",
     "Hypoxanthine ribotide"
 ]
 e_number = "E630"
@@ -3460,7 +3483,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Calcium inosinate"
-alternative_names = []
+alternative_names = [
+    "Calcium inosine-5′-monophosphate"
+]
 e_number = "E633"
 state = "vegan"
 description = ""
@@ -3501,7 +3526,9 @@ vegan_alternatives = []
 [[items]]
 name = "Ethyl maltol"
 alternative_names = [
-    "2-Ethyl pyromeconic acid"
+    "2-Ethyl-3-hydroxy-4-pyranone",
+    "2-Ethyl pyromeconic acid",
+    "2-Ethyl-3-hydroxy-4-pyrone"
 ]
 e_number = "E637"
 state = "vegan"
@@ -3678,7 +3705,11 @@ vegan_alternatives = []
 
 [[items]]
 name = "Potassium persulfate"
-alternative_names = []
+alternative_names = [
+    "potassium peroxydisulfate",
+    "Anthion",
+    "potassium perdisulfate"
+]
 e_number = "E922"
 state = "vegan"
 description = ""
@@ -3706,8 +3737,7 @@ vegan_alternatives = []
 name = "Potassium bromate"
 alternative_names = [
     "Potassium bromate(V)",
-    "Bromic acid",
-    "potassium salt"
+    "Bromic acid, potassium salt"
 ]
 e_number = "E924"
 state = "vegan"
@@ -3833,6 +3863,8 @@ vegan_alternatives = []
 name = "Dichlorodifluoromethane"
 alternative_names = [
     "Dichlorodifluoromethane",
+    "Carbon dichloride difluoride",
+    "Dichloro-difluoro-methane",
     "Difluorodichloromethane",
     "Freon 12",
     "R-12",
@@ -3891,7 +3923,9 @@ vegan_alternatives = []
 [[items]]
 name = "Butane"
 alternative_names = [
-    "Butyl hydride"
+    "Butyl hydride",
+    "Quartane",
+    "R600"
 ]
 e_number = "E943a"
 state = "vegan"
@@ -3971,10 +4005,7 @@ vegan_alternatives = []
 [[items]]
 name = "Aspartame"
 alternative_names = [
-    "N-(",
-    "-α-Aspartyl)-",
-    "-phenylalanine,",
-    "1-methyl ester"
+    "N-(L-α-Aspartyl)-L-phenylalanine,1-methyl ester"
 ]
 e_number = "E951"
 state = "vegan"
@@ -4027,8 +4058,11 @@ vegan_alternatives = []
 [[items]]
 name = "Sucralose"
 alternative_names = [
+    "1′,4,6′-Trichlorogalactosucrose",
     "Trichlorosucrose",
-    "TGS"
+    "4,1′,6′-Trichloro-4,1′,6′-trideoxygalactosucrose",
+    "TGS",
+    "Splenda"
 ]
 e_number = "E955"
 state = "vegan"
@@ -4078,6 +4112,8 @@ vegan_alternatives = []
 [[items]]
 name = "Xylitol"
 alternative_names = [
+    "(2R,3R,4S)-Pentane-1,2,3,4,5-pentaol (not recommended)",
+    "(2R,3R,4S)-1,2,3,4,5-Pentahydroxypentane",
     "Xylite"
 ]
 e_number = "E967"
@@ -4161,6 +4197,7 @@ vegan_alternatives = []
 [[items]]
 name = "Polyvinylpolypyrrolidone"
 alternative_names = [
+    "Polyvinyl polypyrrolidone",
     "crospovidone",
     "crospolividone",
     "Kollidon CL"
@@ -4248,7 +4285,10 @@ vegan_alternatives = []
 
 [[items]]
 name = "Distarch phosphate esterified with sodium trimetasphosphate; esterified with phosphorus oxychloride"
-alternative_names = []
+alternative_names = [
+    "Phosphate cross-linked starch",
+    "Starch, hydrogen phosphate"
+]
 e_number = "E1412"
 state = "vegan"
 description = ""
@@ -4273,7 +4313,7 @@ vegan_alternatives = []
 [[items]]
 name = "Acetylated distarch phosphate"
 alternative_names = [
-    "Starch"
+    "Starch, hydrogen phosphate acetate"
 ]
 e_number = "E1414"
 state = "vegan"
@@ -4364,7 +4404,10 @@ vegan_alternatives = []
 
 [[items]]
 name = "Hydroxy propyl distarch phosphate"
-alternative_names = []
+alternative_names = [
+    "Hydroxypropyl di-starch phosphate",
+    "Hydroxypropylated distarch phosphate"
+]
 e_number = "E1442"
 state = "vegan"
 description = ""
@@ -4443,7 +4486,8 @@ vegan_alternatives = []
 [[items]]
 name = "Glyceryl triacetate or triacetin"
 alternative_names = [
-    "Glycerol triacetate,",
+    "Glycerol triacetate",
+    "glycerin triacetate",
     "1,2,3-triacetylglycerol",
     "1,2,3-triacetoxypropane"
 ]
@@ -4525,7 +4569,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Wax esters"
-alternative_names = []
+alternative_names = [
+    "2-Amino-3-sulfhydrylpropanoic acid"
+]
 e_number = "E910"
 state = "carnist"
 description = ""
@@ -4549,7 +4595,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "L-cysteine"
-alternative_names = []
+alternative_names = [
+    "2-Amino-3-sulfhydrylpropanoic acid"
+]
 e_number = "E920"
 state = "carnist"
 description = ""
@@ -4611,6 +4659,7 @@ alternative_names = [
     "Lucantin red (BASF)",
     "Lucantin Red CWD (BASF)",
     "Carophyll Red (DSM)",
+    "Roxanthin Red 10 (Adisseo)",
     "L-Orange 7g",
     "C.I. Food Orange 8"
 ]
@@ -4650,12 +4699,14 @@ vegan_alternatives = []
 [[items]]
 name = "Astaxanthin"
 alternative_names = [
+    "β-Carotene-4,4'-dione, 3,3'-dihydroxy-, all-trans-",
     "(3S,3'S)-Astaxanthin",
     "(3S,3'S)-Astaxanthin",
-    "(S,S)-Astaxanthin",
-    "Astaxanthin, all-trans-",
+    "(3S,3'S)-all-trans-Astaxanthin",
+    "(S,S)-Astaxanthin; Astaxanthin, all-trans-",
     "all-trans-Astaxanthin",
-    "trans-Astaxanthin"
+    "trans-Astaxanthin",
+    "Ovoester"
 ]
 e_number = "E161j"
 state = "itDepends"
@@ -4739,8 +4790,10 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium lactate"
 alternative_names = [
-    "calcium lactate,",
-    "2-hydroxypropanoic acid"
+    "calcium lactate 5-hydrate",
+    "calcium lactate",
+    "2-hydroxypropanoic acid",
+    "calcium salt pentahydrate"
 ]
 e_number = "E327"
 state = "itDepends"
@@ -4756,9 +4809,9 @@ name = "Glycerol"
 alternative_names = [
     "Glycerin",
     "Glycerine",
-    "3-Trioxypropane",
-    "3-Trihydroxypropane",
-    "3-Propanetriol"
+    "1,2,3-Trioxypropane",
+    "1,2,3-Trihydroxypropane",
+    "1,2,3-Propanetriol"
 ]
 e_number = "E422"
 state = "itDepends"
@@ -4795,7 +4848,15 @@ vegan_alternatives = []
 
 [[items]]
 name = "Polyoxyethene"
-alternative_names = []
+alternative_names = [
+    "Kolliphor PS 20",
+    "Montanox 20",
+    "Polysorbate 20",
+    "PEG(20)sorbitan monolaurate",
+    "Alkest TW 20",
+    "Tween 20",
+    "Kotilen-20"
+]
 e_number = "E432"
 state = "itDepends"
 description = ""
@@ -4807,7 +4868,14 @@ vegan_alternatives = []
 
 [[items]]
 name = "Polyoxyethene"
-alternative_names = []
+alternative_names = [
+    "Kolliphor PS 80",
+    "Montanox 80",
+    "Alkest TW 80",
+    "Tween 80",
+    "PS 80",
+    "Kotilen-80"
+]
 e_number = "E433"
 state = "itDepends"
 description = ""
@@ -4951,7 +5019,9 @@ vegan_alternatives = []
 
 [[items]]
 name = "Mono- and diacetyl tartaric acid esters of mono- and diglycerides of fatty acids"
-alternative_names = []
+alternative_names = [
+    "Diacetyl tartaric acid ester of mono- and diglycerides"
+]
 e_number = "E472e"
 state = "itDepends"
 description = ""
@@ -5075,8 +5145,19 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium stearoyl-2-lactylate"
 alternative_names = [
+    "octadecanoic acid, 2-(1-carboxyethoxy)-1-methyl-2-oxoethyl ester, calcium salt",
+    "calcium bis(2-{[2-(stearoyloxy)propanoyl]oxy}propanoate)",
     "calcium verate",
-    "calcium stelate"
+    "calcium stearoyl lactylate",
+    "calcium stearoyl-2-lactylate",
+    "calcium stearyl-2-lactylate",
+    "calcium stelate",
+    "stearoyl-2-lactylic acid, calcium salt",
+    "calcium alpha-(alpha-(stearoyloxy)propionyloxy)propionate",
+    "calcium 2-(1-carboxyethoxy)-1-methyl-2-oxoethyloctadecanoate",
+    "stearic acid, ester with lactate of lactic acid, calcium salt",
+    "stearic acid ester with lactic acid bimol. ester calcium salt",
+    "calcium bis(2-(1-carboxylatoethoxy)-1-methyl-2-oxoethyl) distearate"
 ]
 e_number = "E482"
 state = "itDepends"
@@ -5117,6 +5198,9 @@ vegan_alternatives = []
 [[items]]
 name = "Sorbitan tristearate"
 alternative_names = [
+    "Sorbitan trioctadecanoate",
+    "Anhydrosorbitan tristearate",
+    "Anhydrosorbitol tristearate",
     "Span 65"
 ]
 e_number = "E492"
@@ -5131,6 +5215,7 @@ vegan_alternatives = []
 [[items]]
 name = "Sorbitan monolaurate"
 alternative_names = [
+    "Dodecanoic acid [2-[(2R,3R,4S)-3,4-dihydroxy-2-tetrahydrofuranyl]-2-hydroxyethyl] ester",
     "alkamuls s 20",
     "glycomul lC",
     "sorbitan laurate",
@@ -5179,8 +5264,7 @@ vegan_alternatives = []
 name = "Fatty acids"
 alternative_names = [
     "Stearic acid",
-    "C18:0 (",
-    "Lipid numbers)"
+    "C18:0 (Lipid numbers)"
 ]
 e_number = "E570"
 state = "itDepends"
