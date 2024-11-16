@@ -325,7 +325,6 @@ E_NUMBERS = [
     ("E999", "vegan"),
 
     ("E1103", "vegan"),
-    ("E1105", "vegan"),
     # The following don't seem to exist
     # ("E1106", "vegan"),
     # ("E1107", "vegan"),
@@ -458,6 +457,8 @@ E_NUMBERS = [
     ("E920", "carnist"),
     ("E921", "carnist"),
     ("E966", "carnist"),
+    ("E1105", "carnist"),
+
 
     ("E153", "itDepends"),
     ("E161g", "itDepends"),
