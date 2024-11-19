@@ -4153,7 +4153,7 @@ vegan_alternatives = []
 name = "Lysozyme"
 alternative_names = []
 e_number = "E1105"
-state = "carnist"
+state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E1105" },

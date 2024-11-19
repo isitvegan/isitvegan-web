@@ -457,8 +457,6 @@ E_NUMBERS = [
     ("E920", "carnist"),
     ("E921", "carnist"),
     ("E966", "carnist"),
-    ("E1105", "carnist"),
-
 
     ("E153", "itDepends"),
     ("E161g", "itDepends"),
@@ -511,6 +509,7 @@ E_NUMBERS = [
     ("E631", "itDepends"),
     ("E635", "itDepends"),
     ("E640", "itDepends"),
+    ("E1105", "itDepends"),
 ]
 
 _E_NUMBERS_URL = 'https://en.wikipedia.org/wiki/E_number'
