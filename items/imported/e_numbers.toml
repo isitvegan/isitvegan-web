@@ -414,13 +414,13 @@ vegan_alternatives = []
 name = "Calcium carbonate, Chalk"
 alternative_names = [
     "Aragonite",
-    "calcite",
-    "chalk",
-    "lime",
-    "limestone",
-    "marble",
-    "oystershell",
-    "pearl"
+    "Calcite",
+    "Chalk",
+    "Lime",
+    "Limestone",
+    "Marble",
+    "Oystershell",
+    "Pearl"
 ]
 e_number = "E170"
 state = "vegan"
@@ -897,7 +897,6 @@ name = "Biphenyl, diphenyl"
 alternative_names = [
     "Biphenyl",
     "Phenylbenzene",
-    "Dibenzene",
     "Xenene"
 ]
 e_number = "E230"
@@ -989,8 +988,6 @@ vegan_alternatives = []
 [[items]]
 name = "Formic acid"
 alternative_names = [
-    "Isocarbonous acid",
-    "Carbonous acid",
     "Formylic acid",
     "Methylic acid",
     "Hydrogencarboxylic acid",
@@ -1139,7 +1136,8 @@ name = "Acetic acid"
 alternative_names = [
     "Vinegar (when dilute)",
     "Hydrogen acetate",
-    "Methanecarboxylic acid"
+    "Methanecarboxylic acid",
+    "Ethylic acid]"
 ]
 e_number = "E260"
 state = "vegan"
@@ -1617,12 +1615,20 @@ vegan_alternatives = []
 
 [[items]]
 name = "Butylated hydroxyanisole"
-alternative_names = []
+alternative_names = [
+    "2-tert-Butyl-4-hydroxyanisole and 3-tert-butyl-4-hydroxyanisole (mixture)",
+    "BOA",
+    "BHA",
+    "tert-Butyl-4-hydroxyanisole",
+    "(1,1-Dimethylethyl)-4-methoxyphenol",
+    "tert-Butyl-4-methoxyphenol",
+    "Antioxyne B"
+]
 e_number = "E320"
 state = "vegan"
 description = ""
 sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/E320" },
+    { type = "url", value = "https://en.wikipedia.org/wiki/Butylated_hydroxyanisole" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
@@ -1637,6 +1643,7 @@ alternative_names = [
     "BHT",
     "AO-29",
     "Avox BHT",
+    "Antioxidant 264",
     "Additin RC 7110",
     "Dibutylated hydroxytoluene",
     "4-Methyl-2,6-di-tert-butyl phenol",
@@ -1923,7 +1930,9 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium adipate"
 alternative_names = [
-    "Disodium adipate"
+    "Disodium adipate",
+    "Adipic acid",
+    "sodium salt"
 ]
 e_number = "E356"
 state = "vegan"
@@ -2609,9 +2618,10 @@ vegan_alternatives = []
 [[items]]
 name = "Ammonium carbonates"
 alternative_names = [
-    "baker's ammonia",
-    "sal volatile",
-    "salt of hartshorn"
+    "Baker's ammonia",
+    "Sal volatile",
+    "Salt of hartshorn",
+    "Spirit of Urine"
 ]
 e_number = "E503"
 state = "vegan"
@@ -2948,7 +2958,7 @@ vegan_alternatives = []
 name = "Magnesium hydroxide"
 alternative_names = [
     "Magnesium dihydroxide",
-    "Milk of Magnesia"
+    "Milk of magnesia"
 ]
 e_number = "E528"
 state = "vegan"
@@ -3903,9 +3913,12 @@ vegan_alternatives = []
 name = "Nitrous oxide"
 alternative_names = [
     "Laughing gas",
+    "galaxy gas",
     "sweet air",
     "nitrous",
     "nos",
+    "nang",
+    "nitrus",
     "protoxide of nitrogen",
     "hyponitrous oxide",
     "dinitrogen oxide",
@@ -4044,7 +4057,7 @@ vegan_alternatives = []
 name = "Saccharin and its sodium, potassium and calcium salts"
 alternative_names = [
     "ortho-benzoic sulfimide",
-    "ortho sulphobenzamide"
+    "ortho sulphobenzimide"
 ]
 e_number = "E954"
 state = "vegan"
@@ -4150,18 +4163,6 @@ sources = [
 vegan_alternatives = []
 
 [[items]]
-name = "Lysozyme"
-alternative_names = []
-e_number = "E1105"
-state = "itDepends"
-description = ""
-sources = [
-    { type = "url", value = "https://en.wikipedia.org/wiki/E1105" },
-    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
-]
-vegan_alternatives = []
-
-[[items]]
 name = "Polydextrose"
 alternative_names = []
 e_number = "E1200"
@@ -4177,12 +4178,10 @@ vegan_alternatives = []
 name = "Polyvinylpyrrolidone"
 alternative_names = [
     "PVP",
-    "Povidone",
-    "PVPP",
-    "Crospovidone",
-    "Polyvidone",
     "PNVP",
-    "Kollidon",
+    "povidone",
+    "polyvidone",
+    "kollidon",
     "Poly-N-vinylpyrrolidine"
 ]
 e_number = "E1201"
@@ -4807,8 +4806,6 @@ vegan_alternatives = []
 [[items]]
 name = "Glycerol"
 alternative_names = [
-    "Glycerin",
-    "Glycerine",
     "1,2,3-Trioxypropane",
     "1,2,3-Trihydroxypropane",
     "1,2,3-Propanetriol"
@@ -5358,6 +5355,18 @@ state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E640" },
+    { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
+]
+vegan_alternatives = []
+
+[[items]]
+name = "Lysozyme"
+alternative_names = []
+e_number = "E1105"
+state = "itDepends"
+description = ""
+sources = [
+    { type = "url", value = "https://en.wikipedia.org/wiki/E1105" },
     { type = "url", value = "https://elated.co.za/which-e-numbers-are-vegan/" }
 ]
 vegan_alternatives = []
