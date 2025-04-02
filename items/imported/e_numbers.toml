@@ -3349,7 +3349,7 @@ vegan_alternatives = []
 name = "Monosodium glutamate"
 alternative_names = []
 e_number = "E621"
-state = "vegan"
+state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/Monosodium_glutamate" },
@@ -3437,7 +3437,7 @@ alternative_names = [
     "5′-Guanylic acid dipotassium salt"
 ]
 e_number = "E628"
-state = "vegan"
+state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E628" },
@@ -4598,7 +4598,7 @@ alternative_names = [
     "2-Amino-3-sulfhydrylpropanoic acid"
 ]
 e_number = "E920"
-state = "carnist"
+state = "itDepends"
 description = ""
 sources = [
     { type = "url", value = "https://en.wikipedia.org/wiki/E920" },

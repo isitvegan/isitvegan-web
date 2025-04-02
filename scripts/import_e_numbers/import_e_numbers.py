@@ -261,13 +261,11 @@ E_NUMBERS = [
     ("E579", "vegan"),
 
     ("E620", "vegan"),
-    ("E621", "vegan"),
     ("E622", "vegan"),
     ("E623", "vegan"),
     ("E624", "vegan"),
     ("E625", "vegan"),
     ("E626", "vegan"),
-    ("E628", "vegan"),
     ("E629", "vegan"),
     ("E630", "vegan"),
     ("E632", "vegan"),
@@ -454,7 +452,6 @@ E_NUMBERS = [
     ("E904", "carnist"),
     ("E910", "carnist"),
     ("E913", "carnist"),
-    ("E920", "carnist"),
     ("E921", "carnist"),
     ("E966", "carnist"),
 
@@ -505,10 +502,13 @@ E_NUMBERS = [
     ("E570", "itDepends"),
     ("E572", "itDepends"),
     ("E585", "itDepends"),
+    ("E621", "itDepends"),
     ("E627", "itDepends"),
+    ("E628", "itDepends"),
     ("E631", "itDepends"),
     ("E635", "itDepends"),
     ("E640", "itDepends"),
+    ("e920", "itDepends"),
     ("E1105", "itDepends"),
 ]
 
