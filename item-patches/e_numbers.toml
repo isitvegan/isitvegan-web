@@ -1,0 +1,13 @@
+[[patch_item]]
+if = '.e_number | IN("E920", "E921")'
+patch.description = """
+Both L-cystine and L-cysteine are traditionally derived from animal hair or feathers.
+Newer methods relying on fermentation are fully vegan."""
+patch.sources = [
+    { type = "url", value = "https://www.wacker.com/h/medias/6882-EN.pdf" },
+    { type = "url", value = "https://github.com/isitvegan/isitvegan-web/pull/116" },
+]
+
+[[patch_item]]
+if = '.e_number = "E621"'
+patch.alternative_names = ["MSG"]
