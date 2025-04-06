@@ -282,7 +282,6 @@ vegan_alternatives = []
 [[items]]
 name = "Ethyl ester of beta-apo-8'-carotenic acid"
 alternative_names = [
-    "Ethyl ester of beta-apo-8'-carotenic acid",
     "Ethyl 8'-apo-beta,psi-carotenoate"
 ]
 e_number = "E160f"
@@ -916,7 +915,6 @@ alternative_names = [
     "o-Phenylphenol",
     "Biphenylol",
     "2-Hydroxybiphenyl",
-    "Orthophenyl phenol",
     "o-Xenol",
     "Orthoxenol"
 ]
@@ -1038,7 +1036,6 @@ vegan_alternatives = []
 [[items]]
 name = "Hexamine"
 alternative_names = [
-    "Hexamine",
     "Methenamine",
     "Urotropine",
     "Formin",
@@ -1223,7 +1220,6 @@ vegan_alternatives = []
 [[items]]
 name = "Sodium propionate"
 alternative_names = [
-    "Sodium propionate",
     "Napropion"
 ]
 e_number = "E281"
@@ -1238,7 +1234,6 @@ vegan_alternatives = []
 [[items]]
 name = "Calcium propionate"
 alternative_names = [
-    "Calcium propionate",
     "Calcium dipropionate",
     "Mycoban"
 ]
@@ -1253,9 +1248,7 @@ vegan_alternatives = []
 
 [[items]]
 name = "Potassium propionate"
-alternative_names = [
-    "Potassium propionate"
-]
+alternative_names = []
 e_number = "E283"
 state = "vegan"
 description = ""
@@ -1346,7 +1339,6 @@ vegan_alternatives = []
 [[items]]
 name = "Fumaric acid"
 alternative_names = [
-    "Fumaric acid",
     "trans-1,2-Ethylenedicarboxylic acid",
     "2-Butenedioic acid",
     "trans-Butenedioic acid",
@@ -1367,7 +1359,8 @@ vegan_alternatives = []
 [[items]]
 name = "Ascorbic acid"
 alternative_names = [
-    "Vitamin C"
+    "Vitamin C",
+    "l-threo-Hex-2-enono-1,4-lactone"
 ]
 e_number = "E300"
 state = "vegan"
@@ -1540,7 +1533,8 @@ name = "Erythorbic acid"
 alternative_names = [
     "-Araboascorbic acid",
     "Erythorbate",
-    "Isoascorbic acid."
+    "Isoascorbic acid",
+    "D-isoascorbic acid"
 ]
 e_number = "E315"
 state = "vegan"
@@ -1576,7 +1570,8 @@ name = "Erythorbin acid[citation needed]"
 alternative_names = [
     "-Araboascorbic acid",
     "Erythorbate",
-    "Isoascorbic acid."
+    "Isoascorbic acid",
+    "D-isoascorbic acid"
 ]
 e_number = "E317"
 state = "vegan"
@@ -1639,6 +1634,7 @@ alternative_names = [
     "2,6-Di-tert-butyl-p-cresol",
     "2,6-DI-tert-butyl-4-methylphenol",
     "3,5-Di-tert-butyl-4-hydroxytoluene",
+    "2,6 ditertiary-butyl-4-methyl phenol",
     "DBPC",
     "BHT",
     "AO-29",
@@ -1723,7 +1719,6 @@ vegan_alternatives = []
 [[items]]
 name = "Tartaric acid"
 alternative_names = [
-    "Tartaric acid",
     "Threaric acid",
     "Racemic acid",
     "Uvic acid",
@@ -1789,7 +1784,8 @@ vegan_alternatives = []
 [[items]]
 name = "Phosphoric acid"
 alternative_names = [
-    "Orthophosphoric acid"
+    "Orthophosphoric acid",
+    "hydrogen phosphate"
 ]
 e_number = "E338"
 state = "vegan"
@@ -1915,7 +1911,6 @@ vegan_alternatives = []
 [[items]]
 name = "Adipic acid"
 alternative_names = [
-    "Adipic acid",
     "Hexane-1,6-dioic acid"
 ]
 e_number = "E355"
@@ -1958,7 +1953,6 @@ vegan_alternatives = []
 [[items]]
 name = "Succinic acid"
 alternative_names = [
-    "Succinic acid",
     "1,4-Butanedioic acid"
 ]
 e_number = "E363"
@@ -2039,7 +2033,7 @@ vegan_alternatives = []
 [[items]]
 name = "Niacin"
 alternative_names = [
-    "Nicotinic acid (INN)",
+    "Niacin (USAN US)",
     "Bionic",
     "Vitamin B3",
     "Vitamin PP"
@@ -2102,9 +2096,7 @@ vegan_alternatives = []
 
 [[items]]
 name = "Alginic acid"
-alternative_names = [
-    "Alginic acid"
-]
+alternative_names = []
 e_number = "E400"
 state = "vegan"
 description = ""
@@ -2730,7 +2722,6 @@ vegan_alternatives = []
 [[items]]
 name = "Stannous chloride"
 alternative_names = [
-    "Stannous chloride",
     "Tin salt",
     "Tin protochloride"
 ]
@@ -2747,7 +2738,8 @@ vegan_alternatives = []
 name = "Sulfuric acid"
 alternative_names = [
     "Oil of vitriol",
-    "Hydrogen sulfate"
+    "Hydrogen sulfate",
+    "Dihydrogen sulfate"
 ]
 e_number = "E513"
 state = "vegan"
@@ -3653,8 +3645,7 @@ vegan_alternatives = []
 name = "Crystalline wax"
 alternative_names = [
     "Hydrogenated poly-1-decenes",
-    "Hydrogenated poly-alpha-olefin",
-    "Crystalline wax"
+    "Hydrogenated poly-alpha-olefin"
 ]
 e_number = "E907"
 state = "vegan"
@@ -3804,7 +3795,6 @@ vegan_alternatives = []
 [[items]]
 name = "Carbamide"
 alternative_names = [
-    "Carbamide",
     "Carbonyldiamide",
     "Carbonyldiamine",
     "Diaminomethanal",
@@ -3872,7 +3862,6 @@ vegan_alternatives = []
 [[items]]
 name = "Dichlorodifluoromethane"
 alternative_names = [
-    "Dichlorodifluoromethane",
     "Carbon dichloride difluoride",
     "Dichloro-difluoro-methane",
     "Difluorodichloromethane",
@@ -3952,7 +3941,6 @@ vegan_alternatives = []
 [[items]]
 name = "Isobutane"
 alternative_names = [
-    "Isobutane",
     "R600a"
 ]
 e_number = "E943b"
@@ -4018,7 +4006,8 @@ vegan_alternatives = []
 [[items]]
 name = "Aspartame"
 alternative_names = [
-    "N-(L-α-Aspartyl)-L-phenylalanine,1-methyl ester"
+    "N-(L-α-Aspartyl)-L-phenylalanine",
+    "1-methyl ester"
 ]
 e_number = "E951"
 state = "vegan"
@@ -4074,8 +4063,7 @@ alternative_names = [
     "1′,4,6′-Trichlorogalactosucrose",
     "Trichlorosucrose",
     "4,1′,6′-Trichloro-4,1′,6′-trideoxygalactosucrose",
-    "TGS",
-    "Splenda"
+    "TGS"
 ]
 e_number = "E955"
 state = "vegan"
@@ -4125,8 +4113,8 @@ vegan_alternatives = []
 [[items]]
 name = "Xylitol"
 alternative_names = [
-    "(2R,3R,4S)-Pentane-1,2,3,4,5-pentaol (not recommended)",
-    "(2R,3R,4S)-1,2,3,4,5-Pentahydroxypentane",
+    "(2R,3r,4S)-Pentane-1,2,3,4,5-pentaol (not recommended)",
+    "(2R,3r,4S)-1,2,3,4,5-Pentahydroxypentane",
     "Xylite"
 ]
 e_number = "E967"
@@ -4444,8 +4432,7 @@ vegan_alternatives = []
 name = "Triethyl citrate"
 alternative_names = [
     "Ethyl citrate",
-    "Citric acid ethyl ester",
-    "Triethyl citrate"
+    "Citric acid ethyl ester"
 ]
 e_number = "E1505"
 state = "vegan"
@@ -4502,7 +4489,6 @@ vegan_alternatives = []
 [[items]]
 name = "Propylene glycol"
 alternative_names = [
-    "Propylene glycol",
     "α-Propylene glycol",
     "1,2-Propanediol",
     "1,2-Dihydroxypropane",
@@ -4569,7 +4555,8 @@ vegan_alternatives = []
 [[items]]
 name = "Wax esters"
 alternative_names = [
-    "2-Amino-3-sulfhydrylpropanoic acid"
+    "2-Amino-3-sulfhydrylpropanoic acid",
+    "2-Amino-3-mercaptopropanoic acid"
 ]
 e_number = "E910"
 state = "carnist"
@@ -4595,7 +4582,8 @@ vegan_alternatives = []
 [[items]]
 name = "L-cysteine"
 alternative_names = [
-    "2-Amino-3-sulfhydrylpropanoic acid"
+    "2-Amino-3-sulfhydrylpropanoic acid",
+    "2-Amino-3-mercaptopropanoic acid"
 ]
 e_number = "E920"
 state = "itDepends"
@@ -4721,7 +4709,8 @@ name = "Potassium nitrate"
 alternative_names = [
     "Saltpeter",
     "Saltpetre",
-    "Nitrate of potash"
+    "Nitrate of potash",
+    "Nitre"
 ]
 e_number = "E252"
 state = "itDepends"
@@ -4735,7 +4724,6 @@ vegan_alternatives = []
 [[items]]
 name = "Lactic acid"
 alternative_names = [
-    "Lactic acid",
     "Milk acid"
 ]
 e_number = "E270"
@@ -5168,7 +5156,6 @@ vegan_alternatives = []
 [[items]]
 name = "Stearyl tartrate"
 alternative_names = [
-    "Stearyl tartrate",
     "E 483"
 ]
 e_number = "E483"
