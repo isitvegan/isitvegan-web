@@ -611,7 +611,7 @@ _e_number_re = re.compile(r'\b[Ee] *\d+\w*')
 
 
 def _get_alternative_names(article_soup, e_number):
-    info_box = article_soup.find(class_=re.compile('\s*infobox\s+.*'))
+    info_box = article_soup.find(class_=re.compile(r'\s*infobox\s+.*'))
     if info_box is None:
         return []
     for style in info_box.find_all('style'):
@@ -623,7 +623,7 @@ def _get_alternative_names(article_soup, e_number):
             if ALTERNATIVE_NAMES_IDENTIFIER in text:
                 list = data.find('ul')
                 if list is not None:
-                    # Some cleaned up articles correctly use a 
+                    # Some cleaned up articles correctly use a
                     # list instead of some garbled junk.
                     items = list.find_all('li')
                     names = (_extract_name(item) for item in items)
