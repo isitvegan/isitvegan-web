@@ -746,7 +746,7 @@ def _get_items(e_numbers):
         sources = [wikipedia_url]
 
         article_soup = _get_soup(wikipedia_url)
-        alternative_names = _get_alternative_names(article_soup, e_number)
+        alternative_names = [n for n in _get_alternative_names(article_soup, e_number) if n != name]
 
         item = _create_item_entry(
             name, e_number, sources, alternative_names, state)
