@@ -9,5 +9,5 @@ patch.sources = [
 ]
 
 [[patch_item]]
-if = '.e_number = "E621"'
+if = '.e_number == "E621"'
 patch.alternative_names = ["MSG"]
