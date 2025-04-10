@@ -454,8 +454,6 @@ E_NUMBERS = [
     ("E904", "carnist"),
     ("E910", "carnist"),
     ("E913", "carnist"),
-    ("E920", "carnist"),
-    ("E921", "carnist"),
     ("E966", "carnist"),
 
     ("E153", "itDepends"),
@@ -509,6 +507,8 @@ E_NUMBERS = [
     ("E631", "itDepends"),
     ("E635", "itDepends"),
     ("E640", "itDepends"),
+    ("e920", "itDepends"),
+    ("E921", "itDepends"),
     ("E1105", "itDepends"),
 ]
 
